@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<link rel="stylesheet" href="./js/lib/bootstrap-3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="./js/lib/bootstrap-3.3.6/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="./css/toukei.main.css">
+<script src="./js/lib/jquery-1.11.3.min.js"></script>
+<script src="./js/lib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+<script src="./js/tokei.main.js"></script>
+<script src="./js/chosahyo.js"></script>
+
+<div id ="common-bar">
+	<button type="button-1" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" style="position: absolute; left: 450px; top: 15px;z-index: 10">回答の一時保存</button>
+	<button type="button-2" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" style="position: absolute; left: 620px; top: 15px;z-index: 10">一時保存した回答の取得</button>
+	<a href="javascript:CmnPageClear(myForm)"><button type="button-3" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" style="position: absolute; left: 860px; top: 15px;z-index: 10">クリア</button></a>
+
+	<a href="javascript:CmnExecChk1(myForm)"><button type="button-5" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" style="position: absolute; left: 880px; top: 1230px; z-index: 10;">次ページへ</button></a>
+
+</div>	
+
+<div id="p1" style="overflow: hidden; position: relative; background-color: white; width: 918px; height: 1299px;left: 185px; top: 65px;">
+
+<!-- Begin shared CSS values -->
+<style class="shared-css" type="text/css" >
+.t {
+	transform-origin: bottom left;
+	z-index: 2;
+	position: absolute;
+	white-space: pre;
+	overflow: visible;
+	line-height: 1.5;
+}
+.text-container {
+	white-space: pre;
+}
+@supports (-webkit-touch-callout: none) {
+	.text-container {
+		white-space: normal;
+	}
+}
+</style>
+<!-- End shared CSS values -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_1{left:441px;bottom:15px;}
+#t2_1{left:454px;bottom:16px;}
+#t3_1{left:468px;bottom:15px;}
+#t4_1{left:63px;bottom:526px;}
+#t5_1{left:90px;bottom:526px;letter-spacing:-0.23px;}
+#t6_1{left:63px;bottom:510px;}
+#t7_1{left:90px;bottom:510px;letter-spacing:-0.23px;}
+#t8_1{left:63px;bottom:493px;}
+#t9_1{left:89px;bottom:493px;letter-spacing:-0.17px;}
+#ta_1{left:805px;bottom:493px;}
+#tb_1{left:82px;bottom:477px;letter-spacing:-0.23px;}
+#tc_1{left:63px;bottom:460px;}
+#td_1{left:89px;bottom:460px;letter-spacing:-0.21px;}
+#te_1{left:209px;bottom:460px;letter-spacing:-0.1px;}
+#tf_1{left:309px;bottom:460px;letter-spacing:-0.23px;}
+#tg_1{left:63px;bottom:444px;}
+#th_1{left:90px;bottom:444px;letter-spacing:-0.23px;}
+#ti_1{left:63px;bottom:426px;}
+#tj_1{left:90px;bottom:426px;letter-spacing:-0.22px;}
+#tk_1{left:76px;bottom:410px;letter-spacing:-0.23px;}
+#tl_1{left:234px;bottom:410px;letter-spacing:-0.22px;}
+#tm_1{left:63px;bottom:391px;}
+#tn_1{left:63px;bottom:375px;}
+#to_1{left:63px;bottom:360px;}
+#tp_1{left:89px;bottom:391px;letter-spacing:-0.24px;}
+#tq_1{left:231px;bottom:391px;letter-spacing:-0.16px;}
+#tr_1{left:272px;bottom:391px;letter-spacing:-0.21px;}
+#ts_1{left:408px;bottom:391px;letter-spacing:-0.25px;}
+#tt_1{left:90px;bottom:376px;letter-spacing:-0.22px;}
+#tu_1{left:573px;bottom:394px;}
+#tv_1{left:585px;bottom:391px;}
+#tw_1{left:90px;bottom:359px;letter-spacing:-0.16px;}
+#tx_1{left:224px;bottom:359px;letter-spacing:-0.22px;}
+#ty_1{left:559px;bottom:392px;}
+#tz_1{left:542px;bottom:392px;}
+#t10_1{left:220px;bottom:409px;}
+#t11_1{left:203px;bottom:409px;}
+#t12_1{left:186px;bottom:409px;}
+#t13_1{left:35px;bottom:497px;}
+#t14_1{left:41px;bottom:473px;}
+#t15_1{left:41px;bottom:456px;}
+#t16_1{left:41px;bottom:438px;}
+#t17_1{left:41px;bottom:421px;}
+#t18_1{left:41px;bottom:403px;}
+#t19_1{left:41px;bottom:386px;}
+#t1a_1{left:40px;bottom:363px;}
+#t1b_1{left:440px;bottom:1200px;letter-spacing:-0.33px;}
+#t1c_1{left:45px;bottom:1149px;letter-spacing:-0.22px;}
+#t1d_1{left:45px;bottom:1136px;letter-spacing:-0.22px;}
+#t1e_1{left:45px;bottom:1121px;letter-spacing:-0.22px;}
+#t1f_1{left:45px;bottom:1107px;letter-spacing:-0.22px;}
+#t1g_1{left:45px;bottom:1093px;letter-spacing:-0.31px;}
+#t1h_1{left:86px;bottom:1050px;letter-spacing:-0.35px;}
+#t1i_1{left:38px;bottom:1020px;letter-spacing:0.31px;}
+#t1j_1{left:38px;bottom:961px;letter-spacing:0.23px;}
+#t1k_1{left:38px;bottom:935px;}
+#t1l_1{left:100px;bottom:935px;}
+#t1m_1{left:38px;bottom:885px;letter-spacing:0.28px;}
+#t1n_1{left:38px;bottom:825px;letter-spacing:0.23px;}
+#t1o_1{left:556px;bottom:642px;letter-spacing:-0.53px;word-spacing:2.81px;}
+#t1p_1{left:556px;bottom:632px;letter-spacing:-0.5px;}
+#t1q_1{left:556px;bottom:621px;letter-spacing:-0.48px;word-spacing:2.58px;}
+#t1r_1{left:556px;bottom:610px;letter-spacing:-0.6px;}
+#t1s_1{left:556px;bottom:599px;letter-spacing:-0.53px;word-spacing:2.81px;}
+#t1t_1{left:556px;bottom:588px;letter-spacing:-0.53px;word-spacing:2.63px;}
+#t1u_1{left:556px;bottom:578px;letter-spacing:-0.55px;}
+#t1v_1{left:38px;bottom:554px;letter-spacing:-0.22px;word-spacing:0.59px;}
+#t1w_1{left:38px;bottom:291px;letter-spacing:0.24px;word-spacing:0.75px;}
+#t1x_1{left:186px;bottom:291px;letter-spacing:0.34px;}
+#t1y_1{left:247px;bottom:291px;letter-spacing:-0.25px;}
+#t1z_1{left:275px;bottom:291px;}
+#t20_1{left:281px;bottom:291px;}
+#t21_1{left:295px;bottom:291px;letter-spacing:0.25px;}
+#t22_1{left:702px;bottom:291px;letter-spacing:-0.16px;}
+#t23_1{left:745px;bottom:291px;letter-spacing:0.27px;}
+#t24_1{left:84px;bottom:264px;letter-spacing:-0.16px;}
+#t25_1{left:180px;bottom:264px;letter-spacing:-0.16px;}
+#t26_1{left:274px;bottom:264px;letter-spacing:-0.16px;}
+#t27_1{left:367px;bottom:264px;letter-spacing:-0.16px;}
+#t28_1{left:467px;bottom:264px;letter-spacing:-0.17px;}
+#t29_1{left:560px;bottom:264px;letter-spacing:-0.17px;}
+#t2a_1{left:657px;bottom:264px;letter-spacing:-0.16px;}
+#t2b_1{left:752px;bottom:263px;letter-spacing:0.31px;}
+#t2c_1{left:116px;bottom:235px;}
+#t2d_1{left:209px;bottom:235px;}
+#t2e_1{left:303px;bottom:235px;}
+#t2f_1{left:396px;bottom:235px;}
+#t2g_1{left:490px;bottom:235px;}
+#t2h_1{left:583px;bottom:235px;}
+#t2i_1{left:677px;bottom:235px;}
+#t2j_1{left:771px;bottom:235px;}
+#t2k_1{left:41px;bottom:175px;letter-spacing:0.23px;}
+#t2l_1{left:83px;bottom:175px;letter-spacing:0.1px;}
+#t2m_1{left:136px;bottom:175px;letter-spacing:-0.09px;}
+#t2n_1{left:422px;bottom:175px;letter-spacing:-0.35px;}
+#t2o_1{left:461px;bottom:175px;letter-spacing:-0.09px;}
+#t2p_1{left:827px;bottom:175px;}
+#t2q_1{left:41px;bottom:158px;letter-spacing:-0.08px;word-spacing:0.73px;}
+#t2r_1{left:41px;bottom:141px;letter-spacing:-0.23px;}
+#t2s_1{left:51px;bottom:743px;letter-spacing:-0.25px;}
+#t2t_1{left:198px;bottom:743px;letter-spacing:-0.25px;}
+#t2u_1{left:370px;bottom:743px;letter-spacing:-0.25px;}
+#t2v_1{left:482px;bottom:743px;letter-spacing:-0.25px;}
+#t2w_1{left:45px;bottom:632px;letter-spacing:-0.21px;word-spacing:0.68px;}
+#t2x_1{left:582px;bottom:1019px;letter-spacing:0.23px;}
+#t2y_1{left:582px;bottom:990px;letter-spacing:0.26px;}
+#t2z_1{left:582px;bottom:885px;letter-spacing:0.28px;}
+#t30_1{left:795px;bottom:885px;letter-spacing:0.22px;}
+#t31_1{left:582px;bottom:795px;letter-spacing:0.28px;}
+#t32_1{left:582px;bottom:954px;letter-spacing:0.28px;}
+#t33_1{left:184px;bottom:1152px;letter-spacing:-0.25px;}
+#t34_1{left:171px;bottom:1134px;letter-spacing:-0.33px;}
+#t35_1{left:840px;bottom:1221px;}
+#t36_1{left:187px;bottom:1219px;letter-spacing:-0.19px;}
+
+.s1{font-size:17px;font-family:MS-PGothic_o;color:#000;}
+.s2{font-size:17px;font-family:MS-PMincho_9;color:#000;}
+.s3{font-size:14px;font-family:MS-PMincho_9;color:#000;}
+.s4{font-size:14px;font-family:MS-PGothic_o;color:#000;-webkit-text-stroke:0.4px #000;text-stroke:0.4px #000;}
+.s5{font-size:9px;font-family:MS-PMincho_9;color:#000;}
+.s6{font-size:15px;font-family:MS-PMincho_9;color:#000;}
+.s7{font-size:37px;font-family:MS-Mincho_e;color:#000;}
+.s8{font-size:11px;font-family:MS-Gothic_j;color:#000;}
+.s9{font-size:28px;font-family:MS-PGothic_o;color:#000;-webkit-text-stroke:0.8px #000;text-stroke:0.8px #000;}
+.sa{font-size:11px;font-family:MS-Mincho_e;color:#000;}
+.sb{font-size:15px;font-family:MS-PGothic_o;color:#000;-webkit-text-stroke:0.4px #000;text-stroke:0.4px #000;}
+.sc{font-size:14px;font-family:MS-Mincho_e;color:#000;}
+.sd{font-size:14px;font-family:MS-PGothic_o;color:#000;}
+.se{font-size:18px;font-family:MS-Mincho_e;color:#000;}
+.sf{font-size:17px;font-family:MS-Mincho_e;color:#000;}
+.t.v0_1{transform:scaleX(0.94);}
+.t.v1_1{transform:scaleX(0.96);}
+.t.v2_1{transform:scaleX(1.8);}
+.t.v3_1{transform:scaleX(1.98);}
+.t.v4_1{transform:scaleX(0.919);}
+
+#tese_yubin_1{left:18px;bottom:955px;width:38px;height:25px;letter-spacing:0.46px;z-index: 99;}
+#tese_yubin_2{left:70px;bottom:955px;width:50px;height:25px;letter-spacing:0.46px;z-index: 98;}
+#tese_add{left:0px;bottom:925px;width:475px;height:29px;letter-spacing:0.46px;}
+
+#tese_add_moto{left:0px;bottom:1005px;width:475px;height:29px;letter-spacing:0.46px;}
+#tese2_jigyosyo_moto{left:0px;bottom:850px;letter-spacing:0.46px;}
+
+#tese2_jigyosyo{left:0px;bottom:785px;letter-spacing:0.46px;}
+#kihon_name{left:635px;bottom:978px;letter-spacing:0.46px;}
+#kihon_furigana{left:635px;bottom:1008px;letter-spacing:0.46px;z-index: 999;}
+#kihon_syozoku{left:543px;bottom:906px;letter-spacing:0.46px;}
+#kihon_tel{left:543px;bottom:865px;letter-spacing:0.46px;}
+#kihon_naisen{left:758px;bottom:865px;letter-spacing:0.46px;}
+#tmail{left:582px;bottom:843px;letter-spacing:0.26px;}
+#kihon_mail_add{left:543px;bottom:816px;letter-spacing:0.28px;}
+#kihon_jigyonaiyou{left:543px;bottom:716px;letter-spacing:0.28px;}
+#province_ken_cd_1{left:3px;bottom:685.5px;letter-spacing:0.28px;}
+#province_ken_cd_2{left:54px;bottom:685.5px;letter-spacing:0.28px;}
+#province_jigyo_cd_1{left:105px;bottom:685.5px;letter-spacing:0.28px;}
+#province_jigyo_cd_2{left:156px;bottom:685.5px;letter-spacing:0.28px;}
+#province_jigyo_cd_3{left:207px;bottom:685.5px;letter-spacing:0.28px;}
+#province_jigyo_cd_4{left:258px;bottom:685.5px;letter-spacing:0.28px;}
+#province_sangyo_cd_1{left:309px;bottom:685.5px;letter-spacing:0.28px;}
+#province_sangyo_cd_2{left:352px;bottom:685.5px;letter-spacing:0.28px;}
+#province_sangyo_cd_3{left:393px;bottom:685.5px;letter-spacing:0.28px;}
+#province_type{left:436px;bottom:685.5px;letter-spacing:0.28px;}
+
+#hojin_cd_1{left:5px;bottom:590px;letter-spacing:0.28px;z-index: 99;}
+#hojin_cd_2{left:38px;bottom:590px;letter-spacing:0.28px;z-index: 98;}
+#hojin_cd_3{left:72px;bottom:590px;letter-spacing:0.28px;z-index: 97;}
+#hojin_cd_4{left:106.5px;bottom:590px;letter-spacing:0.28px;z-index: 96;}
+#hojin_cd_5{left:141px;bottom:590px;letter-spacing:0.28px;z-index: 95;}
+#hojin_cd_6{left:175px;bottom:590px;letter-spacing:0.28px;z-index: 94;}
+#hojin_cd_7{left:209px;bottom:590px;letter-spacing:0.28px;z-index: 93;}
+#hojin_cd_8{left:243px;bottom:590px;letter-spacing:0.28px;z-index: 92;}
+#hojin_cd_9{left:277px;bottom:590px;letter-spacing:0.28px;z-index: 91;}
+#hojin_cd_10{left:311px;bottom:590px;letter-spacing:0.28px;z-index: 90;}
+#hojin_cd_11{left:345px;bottom:590px;letter-spacing:0.28px;z-index: 89;}
+#hojin_cd_12{left:379px;bottom:590px;letter-spacing:0.28px;z-index: 88;}
+#hojin_cd_13{left:413px;bottom:590px;letter-spacing:0.28px;z-index: 87;}
+
+
+#q_1_zentaininzu_1{left:96px;bottom:234px;letter-spacing:0.28px;z-index: 99;}
+#q_1_zentaininzu_2{left:190px;bottom:234px;letter-spacing:0.28px;z-index: 99;}
+#q_1_zentaininzu_3{left:283px;bottom:234px;letter-spacing:0.28px;z-index: 99;}
+#q_1_zentaininzu_4{left:375px;bottom:234px;letter-spacing:0.28px;z-index: 99;}
+#q_1_zentaininzu_5{left:468px;bottom:234px;letter-spacing:0.28px;z-index: 99;}
+#q_1_zentaininzu_6{left:563px;bottom:234px;letter-spacing:0.28px;z-index: 99;}
+#q_1_zentaininzu_7{left:656px;bottom:234px;letter-spacing:0.28px;z-index: 99;}
+#q_1_zentaininzu_8{left:749px;bottom:234px;letter-spacing:0.28px;z-index: 99;}
+
+#color_1{left:73px;bottom:234px;letter-spacing:0.28px;width:91px;height:25px;background-color: yellow;}
+#color_2{left:166px;bottom:234px;letter-spacing:0.28px;width:92px;height:25px;background-color: yellow;}
+#color_3{left:260px;bottom:234px;letter-spacing:0.28px;width:92px;height:25px;background-color: yellow;}
+#color_4{left:353.4px;bottom:234px;letter-spacing:0.28px;width:91px;height:25px;background-color: yellow;}
+#color_5{left:446px;bottom:234px;letter-spacing:0.28px;width:92px;height:25px;background-color: yellow;}
+#color_6{left:539.5px;bottom:234px;letter-spacing:0.28px;width:92px;height:25px;background-color: yellow;}
+#color_7{left:633.5px;bottom:234px;letter-spacing:0.28px;width:92px;height:25px;background-color: yellow;}
+#color_8{left:727px;bottom:234px;letter-spacing:0.28px;width:92px;height:25px;background-color: yellow;}
+
+
+.form_input{background-color: yellow;border-style: solid;}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts1" type="text/css" >
+
+@font-face {
+	font-family: MS-Gothic_j;
+	src: url("css/fonts/MS-Gothic_j.woff") format("woff");
+}
+
+@font-face {
+	font-family: MS-Mincho_e;
+	src: url("css/fonts/MS-Mincho_e.woff") format("woff");
+}
+
+@font-face {
+	font-family: MS-PGothic_o;
+	src: url("css/fonts/MS-PGothic_o.woff") format("woff");
+}
+
+@font-face {
+	font-family: MS-PMincho_9;
+	src: url("css/fonts/MS-PMincho_9.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin page background -->
+<div id="pg1Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg1" style="-webkit-user-select: none;"><object width="918" height="1299" data="img/1/1.svg" type="image/svg+xml" id="pdf1" style="width:918px; height:1299px; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<form name="myForm" >
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div class="text-container"><span id="t1_1" class="t s1">- </span><span id="t2_1" class="t s2">1 </span><span id="t3_1" class="t s1">- </span>
+
+<div id ="tese_yubin_1"  class="t s1_3">
+	<input type ="text" class="form_input" name="tese_yubin_1" style="width:38px;height:25px;text-align: left;"maxlength="3">
+</div>
+<div id ="tese_yubin_2"  class="t s1_3">
+	<input type ="text" class="form_input" name="tese_yubin_2" style="width:50px;height:25px;text-align: left;"maxlength="4">
+</div>
+<div id ="tese_add"  class="t s1_3">
+	<input type ="text" class="form_input" name="tese_add" style="width:475px;height:29px;text-align: left;">
+</div>
+
+<div id ="tese_add_moto"  class="t s1_3">
+	<input type ="text" class="form_input" name="tese_add_moto" disabled="true" style="background-color: #3366FF;width:475px;height:29px;text-align: left;">
+</div>
+
+<div id ="tese2_jigyosyo"  class="t s1_3">
+	<input type ="text" class="form_input" name="tese2_jigyosyo" style="width:475px;height:29px;text-align: left;">
+</div>
+
+<div id ="tese2_jigyosyo_moto"  class="t s1_3">
+	<input type ="text" class="form_input" name="tese2_jigyosyo_moto" disabled="true"style="background-color: #3366FF;width:475px;height:29px;text-align: left;">
+</div>
+
+<div id ="kihon_furigana"  class="t s1_3">
+	<input type ="text" class="form_input" name="kihon_furigana" style="width:200px;height:25px;text-align: left;">
+</div>
+<div id ="kihon_name"  class="t s1_3">
+	<input type ="text" class="form_input" name="kihon_name" style="width:200px;height:35px;text-align: left;">
+</div>
+<div id ="kihon_syozoku"  class="t s1_3">
+	<input type ="text" class="form_input" name="kihon_syozoku" style="width:304px;height:50px;text-align: left;">
+</div>
+<div id ="kihon_tel"  class="t s1_3">
+	<input type ="text" class="form_input" id ="kihon_tel" name="kihon_tel" style="width:200px;height:25px;text-align: left;"maxlength="10">
+</div>
+<div id ="kihon_naisen"  class="t s1_3">
+	<input type ="text" class="form_input" name="kihon_naisen" style="width:89px;height:25px;text-align: left;" maxlength="3">
+</div>
+<div id ="kihon_mail_add"  class="t s1_3">
+	<input type ="text" class="form_input" name="kihon_mail_add" style="width:304px;height:30px;text-align: left;">
+</div>
+<div id ="kihon_jigyonaiyou"  class="t s1_3">
+	<input type ="text" class="form_input" name="kihon_jigyonaiyou" style="width:304px;height:80px;text-align: left;">
+</div>
+<div id ="province_ken_cd_1"  class="t s1_3">
+	<input type ="text" class="form_input" name="province_ken_cd" disabled="true" style="width:48px;height:53px;background-color: #3366FF;border-style: hidden;text-align: right;">
+</div>
+<div id ="province_ken_cd_2"  class="t s1_3">
+	<input type ="text" class="form_input" name="province_ken_cd" disabled="true" style="width:48px;height:53px;background-color: #3366FF;border-style: hidden;text-align: right;">
+</div>
+<div id ="province_jigyo_cd_1"  class="t s1_3">
+	<input type ="text" class="form_input" name="province_jigyo_cd" disabled="true" style="width:48px;height:53px;background-color: #3366FF;border-style: hidden;text-align: right;">
+</div>
+<div id ="province_jigyo_cd_2"  class="t s1_3">
+	<input type ="text" class="form_input" name="province_jigyo_cd" disabled="true" style="width:48px;height:53px;background-color: #3366FF;border-style: hidden;text-align: right;">
+</div>
+<div id ="province_jigyo_cd_3"  class="t s1_3">
+	<input type ="text" class="form_input" name="province_jigyo_cd" disabled="true" style="width:48px;height:53px;background-color: #3366FF;border-style: hidden;text-align: right;">
+</div>
+<div id ="province_jigyo_cd_4"  class="t s1_3">
+	<input type ="text" class="form_input" name="province_jigyo_cd" disabled="true" style="width:48px;height:53px;background-color: #3366FF;border-style: hidden;text-align: right;">
+</div>
+<div id ="province_sangyo_cd_1"  class="t s1_3">
+	<input type ="text" class="form_input" name="province_sangyo_cd" disabled="true" style="width:39px;height:53px;background-color: #3366FF;border-style: hidden;text-align: right;">
+</div>
+<div id ="province_sangyo_cd_2"  class="t s1_3">
+	<input type ="text" class="form_input" name="province_sangyo_cd" disabled="true" style="width:39px;height:53px;background-color: #3366FF;border-style: hidden;text-align: right;">
+</div>
+<div id ="province_sangyo_cd_3"  class="t s1_3">
+	<input type ="text" class="form_input" name="province_sangyo_cd" disabled="true" style="width:39px;height:53px;background-color: #3366FF;border-style: hidden;text-align: right;">
+</div>
+<div id ="province_type"  class="t s1_3">
+	<input type ="text" class="form_input" name="province_type" disabled="true" style="width:39px;height:53px;background-color: #3366FF;border-style: hidden;text-align: right;">
+</div>
+
+
+<div id ="hojin_cd_1"  class="t s1_3">
+	<input type ="text" class="form_input" id ="hojin_cd_1" name="hojin_cd_1" style="width:32px;height:40px;border-style: hidden;text-align: right;" maxlength="1">
+</div>
+<div id ="hojin_cd_2"  class="t s1_3">
+	<input type ="text" class="form_input" id ="hojin_cd_2" name="hojin_cd_2" style="width:33px;height:40px;border-style: hidden;text-align: right;" maxlength="1">
+</div>
+<div id ="hojin_cd_3"  class="t s1_3">
+	<input type ="text" class="form_input" id ="hojin_cd_3" name="hojin_cd_3" style="width:33px;height:40px;border-style: hidden;text-align: right;" maxlength="1">
+</div>
+<div id ="hojin_cd_4"  class="t s1_3">
+	<input type ="text" class="form_input" id ="hojin_cd_4" name="hojin_cd_4" style="width:33px;height:40px;border-style: hidden;text-align: right;" maxlength="1">
+</div>
+<div id ="hojin_cd_5"  class="t s1_3">
+	<input type ="text" class="form_input" id ="hojin_cd_5" name="hojin_cd_5" style="width:33px;height:40px;border-style: hidden;text-align: right;" maxlength="1">
+</div>
+<div id ="hojin_cd_6"  class="t s1_3">
+	<input type ="text" class="form_input" id ="hojin_cd_6" name="hojin_cd_6" style="width:33px;height:40px;border-style: hidden;text-align: right;" maxlength="1">
+</div>
+<div id ="hojin_cd_7"  class="t s1_3">
+	<input type ="text" class="form_input" id ="hojin_cd_7" name="hojin_cd_7" style="width:33px;height:40px;border-style: hidden;text-align: right;" maxlength="1">
+</div>
+<div id ="hojin_cd_8"  class="t s1_3">
+	<input type ="text" class="form_input" id ="hojin_cd_8" name="hojin_cd_8" style="width:33px;height:40px;border-style: hidden;text-align: right;" maxlength="1">
+</div>
+<div id ="hojin_cd_9"  class="t s1_3">
+	<input type ="text" class="form_input" id ="hojin_cd_9" name="hojin_cd_9" style="width:33px;height:40px;border-style: hidden;text-align: right;" maxlength="1">
+</div>
+<div id ="hojin_cd_10"  class="t s1_3">
+	<input type ="text" class="form_input" id ="hojin_cd_10" name="hojin_cd_10" style="width:33px;height:40px;border-style: hidden;text-align: right;" maxlength="1">
+</div>
+<div id ="hojin_cd_11"  class="t s1_3">
+	<input type ="text" class="form_input" id ="hojin_cd_11" name="hojin_cd_11" style="width:33px;height:40px;border-style: hidden;text-align: right;" maxlength="1">
+</div>
+<div id ="hojin_cd_12"  class="t s1_3">
+	<input type ="text" class="form_input" id ="hojin_cd_12" name="hojin_cd_12" style="width:33px;height:40px;border-style: hidden;text-align: right;" maxlength="1">
+</div>
+<div id ="hojin_cd_13"  class="t s1_3">
+	<input type ="text" class="form_input" name="hojin_cd_13" style="width:33px;height:40px;border-style: hidden;text-align: right;">
+</div>
+
+<div id ="hojin_cd"  class="t s1_3">
+	<input type ="text" class="form_input" id ="hojin_cd" name="hojin_cd" type="hidden" disabled="true" maxlength="13">
+</div>
+
+<div id ="q_1_zentaininzu_1"  class="t s6_10">
+	<input type ="radio" class="radio-button" name="q_1_zentaininzu" value="1">
+</div>
+<div id ="q_1_zentaininzu_2"  class="t s6_10">
+	<input type ="radio" class="radio-button" name="q_1_zentaininzu" value="2">
+</div>
+<div id ="q_1_zentaininzu_3"  class="t s6_10">
+	<input type ="radio" class="radio-button" name="q_1_zentaininzu" value="3">
+</div>
+<div id ="q_1_zentaininzu_4"  class="t s6_10">
+	<input type ="radio" class="radio-button" name="q_1_zentaininzu" value="4">
+</div>
+<div id ="q_1_zentaininzu_5"  class="t s6_10">
+	<input type ="radio" class="radio-button" name="q_1_zentaininzu" value="5">
+</div>
+<div id ="q_1_zentaininzu_6"  class="t s6_10">
+	<input type ="radio" class="radio-button" name="q_1_zentaininzu" value="6">
+</div>
+<div id ="q_1_zentaininzu_7"  class="t s6_10">
+	<input type ="radio" class="radio-button" name="q_1_zentaininzu" value="7">
+</div>
+<div id ="q_1_zentaininzu_8"  class="t s6_10">
+	<input type ="radio" class="radio-button" name="q_1_zentaininzu" value="8">
+</div>
+<div id ="color_1"  class="t s6_10"></div>
+<div id ="color_2"  class="t s6_10"></div>
+<div id ="color_3"  class="t s6_10"></div>
+<div id ="color_4"  class="t s6_10"></div>
+<div id ="color_5"  class="t s6_10"></div>
+<div id ="color_6"  class="t s6_10"></div>
+<div id ="color_7"  class="t s6_10"></div>
+<div id ="color_8"  class="t s6_10"></div>
+
+<span id="t4_1" class="t s3">１ </span><span id="t5_1" class="t s3">この調査は、常用労働者が５人以上の事業所又は企業規模5人以上の事業所を対象としています。 </span>
+<span id="t6_1" class="t s3">２ </span><span id="t7_1" class="t s3">事業所の範囲は、同一場所にある工場や店舗などを対象とし、他の場所にある支店や工場は含めません。 </span>
+<span id="t8_1" class="t s3">３ </span><span id="t9_1" class="t v0_1 s3">問１～問2は全ての事業所がご回答ください。また、問3以降は、単独事業所又は本所となる事業所(４ﾍﾟｰｼﾞの注12又は注13を参照）が </span><span id="ta_1" class="t s3">組 </span>
+<span id="tb_1" class="t s3">織全体の状況についてご回答ください。 </span>
+<span id="tc_1" class="t s3">４ </span><span id="td_1" class="t s3">特に断りのない限り、</span><span id="te_1" class="t s4">令和3年10月１日</span><span id="tf_1" class="t s3">現在の状況について記入してください。 </span>
+<span id="tg_1" class="t s3">５ </span><span id="th_1" class="t s3">調査票は黒か青のボールペンで記入してください。 </span>
+<span id="ti_1" class="t s3">６ </span><span id="tj_1" class="t s3">特に断りのない限り、該当する選択肢の番号を１つ選び、◯で囲んでください。 </span>
+<span id="tk_1" class="t s3">ただし、回答欄が </span><span id="tl_1" class="t s3">のように網掛けとなっている場合は、設問に従って複数回答をお願いします。 </span>
+<span id="tm_1" class="t v1_1 s3">７ </span>
+<span id="tn_1" class="t v1_1 s3">８ </span>
+<span id="to_1" class="t v1_1 s3">９ </span>
+<span id="tp_1" class="t s3">数字を記入する場合は、</span><span id="tq_1" class="t s4">右詰め</span><span id="tr_1" class="t s3">で記入してください。 </span><span id="ts_1" class="t s3">（記入例 </span>
+<span id="tt_1" class="t s3">該当する労働者がいない場合は「０」を記入してください。 </span>
+<span id="tu_1" class="t s5">人 </span><span id="tv_1" class="t s6">） </span>
+<span id="tw_1" class="t s4">令和３年10月15日（金）</span><span id="tx_1" class="t s3">までに、回答してください。 </span>
+<span id="ty_1" class="t s6">5 </span><span id="tz_1" class="t s6">4 </span>
+<span id="t10_1" class="t s6">3 </span><span id="t11_1" class="t s6">2 </span><span id="t12_1" class="t s6">1 </span>
+<span id="t13_1" class="t v2_1 s6">（ </span>
+<span id="t14_1" class="t s6">記 </span>
+<span id="t15_1" class="t s6">入 </span>
+<span id="t16_1" class="t s6">上 </span>
+<span id="t17_1" class="t s6">の </span>
+<span id="t18_1" class="t s6">注 </span>
+<span id="t19_1" class="t s6">意 </span>
+<span id="t1a_1" class="t v3_1 s6">） </span>
+<span id="t1b_1" class="t s7">（案） </span>
+<span id="t1c_1" class="t s8">統計法に基づく国 </span>
+<span id="t1d_1" class="t s8">の統計調査です。 </span>
+<span id="t1e_1" class="t s8">調査票情報の秘密 </span>
+<span id="t1f_1" class="t s8">の保護に万全を期 </span>
+<span id="t1g_1" class="t s8">します。 </span>
+<span id="t1h_1" class="t s9">令和３年パートタイム・有期雇用労働者総合実態調査（事業所票） </span>
+<span id="t1i_1" class="t s6">所在地 </span>
+<span id="t1j_1" class="t s6">【訂正記入欄】 </span>
+<span id="t1k_1" class="t s6">〒 </span><span id="t1l_1" class="t s6">- </span>
+<span id="t1m_1" class="t s6">事業所名 </span>
+<span id="t1n_1" class="t s6">【訂正記入欄】 </span>
+<span id="t1o_1" class="t sa">←法人番号の印字がない場合や誤りがある場合等は記入・訂正を お </span>
+<span id="t1p_1" class="t sa">願いします。その際、商業登記法に基づく「会社法人等番号(12 </span>
+<span id="t1q_1" class="t sa">桁)｣やマイナンバー(個人番号)を記入しないようにご注意くださ い。 </span>
+<span id="t1r_1" class="t sa">また、法人番号は支店や事業所ごとには指定されませんので、支店 </span>
+<span id="t1s_1" class="t sa">や事業所についても、各法人に指定された法人番号を記入し てくだ </span>
+<span id="t1t_1" class="t sa">さい。なお、個人事業主の事業所については、無記入のま まで構い </span>
+<span id="t1u_1" class="t sa">ません。 </span>
+<span id="t1v_1" class="t s3">※ 貴事業所の所在地・名称・法人番号に誤りがある場合には、赤色ボールペン等で訂正してください。 </span>
+<span id="t1w_1" class="t s6">問１ 貴事業所が属する</span><span id="t1x_1" class="t sb">組織全体</span><span id="t1y_1" class="t sc">（注</span><span id="t1z_1" class="t s3">1</span><span id="t20_1" class="t sc">）</span><span id="t21_1" class="t s6">（本所・本社、支所・支社、営業所・工場等を含む）の常用労働者</span><span id="t22_1" class="t s3">(注2)数</span><span id="t23_1" class="t s6">は何人ですか。 </span>
+<span id="t24_1" class="t s3">1,000人以上 </span><span id="t25_1" class="t s3">500～999人 </span><span id="t26_1" class="t s3">300～499人 </span><span id="t27_1" class="t s3">100～299人 </span><span id="t28_1" class="t s3">50～99人 </span><span id="t29_1" class="t s3">30～49人 </span><span id="t2a_1" class="t s3">５～29人 </span><span id="t2b_1" class="t s6">官公営 </span>
+<span id="t2c_1" class="t s6">１ </span><span id="t2d_1" class="t s6">２ </span><span id="t2e_1" class="t s6">３ </span><span id="t2f_1" class="t s6">４ </span><span id="t2g_1" class="t s6">５ </span><span id="t2h_1" class="t s6">６ </span><span id="t2i_1" class="t s6">７ </span><span id="t2j_1" class="t s6">８ </span>
+<span id="t2k_1" class="t v4_1 sd">（注１）「</span><span id="t2l_1" class="t v0_1 s4">組織全体</span><span id="t2m_1" class="t v0_1 s3">」とは、法人の場合は、法人単位で、お考えください。</span><span id="t2n_1" class="t v1_1 sc">例えば</span><span id="t2o_1" class="t v0_1 s3">、大手コンビニのフランチャイズ店（直営店以外）は、当該コンビニ企 </span><span id="t2p_1" class="t s3">業 </span>
+<span id="t2q_1" class="t s3">の事業所とはならないため、法人としてお答えください。また、 「□□法人●●会××病院」といった場合は、□□法人●●会が××病院を </span>
+<span id="t2r_1" class="t s3">経営しているのであれば、××病院を含めた□□法人●●会が組織全体となります。 </span>
+<span id="t2s_1" class="t s3">都道府県番号 </span><span id="t2t_1" class="t s3">事業所一連番号 </span><span id="t2u_1" class="t s3">産業分類番号 </span><span id="t2v_1" class="t s3">種類 </span>
+<span id="t2w_1" class="t s3">法人番号（ 国税庁が指定する13桁の番号をいいます。） </span>
+<span id="t2x_1" class="t s6">（ふりがな） </span>
+<span id="t2y_1" class="t s6"　>記入者氏名 </span>
+<span id="tmail" class="t s6">メールアドレス </span>
+<span id="t2z_1" class="t s6">電話番号 </span><span id="t30_1" class="t s6">内線 </span>
+<span id="t31_1" class="t s6">主な事業の内容 </span>
+<span id="t32_1" class="t s6">所属部署 </span>
+<span id="t33_1" class="t sc">この調査票に記入された事項については、個別事業所の秘密を守り、統計以 </span>
+<span id="t34_1" class="t sc">外の目的に用いることは絶対にありませんので、ありのままをご記入ください。 </span>
+<span id="t35_1" class="t se">秘 </span>
+<span id="t36_1" class="t sf">統計法に基づく一般統計調査 </span></div>
+
+<div class="modal fade" id="modal_info" data-backdrop="static" tabindex="-1">
+	<div class="modal-dialog">
+	<div class="modal-content">
+	<div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span>×</span></button><h4 class="modal-title"></h4></div>
+	<div class="modal-body"><div class="alert alert-info tokei-alert-info cf"><span class="glyphicon tokei-glyphicon-info" aria-hidden="true"></span><div class="tokei-alert-inner"></div></div></div>
+	<div class="modal-footer"><button type="button" class="btn tokei-btn-important" data-dismiss="modal">OK</button></div>
+	</div>
+	</div>
+	</div>
+	<!--
+		4.2.5 (15) モダールウィンドウを表示する
+		・modal_conf(確認、キャンセル／OKボタンを配置)
+		
+		chosahyo.jsでMODAL_CONFを指定すると利用できます。
+	-->
+	<div class="modal fade" id="modal_conf" data-backdrop="static" tabindex="-1">
+	<div class="modal-dialog">
+	<div class="modal-content">
+	<div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span>×</span></button><h4 class="modal-title"></h4></div>
+	<div class="modal-body"><div class="alert alert-success tokei-alert-confirmation cf"><span class="glyphicon tokei-glyphicon-confirmation" aria-hidden="true"></span><div class="tokei-alert-inner"></div></div></div>
+	<div class="modal-footer"><button type="button" class="btn tokei-btn-important" data-dismiss="modal">OK</button></div>
+	</div>
+	</div>
+	</div>
+	<!--
+		4.2.5 (15) モダールウィンドウを表示する
+		・modal_warn(警告、OKボタンのみ配置)
+		
+		chosahyo.jsでMODAL_WARNを指定すると利用できます。
+	-->
+	<div class="modal fade" id="modal_warn" data-backdrop="static" tabindex="-1">
+	<div class="modal-dialog">
+	<div class="modal-content">
+	<div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span>×</span></button><h4 class="modal-title"></h4></div>
+	<div class="modal-body"><div class="alert alert-warning tokei-alert-warning cf"><span class="glyphicon tokei-glyphicon-warning" aria-hidden="true"></span><div class="tokei-alert-inner"></div></div></div>
+	<div class="modal-footer"><button type="button" class="btn tokei-btn-important" data-dismiss="modal">OK</button></div>
+	</div>
+	</div>
+	</div>
+	<!--
+		4.2.5 (15) モダールウィンドウを表示する
+		・modal_error(エラー用、OKボタンのみ配置)
+		
+		chosahyo.jsでMODAL_ERRORを指定すると利用できます。
+	-->
+	<div class="modal fade" id="modal_error" data-backdrop="static" tabindex="-1">
+	<div class="modal-dialog">
+	<div class="modal-content">
+	<div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span>×</span></button><h4 class="modal-title"></h4></div>
+	<div class="modal-body"><div class="alert alert-danger tokei-alert-danger cf"><span class="glyphicon tokei-glyphicon-danger" aria-hidden="true"></span><div class="tokei-alert-inner"></div></div></div>
+	<div class="modal-footer"><button type="button" class="btn tokei-btn-important" data-dismiss="modal">OK</button></div>
+	</div>
+	</div>
+	</div>
+<!-- End text definitions -->
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;" onload="enablechange()">
+	<link rel="stylesheet" href="./js/lib/bootstrap-3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./js/lib/bootstrap-3.3.6/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="./css/toukei.main.css">
+	<script src="./js/lib/jquery-1.11.3.min.js"></script>
+	<script src="./js/lib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+	<script src="./js/tokei.main.js"></script>
+	<script src="./js/chosahyo.js"></script>
+<div id ="common-bar">
+	<button type="button-1" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" style="position: absolute; left: 450px; top: 15px;z-index: 10">回答の一時保存</button>
+	<button type="button-2" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" style="position: absolute; left: 620px; top: 15px;z-index: 10">一時保存した回答の取得</button>
+	<a href="javascript:CmnPageClear(myForm)"><button type="button-3" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" style="position: absolute; left: 860px; top: 15px;z-index: 10">クリア</button></a>
+	<a href="javascript:CmnExecChk4(myForm)"><button type="button-5" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" style="position: absolute; left: 880px; top: 1400px; z-index: 10;">次ページへ</button></a>
+    <input
+	action="action"
+    onclick="window.history.go(-1); return false;"
+	class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command"
+    type="submit"
+	style="position: absolute; left: 250px; top: 1400px; width: 120px; z-index: 10"
+    value="前ページへ"
+/>
+</div>	
+<script>
+	function enablechange(){
+		var syosai_muki_part_man =parseInt(localStorage.getItem("q_2_syosai_muki_part_man"));
+		var syosai_muki_part_female =parseInt(localStorage.getItem("q_2_syosai_muki_part_female"));
+		var syosai_yuki_part_man =parseInt(localStorage.getItem("q_2_syosai_yuki_part_man"));
+		var syosai_yuki_part_female =parseInt(localStorage.getItem("q_2_syosai_yuki_part_female"));
+		var syosai_yuki_full_man =parseInt(localStorage.getItem("q_2_syosai_yuki_full_man"));
+		var syosai_yuki_full_female =parseInt(localStorage.getItem("q_2_syosai_yuki_full_female"));
+		if (syosai_muki_part_man!=0||syosai_muki_part_female!=0){
+			document.getElementById("color_20").style.backgroundColor = "grey";
+			document.getElementById("q_4_syu_4").disabled = true;
+			document.getElementById("q_4_syu_4").checked = false;
+			document.getElementById("color_17").style.backgroundColor = "grey";
+			document.getElementById("q_4_syu_1").disabled = true;
+			document.getElementById("q_4_syu_1").checked = true;
+		}
+		if (syosai_yuki_part_man!=0||syosai_yuki_part_female!=0){
+			document.getElementById("color_20").style.backgroundColor = "grey";
+			document.getElementById("q_4_syu_4").disabled = true;
+			document.getElementById("q_4_syu_4").checked = false;
+
+			document.getElementById("color_18").style.backgroundColor = "grey";
+			document.getElementById("q_4_syu_2").disabled = true;
+			document.getElementById("q_4_syu_2").checked = true;
+		}
+		if (syosai_yuki_part_man!=0||syosai_yuki_full_female!=0){
+			document.getElementById("color_20").style.backgroundColor = "grey";
+			document.getElementById("q_4_syu_4").disabled = true;
+			document.getElementById("q_4_syu_4").checked = false;
+
+			document.getElementById("color_19").style.backgroundColor = "grey";
+			document.getElementById("q_4_syu_3").disabled = true;
+			document.getElementById("q_4_syu_3").checked = true;
+		}
+
+		if (syosai_muki_part_man==0&&syosai_muki_part_female==0){
+			document.getElementById("color_17").style.backgroundColor = "grey";
+			document.getElementById("q_4_syu_1").disabled = true;
+			document.getElementById("q_4_syu_1").checked = false;
+		}
+		if (syosai_yuki_part_man==0&&syosai_yuki_part_female==0){
+			document.getElementById("color_18").style.backgroundColor = "grey";
+			document.getElementById("q_4_syu_2").disabled = true;
+			document.getElementById("q_4_syu_2").checked = false;
+		}
+		if (syosai_yuki_part_man==0&&syosai_yuki_full_female==0){
+			document.getElementById("color_19").style.backgroundColor = "grey";
+			document.getElementById("q_4_syu_3").disabled = true;
+			document.getElementById("q_4_syu_3").checked = false;
+		}
+	}
+</script>
+
+<div id="p4" style="overflow: hidden; position: relative; background-color: white; width: 918px; height: 1299px; left: 185px; top: 65px;">
+
+<!-- Begin shared CSS values -->
+<style class="shared-css" type="text/css" >
+.t {
+	transform-origin: bottom left;
+	z-index: 2;
+	position: absolute;
+	white-space: pre;
+	overflow: visible;
+	line-height: 1.5;
+}
+</style>
+<!-- End shared CSS values -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_4{left:46px;bottom:1005px;letter-spacing:-0.11px;}
+#t2_4{left:96px;bottom:1005px;}
+#t3_4{left:103px;bottom:1005px;letter-spacing:-0.11px;}
+#t4_4{left:172px;bottom:1005px;letter-spacing:-0.26px;}
+#t5_4{left:46px;bottom:980px;letter-spacing:-0.11px;}
+#t6_4{left:96px;bottom:980px;}
+#t7_4{left:103px;bottom:980px;letter-spacing:-0.11px;}
+#t8_4{left:130px;bottom:980px;letter-spacing:-0.26px;}
+#t9_4{left:46px;bottom:955px;letter-spacing:-0.11px;}
+#ta_4{left:96px;bottom:955px;}
+#tb_4{left:103px;bottom:955px;letter-spacing:-0.11px;}
+#tc_4{left:130px;bottom:955px;letter-spacing:-0.24px;}
+#td_4{left:38px;bottom:908px;letter-spacing:0.3px;}
+#te_4{left:73px;bottom:908px;letter-spacing:0.34px;}
+#tf_4{left:38px;bottom:273px;letter-spacing:0.3px;}
+#tg_4{left:73px;bottom:273px;letter-spacing:0.35px;}
+#th_4{left:530px;bottom:273px;letter-spacing:0.55px;}
+#ti_4{left:575px;bottom:273px;letter-spacing:0.3px;}
+#tj_4{left:403px;bottom:874px;letter-spacing:0.28px;z-index: 99;}
+#tk_4{left:403px;bottom:838px;letter-spacing:0.28px;z-index: 99;}
+#tl_4{left:72px;bottom:547px;letter-spacing:4.85px;}
+#tm_4{left:403px;bottom:583px;letter-spacing:0.28px;}
+#tn_4{left:403px;bottom:547px;letter-spacing:0.28px;}
+#to_4{left:403px;bottom:801px;letter-spacing:0.28px;}
+#tp_4{left:403px;bottom:765px;letter-spacing:0.28px;}
+#tq_4{left:403px;bottom:729px;letter-spacing:0.28px;}
+#tr_4{left:403px;bottom:692px;letter-spacing:0.28px;}
+#ts_4{left:403px;bottom:656px;letter-spacing:0.28px;}
+#tt_4{left:72px;bottom:511px;}
+#tu_4{left:99px;bottom:511px;}
+#tv_4{left:126px;bottom:511px;}
+#tw_4{left:153px;bottom:511px;}
+#tx_4{left:180px;bottom:511px;}
+#ty_4{left:207px;bottom:511px;}
+#tz_4{left:233px;bottom:511px;}
+#t10_4{left:260px;bottom:511px;}
+#t11_4{left:287px;bottom:511px;}
+#t12_4{left:314px;bottom:511px;}
+#t13_4{left:341px;bottom:511px;}
+#t14_4{left:72px;bottom:475px;letter-spacing:7.57px;}
+#t15_4{left:72px;bottom:583px;}
+#t16_4{left:102px;bottom:583px;}
+#t17_4{left:132px;bottom:583px;}
+#t18_4{left:162px;bottom:583px;}
+#t19_4{left:192px;bottom:583px;}
+#t1a_4{left:222px;bottom:583px;}
+#t1b_4{left:252px;bottom:583px;}
+#t1c_4{left:281px;bottom:583px;}
+#t1d_4{left:311px;bottom:583px;}
+#t1e_4{left:341px;bottom:583px;}
+#t1f_4{left:403px;bottom:620px;letter-spacing:0.28px;}
+#t1g_4{left:72px;bottom:438px;}
+#t1h_4{left:111px;bottom:438px;}
+#t1i_4{left:149px;bottom:438px;}
+#t1j_4{left:187px;bottom:438px;}
+#t1k_4{left:226px;bottom:438px;}
+#t1l_4{left:264px;bottom:438px;}
+#t1m_4{left:303px;bottom:438px;}
+#t1n_4{left:341px;bottom:438px;}
+#t1o_4{left:72px;bottom:402px;}
+#t1p_4{left:139px;bottom:402px;}
+#t1q_4{left:207px;bottom:402px;}
+#t1r_4{left:274px;bottom:402px;}
+#t1s_4{left:341px;bottom:402px;}
+#t1t_4{left:72px;bottom:801px;}
+#t1u_4{left:207px;bottom:801px;}
+#t1v_4{left:341px;bottom:801px;}
+#t1w_4{left:72px;bottom:765px;letter-spacing:9.49px;}
+#t1x_4{left:72px;bottom:729px;}
+#t1y_4{left:139px;bottom:729px;}
+#t1z_4{left:207px;bottom:729px;}
+#t20_4{left:274px;bottom:729px;}
+#t21_4{left:341px;bottom:729px;}
+#t22_4{left:72px;bottom:692px;}
+#t23_4{left:117px;bottom:692px;}
+#t24_4{left:162px;bottom:692px;}
+#t25_4{left:207px;bottom:692px;}
+#t26_4{left:252px;bottom:692px;}
+#t27_4{left:296px;bottom:692px;}
+#t28_4{left:341px;bottom:692px;}
+#t29_4{left:72px;bottom:656px;}
+#t2a_4{left:117px;bottom:656px;}
+#t2b_4{left:162px;bottom:656px;}
+#t2c_4{left:207px;bottom:656px;}
+#t2d_4{left:252px;bottom:656px;}
+#t2e_4{left:296px;bottom:656px;}
+#t2f_4{left:341px;bottom:656px;}
+#t2g_4{left:72px;bottom:620px;}
+#t2h_4{left:117px;bottom:620px;}
+#t2i_4{left:162px;bottom:620px;}
+#t2j_4{left:207px;bottom:620px;}
+#t2k_4{left:252px;bottom:620px;}
+#t2l_4{left:296px;bottom:620px;}
+#t2m_4{left:341px;bottom:620px;}
+#t2n_4{left:72px;bottom:329px;letter-spacing:2.81px;}
+#t2o_4{left:72px;bottom:366px;}
+#t2p_4{left:111px;bottom:366px;}
+#t2q_4{left:149px;bottom:366px;}
+#t2r_4{left:187px;bottom:366px;}
+#t2s_4{left:226px;bottom:366px;}
+#t2t_4{left:264px;bottom:366px;}
+#t2u_4{left:303px;bottom:366px;}
+#t2v_4{left:341px;bottom:366px;}
+#t2w_4{left:437px;bottom:301px;letter-spacing:0.11px;}
+#t2x_4{left:99px;bottom:238px;letter-spacing:0.34px;}
+#t2y_4{left:294px;bottom:238px;letter-spacing:0.34px;}
+#t2z_4{left:495px;bottom:238px;letter-spacing:0.34px;}
+#t30_4{left:163px;bottom:211px;}
+#t31_4{left:72px;bottom:874px;letter-spacing:9.65px;}
+#t32_4{left:72px;bottom:838px;}
+#t33_4{left:207px;bottom:838px;}
+#t34_4{left:341px;bottom:838px;}
+#t35_4{left:360px;bottom:211px;}
+#t36_4{left:403px;bottom:511px;letter-spacing:0.28px;}
+#t37_4{left:403px;bottom:475px;letter-spacing:0.28px;}
+#t38_4{left:403px;bottom:438px;letter-spacing:0.28px;}
+#t39_4{left:402px;bottom:402px;letter-spacing:0.28px;}
+#t3a_4{left:705px;bottom:238px;letter-spacing:0.36px;}
+#t3b_4{left:554px;bottom:211px;}
+#t3c_4{left:402px;bottom:366px;letter-spacing:0.28px;}
+#t3d_4{left:402px;bottom:329px;letter-spacing:0.28px;}
+#t3e_4{left:750px;bottom:211px;}
+#t3f_4{left:855px;bottom:208px;letter-spacing:0.11px;}
+#t3g_4{left:45px;bottom:1218px;letter-spacing:-0.07px;}
+#t3h_4{left:214px;bottom:1218px;letter-spacing:-0.09px;}
+#t3i_4{left:45px;bottom:1174px;letter-spacing:-0.09px;}
+#t3j_4{left:45px;bottom:1152px;letter-spacing:-0.09px;}
+#t3k_4{left:45px;bottom:1131px;letter-spacing:-0.11px;}
+#t3l_4{left:45px;bottom:1089px;letter-spacing:-0.1px;}
+#t3m_4{left:45px;bottom:1069px;letter-spacing:-0.11px;}
+#t3n_4{left:45px;bottom:1049px;letter-spacing:-0.11px;}
+#t3o_4{left:671px;bottom:131px;letter-spacing:-0.06px;}
+#t3p_4{left:671px;bottom:110px;letter-spacing:-0.06px;}
+#t3q_4{left:671px;bottom:88px;letter-spacing:-0.02px;}
+#t3r_4{left:671px;bottom:68px;letter-spacing:0.2px;}
+#t3s_4{left:688px;bottom:68px;letter-spacing:-0.11px;}
+#t3t_4{left:671px;bottom:48px;letter-spacing:0.07px;}
+#t3u_4{left:91px;bottom:131px;letter-spacing:-0.02px;}
+#t3v_4{left:194px;bottom:131px;letter-spacing:-0.1px;}
+#t3w_4{left:91px;bottom:109px;}
+#t3x_4{left:91px;bottom:67px;letter-spacing:-0.09px;}
+#t3y_4{left:496px;bottom:67px;letter-spacing:-0.09px;}
+#t3z_4{left:91px;bottom:47px;letter-spacing:-0.01px;}
+#t40_4{left:441px;bottom:15px;letter-spacing:0.03px;word-spacing:-0.09px;}
+
+#q_3_syuyosangyo_1{left:390px;bottom:874px;letter-spacing:0.28px;z-index: 99;}
+#q_3_syuyosangyo_2{left:390px;bottom:838px;letter-spacing:0.28px;z-index: 99;}
+#q_3_syuyosangyo_3{left:390px;bottom:801px;letter-spacing:0.28px;z-index: 99;}
+#q_3_syuyosangyo_4{left:390px;bottom:765px;letter-spacing:0.28px;z-index: 99;}
+#q_3_syuyosangyo_5{left:390px;bottom:729px;letter-spacing:0.28px;z-index: 99;}
+#q_3_syuyosangyo_6{left:390px;bottom:692px;letter-spacing:0.28px;z-index: 99;}
+#q_3_syuyosangyo_7{left:390px;bottom:656px;letter-spacing:0.28px;z-index: 99;}
+#q_3_syuyosangyo_8{left:390px;bottom:620px;letter-spacing:0.28px;z-index: 99;}
+#q_3_syuyosangyo_9{left:390px;bottom:583px;letter-spacing:0.28px;z-index: 99;}
+#q_3_syuyosangyo_10{left:390px;bottom:547px;letter-spacing:0.28px;z-index: 99;}
+#q_3_syuyosangyo_11{left:390px;bottom:511px;letter-spacing:0.28px;z-index: 99;}
+#q_3_syuyosangyo_12{left:390px;bottom:475px;letter-spacing:0.28px;z-index: 99;}
+#q_3_syuyosangyo_13{left:390px;bottom:438px;letter-spacing:0.28px;z-index: 99;}
+#q_3_syuyosangyo_14{left:390px;bottom:402px;letter-spacing:0.28px;z-index: 99;}
+#q_3_syuyosangyo_15{left:390px;bottom:366px;letter-spacing:0.28px;z-index: 99;}
+#q_3_syuyosangyo_16{left:390px;bottom:329px;letter-spacing:0.28px;z-index: 99;}
+
+#q_4_syugyoketai_1{left:155px;bottom:211px;z-index: 99;}
+#q_4_syugyoketai_2{left:355px;bottom:211px;z-index: 99;}
+#q_4_syugyoketai_3{left:555px;bottom:211px;z-index: 99;}
+#q_4_syugyoketai_4{left:755px;bottom:211px;z-index: 99;}
+
+
+
+.s1_4{font-size:14px;font-family:MS-PMincho_235;color:#000;}
+.s2_4{font-size:14px;font-family:MS-PGothic_239;color:#000;-webkit-text-stroke:0.4px #000;text-stroke:0.4px #000;}
+.s3_4{font-size:15px;font-family:MS-PMincho_235;color:#000;}
+.s4_4{font-size:15px;font-family:MS-PGothic_239;color:#000;-webkit-text-stroke:0.4px #000;text-stroke:0.4px #000;}
+.s5_4{font-size:15px;font-family:MS-Mincho_23d;color:#000;}
+.s6_4{font-size:12px;font-family:MS-PMincho_235;color:#000;}
+.s7_4{font-size:17px;font-family:MS-PGothic_239;color:#000;-webkit-text-stroke:0.5px #000;text-stroke:0.5px #000;}
+.s8_4{font-size:17px;font-family:MS-PGothic_239;color:#000;}
+
+#color_1{left:361px;bottom:868px;letter-spacing:0.28px;width:98px;height:34px;background-color: yellow;}
+#color_2{left:361px;bottom:832px;letter-spacing:0.28px;width:98px;height:34.5px;background-color: yellow;}
+#color_3{left:361px;bottom:795.5px;letter-spacing:0.28px;width:98px;height:34px;background-color: yellow;}
+#color_4{left:361px;bottom:759.5px;letter-spacing:0.28px;width:98px;height:34px;background-color: yellow;}
+#color_5{left:361px;bottom:723.3px;letter-spacing:0.28px;width:98px;height:34px;background-color: yellow;}
+#color_6{left:361px;bottom:687.5px;letter-spacing:0.28px;width:98.5px;height:34px;background-color: yellow;}
+#color_7{left:361px;bottom:651px;letter-spacing:0.28px;width:98px;height:34px;background-color: yellow;}
+#color_8{left:361px;bottom:614px;letter-spacing:0.28px;width:98px;height:34px;background-color: yellow;}
+#color_9{left:361px;bottom:578px;letter-spacing:0.28px;width:98px;height:34px;background-color: yellow;}
+#color_10{left:361px;bottom:541.5px;letter-spacing:0.28px;width:98px;height:34px;background-color: yellow;}
+
+#color_11{left:361px;bottom:505.5px;letter-spacing:0.28px;width:98px;height:34px;background-color: yellow;}
+#color_12{left:361px;bottom:469px;letter-spacing:0.28px;width:98px;height:34px;background-color: yellow;}
+#color_13{left:361px;bottom:433px;letter-spacing:0.28px;width:98px;height:34px;background-color: yellow;}
+#color_14{left:361px;bottom:397px;letter-spacing:0.28px;width:98px;height:34px;background-color: yellow;}
+#color_15{left:361px;bottom:361px;letter-spacing:0.28px;width:98px;height:34px;background-color: yellow;}
+#color_16{left:361px;bottom:324.5px;letter-spacing:0.28px;width:98px;height:34px;background-color: yellow;}
+
+#color_17{left:71.5px;bottom:210px;letter-spacing:0.28px;width:193px;height:25px;background-color: yellow;background-image: radial-gradient(black 30%, transparent 30%);background-size: 3px 3px;}
+#color_18{left:267.5px;bottom:210px;letter-spacing:0.28px;width:192px;height:25px;background-color: yellow;background-image: radial-gradient(black 30%, transparent 30%);background-size: 3px 3px;}
+#color_19{left:461.5px;bottom:210px;letter-spacing:0.28px;width:193.5px;height:25px;background-color: yellow;background-image: radial-gradient(black 30%, transparent 30%);background-size: 3px 3px;}
+#color_20{left:658px;bottom:210px;letter-spacing:0.28px;width:193px;height:25px;background-color: yellow;}
+
+
+
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts4" type="text/css" >
+
+@font-face {
+	font-family: MS-Mincho_23d;
+	src: url("css/fonts/MS-Mincho_23d.woff") format("woff");
+}
+
+@font-face {
+	font-family: MS-PGothic_239;
+	src: url("css/fonts/MS-PGothic_239.woff") format("woff");
+}
+
+@font-face {
+	font-family: MS-PMincho_235;
+	src: url("css/fonts/MS-PMincho_235.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin page background -->
+<div id="pg4Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg4" style="-webkit-user-select: none;"><object width="918" height="1299" data="img/4/4.svg" type="image/svg+xml" id="pdf4" style="width:918px; height:1299px; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<form name ="myForm">
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_4" class="t s1_4">(注12) </div>
+<div id="t2_4" class="t s1_4">「</div>
+<div id="t3_4" class="t s2_4">単独事業所</div>
+<div id="t4_4" class="t s1_4">」とは、他の場所に同一経営の本所（本社・本店）や支所（支社・支店）を持たない事業所をいいます。</div>
+<div id="t5_4" class="t s1_4">(注13) </div>
+<div id="t6_4" class="t s1_4">「</div>
+<div id="t7_4" class="t s2_4">本所</div>
+<div id="t8_4" class="t s1_4">」とは、他の場所に同一の支所（支社・支店）があって、それらの全てを統括している事業所をいいます。</div>
+<div id="t9_4" class="t s1_4">(注14) </div>
+<div id="ta_4" class="t s1_4">「</div>
+<div id="tb_4" class="t s2_4">支所</div>
+<div id="tc_4" class="t s1_4">」とは、本所(本社・本店）から統括を受けている事業所をいいます。</div>
+<div id="td_4" class="t s3_4">問３</div>
+<div id="te_4" class="t s3_4">組織全体の主要産業を一つ選んでください。</div>
+<div id="tf_4" class="t s3_4">問４</div>
+<div id="tg_4" class="t s3_4">組織全体で雇用している「パートタイム・有期雇用労働者」の就業形態を</div>
+<div id="th_4" class="t s4_4">すべて</div>
+<div id="ti_4" class="t s3_4">選んでください。</div>
+<div id="tj_4" class="t s5_4">01</div>
+<div id ="q_3_syuyosangyo_1"  class="t s1_3">
+	<input type ="radio" class="radio-button" name="q_3_syuyosangyo" value="1">
+</div>
+<div id="tk_4" class="t s5_4">02</div>
+<div id ="q_3_syuyosangyo_2"  class="t s1_3">
+	<input type ="radio" class="radio-button" name="q_3_syuyosangyo" value="2">
+</div>
+<div id ="q_3_syuyosangyo_3"  class="t s1_3">
+	<input type ="radio" class="radio-button" name="q_3_syuyosangyo" value="3">
+</div>
+<div id ="q_3_syuyosangyo_4"  class="t s1_3">
+	<input type ="radio" class="radio-button" name="q_3_syuyosangyo" value="4">
+</div>
+<div id ="q_3_syuyosangyo_5"  class="t s1_3">
+	<input type ="radio" class="radio-button" name="q_3_syuyosangyo" value="5">
+</div>
+<div id ="q_3_syuyosangyo_6"  class="t s1_3">
+	<input type ="radio" class="radio-button" name="q_3_syuyosangyo" value="6">
+</div>
+<div id ="q_3_syuyosangyo_7"  class="t s1_3">
+	<input type ="radio" class="radio-button" name="q_3_syuyosangyo" value="7">
+</div>
+<div id ="q_3_syuyosangyo_8"  class="t s1_3">
+	<input type ="radio" class="radio-button" name="q_3_syuyosangyo" value="8">
+</div>
+<div id ="q_3_syuyosangyo_9"  class="t s1_3">
+	<input type ="radio" class="radio-button" name="q_3_syuyosangyo" value="9">
+</div>
+<div id ="q_3_syuyosangyo_10"  class="t s1_3">
+	<input type ="radio" class="radio-button" name="q_3_syuyosangyo"value="10">
+</div>
+<div id ="q_3_syuyosangyo_11"  class="t s1_3">
+	<input type ="radio" class="radio-button" name="q_3_syuyosangyo"value="11">
+</div> 
+<div id ="q_3_syuyosangyo_12"  class="t s1_3">
+	<input type ="radio" class="radio-button" name="q_3_syuyosangyo"value="12">
+</div>
+<div id ="q_3_syuyosangyo_13"  class="t s1_3">
+	<input type ="radio" class="radio-button" name="q_3_syuyosangyo" value="13">
+</div>
+<div id ="q_3_syuyosangyo_14"  class="t s1_3">
+	<input type ="radio" class="radio-button" name="q_3_syuyosangyo" value="14">
+</div>
+<div id ="q_3_syuyosangyo_15"  class="t s1_3">
+	<input type ="radio" class="radio-button" name="q_3_syuyosangyo" value="15">
+</div>
+<div id ="q_3_syuyosangyo_16"  class="t s1_3">
+	<input type ="radio" class="radio-button" name="q_3_syuyosangyo" value="16">
+</div>
+<div id ="q_4_syugyoketai_1"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-button" id  ="q_4_syu_1" onclick="disable();" name="q_4_syugyoketai"value ="1">
+</div>
+<div id ="q_4_syugyoketai_2"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-button" id  ="q_4_syu_2" onclick="disable();" name="q_4_syugyoketai" value ="2">
+</div>
+<div id ="q_4_syugyoketai_3"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-button" id  ="q_4_syu_3" onclick="disable();" name="q_4_syugyoketai" value ="3">
+</div>
+<div id ="q_4_syugyoketai_4"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-button" id  ="q_4_syu_4"  onclick="disable();" name="q_4_syugyoketai" value="4" value ="4">
+</div>
+<script>
+	function disable() {
+		n=0;
+		if (document.getElementById('q_4_syu_1').checked || document.getElementById('q_4_syu_2').checked || document.getElementById('q_4_syu_3').checked ){
+			document.getElementById("color_20").style.backgroundColor = "grey";
+			document.getElementById("q_4_syu_4").disabled = true;
+			document.getElementById("q_4_syu_4").checked = false;
+		} else {
+			document.getElementById("color_20").style.backgroundColor = "yellow";
+			document.getElementById("q_4_syu_4").disabled = false;
+		}
+
+		if (document.getElementById('q_4_syu_4').checked){
+			document.getElementById("color_19").style.backgroundColor = "grey";
+			document.getElementById("color_18").style.backgroundColor = "grey";
+			document.getElementById("color_17").style.backgroundColor = "grey";
+			document.getElementById("q_4_syu_1").disabled = true;
+			document.getElementById("q_4_syu_1").checked = false;
+			document.getElementById("q_4_syu_2").disabled = true;
+			document.getElementById("q_4_syu_2").checked = false;
+			document.getElementById("q_4_syu_3").disabled = true;
+			document.getElementById("q_4_syu_3").checked = false;
+		} else {
+			document.getElementById("color_19").style.backgroundColor = "yellow";
+			document.getElementById("color_18").style.backgroundColor = "yellow";
+			document.getElementById("color_17").style.backgroundColor = "yellow";
+			document.getElementById("q_4_syu_1").disabled = false;
+			document.getElementById("q_4_syu_2").disabled = false;
+			document.getElementById("q_4_syu_3").disabled = false;
+		}
+	}
+</script>
+
+<div id ="color_1"  class="t s6_10"></div>
+<div id ="color_2"  class="t s6_10"></div>
+<div id ="color_3"  class="t s6_10"></div>
+<div id ="color_4"  class="t s6_10"></div>
+<div id ="color_5"  class="t s6_10"></div>
+<div id ="color_6"  class="t s6_10"></div>
+<div id ="color_7"  class="t s6_10"></div>
+<div id ="color_8"  class="t s6_10"></div>
+<div id ="color_9"  class="t s6_10"></div>
+<div id ="color_10"  class="t s6_10"></div>
+<div id ="color_11"  class="t s6_10"></div>
+<div id ="color_12"  class="t s6_10"></div>
+<div id ="color_13"  class="t s6_10"></div>
+<div id ="color_14"  class="t s6_10"></div>
+<div id ="color_15"  class="t s6_10"></div>
+<div id ="color_16"  class="t s6_10"></div>
+<div id ="color_17"  class="t s6_10"></div>
+<div id ="color_18"  class="t s6_10"></div>
+<div id ="color_19"  class="t s6_10"></div>
+<div id ="color_20"  class="t s6_10"></div>
+
+<div id="tl_4" class="t s5_4">学術研究，専門･技術サ－ビス業</div>
+<div id="tm_4" class="t s5_4">09</div>
+<div id="tn_4" class="t s5_4">10</div>
+<div id="to_4" class="t s5_4">03</div>
+<div id="tp_4" class="t s5_4">04</div>
+<div id="tq_4" class="t s5_4">05</div>
+<div id="tr_4" class="t s5_4">06</div>
+<div id="ts_4" class="t s5_4">07</div>
+<div id="tt_4" class="t s5_4">宿</div>
+<div id="tu_4" class="t s5_4">泊</div>
+<div id="tv_4" class="t s5_4">業</div>
+<div id="tw_4" class="t s5_4">，</div>
+<div id="tx_4" class="t s5_4">飲</div>
+<div id="ty_4" class="t s5_4">食</div>
+<div id="tz_4" class="t s5_4">サ</div>
+<div id="t10_4" class="t s5_4">－</div>
+<div id="t11_4" class="t s5_4">ビ</div>
+<div id="t12_4" class="t s5_4">ス</div>
+<div id="t13_4" class="t s5_4">業</div>
+<div id="t14_4" class="t s5_4">生活関連サ－ビス業，娯楽業</div>
+<div id="t15_4" class="t s5_4">不</div>
+<div id="t16_4" class="t s5_4">動</div>
+<div id="t17_4" class="t s5_4">産</div>
+<div id="t18_4" class="t s5_4">業</div>
+<div id="t19_4" class="t s5_4">，</div>
+<div id="t1a_4" class="t s5_4">物</div>
+<div id="t1b_4" class="t s5_4">品</div>
+<div id="t1c_4" class="t s5_4">賃</div>
+<div id="t1d_4" class="t s5_4">貸</div>
+<div id="t1e_4" class="t s5_4">業</div>
+<div id="t1f_4" class="t s5_4">08</div>
+<div id="t1g_4" class="t s5_4">教</div>
+<div id="t1h_4" class="t s5_4">育</div>
+<div id="t1i_4" class="t s5_4">，</div>
+<div id="t1j_4" class="t s5_4">学</div>
+<div id="t1k_4" class="t s5_4">習</div>
+<div id="t1l_4" class="t s5_4">支</div>
+<div id="t1m_4" class="t s5_4">援</div>
+<div id="t1n_4" class="t s5_4">業</div>
+<div id="t1o_4" class="t s5_4">医</div>
+<div id="t1p_4" class="t s5_4">療</div>
+<div id="t1q_4" class="t s5_4">，</div>
+<div id="t1r_4" class="t s5_4">福</div>
+<div id="t1s_4" class="t s5_4">祉</div>
+<div id="t1t_4" class="t s5_4">製</div>
+<div id="t1u_4" class="t s5_4">造</div>
+<div id="t1v_4" class="t s5_4">業</div>
+<div id="t1w_4" class="t s5_4">電気･ガス･熱供給･水道業</div>
+<div id="t1x_4" class="t s5_4">情</div>
+<div id="t1y_4" class="t s5_4">報</div>
+<div id="t1z_4" class="t s5_4">通</div>
+<div id="t20_4" class="t s5_4">信</div>
+<div id="t21_4" class="t s5_4">業</div>
+<div id="t22_4" class="t s5_4">運</div>
+<div id="t23_4" class="t s5_4">輸</div>
+<div id="t24_4" class="t s5_4">業</div>
+<div id="t25_4" class="t s5_4">，</div>
+<div id="t26_4" class="t s5_4">郵</div>
+<div id="t27_4" class="t s5_4">便</div>
+<div id="t28_4" class="t s5_4">業</div>
+<div id="t29_4" class="t s5_4">卸</div>
+<div id="t2a_4" class="t s5_4">売</div>
+<div id="t2b_4" class="t s5_4">業</div>
+<div id="t2c_4" class="t s5_4">，</div>
+<div id="t2d_4" class="t s5_4">小</div>
+<div id="t2e_4" class="t s5_4">売</div>
+<div id="t2f_4" class="t s5_4">業</div>
+<div id="t2g_4" class="t s5_4">金</div>
+<div id="t2h_4" class="t s5_4">融</div>
+<div id="t2i_4" class="t s5_4">業</div>
+<div id="t2j_4" class="t s5_4">，</div>
+<div id="t2k_4" class="t s5_4">保</div>
+<div id="t2l_4" class="t s5_4">険</div>
+<div id="t2m_4" class="t s5_4">業</div>
+<div id="t2n_4" class="t s5_4">サービス業(他に分類されないもの)</div>
+<div id="t2o_4" class="t s5_4">複</div>
+<div id="t2p_4" class="t s5_4">合</div>
+<div id="t2q_4" class="t s5_4">サ</div>
+<div id="t2r_4" class="t s5_4">－</div>
+<div id="t2s_4" class="t s5_4">ビ</div>
+<div id="t2t_4" class="t s5_4">ス</div>
+<div id="t2u_4" class="t s5_4">事</div>
+<div id="t2v_4" class="t s5_4">業</div>
+<div id="t2w_4" class="t s6_4"></div>
+<div id="t2x_4" class="t s3_4">無期雇用パートタイム</div>
+<div id="t2y_4" class="t s3_4">有期雇用パートタイム</div>
+<div id="t2z_4" class="t s3_4">有期雇用フルタイム</div>
+<div id="t30_4" class="t s3_4">１</div>
+<div id="t31_4" class="t s5_4">鉱業，採石業，砂利採取業</div>
+<div id="t32_4" class="t s5_4">建</div>
+<div id="t33_4" class="t s5_4">設</div>
+<div id="t34_4" class="t s5_4">業</div>
+<div id="t35_4" class="t s3_4">2</div>
+<div id="t36_4" class="t s5_4">11</div>
+<div id="t37_4" class="t s5_4">12</div>
+<div id="t38_4" class="t s5_4">13</div>
+<div id="t39_4" class="t s3_4">14</div>
+<div id="t3a_4" class="t s3_4">雇用していない</div>
+<div id="t3b_4" class="t s3_4">３</div>
+<div id="t3c_4" class="t s3_4">15</div>
+<div id="t3d_4" class="t s3_4">16</div>
+<div id="t3e_4" class="t s3_4">４</div>
+<div id="t3f_4" class="t s6_4"></div>
+<div id="t3g_4" class="t s7_4">貴事業所が単独事業所</div>
+<div id="t3h_4" class="t s7_4">(注12）又は本所（注13）である場合は、この頁の問３以降に回答してください。</div>
+<div id="t3i_4" class="t s7_4">支所（注14）の場合は、これで質問は終わりです。ご協力ありがとうございました。</div>
+<div id="t3j_4" class="t s7_4">令和３年10月15日（金）までに、回答してください。</div>
+<div id="t3k_4" class="t s7_4">後日、ご回答いただいた労働者数に応じ、個人票を送付いたしますので、調査にご協力お願します。</div>
+<div id="t3l_4" class="t s7_4">「無期雇用パートタイム」「有期雇用パートタイム」「有期雇用フルタイム」のうち、貴事業所が属する組織全体（本社、支</div>
+<div id="t3m_4" class="t s7_4">社、営業所、工場等を含む。以下同じ。）で雇用している各就業形態毎に回答してください。各就業形態の内で、職種</div>
+<div id="t3n_4" class="t s7_4">や事業所、個々の労働者によって取扱いが異なる場合は、最も人数が多い取扱いについて記入してください。</div>
+<div id="t3o_4" class="t s7_4">「４」を選択した場合は、</div>
+<div id="t3p_4" class="t s7_4">これで調査は終わりで</div>
+<div id="t3q_4" class="t s7_4">す。</div>
+<div id="t3r_4" class="t s7_4">12</div>
+<div id="t3s_4" class="t s7_4">ページの末尾をご覧く</div>
+<div id="t3t_4" class="t s7_4">ださい。</div>
+<div id="t3u_4" class="t s7_4">問５～問９、問</div>
+<div id="t3v_4" class="t s7_4">10（１）（３）は、問４で選択した就業形態のみについて、回答し</div>
+<div id="t3w_4" class="t s7_4">てください。</div>
+<div id="t3x_4" class="t s7_4">なお、正社員がいない場合は、これで調査は終わりです。</div>
+<div id="t3y_4" class="t s7_4">12ページの末尾を</div>
+<div id="t3z_4" class="t s7_4">ご覧ください。</div>
+<div id="t40_4" class="t s8_4">- 4 -</div>
+
+<!--
+	4.2.5 (15) モダールウィンドウを表示する
+	・modal_conf(確認、キャンセル／OKボタンを配置)
+	
+	chosahyo.jsでMODAL_CONFを指定すると利用できます。
+-->
+<div class="modal fade" id="modal_conf" data-backdrop="static" tabindex="-1">
+	<div class="modal-dialog">
+	<div class="modal-content">
+	<div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span>×</span></button><h4 class="modal-title"></h4></div>
+	<div class="modal-body"><div class="alert alert-success tokei-alert-confirmation cf"><span class="glyphicon tokei-glyphicon-confirmation" aria-hidden="true"></span><div class="tokei-alert-inner"></div></div></div>
+	<div class="modal-footer"><button type="button" class="btn tokei-btn-important" data-dismiss="modal">OK</button></div>
+	</div>
+	</div>
+	</div>
+	<!--
+		4.2.5 (15) モダールウィンドウを表示する
+		・modal_warn(警告、OKボタンのみ配置)
+		
+		chosahyo.jsでMODAL_WARNを指定すると利用できます。
+	-->
+	<div class="modal fade" id="modal_warn" data-backdrop="static" tabindex="-1">
+	<div class="modal-dialog">
+	<div class="modal-content">
+	<div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span>×</span></button><h4 class="modal-title"></h4></div>
+	<div class="modal-body"><div class="alert alert-warning tokei-alert-warning cf"><span class="glyphicon tokei-glyphicon-warning" aria-hidden="true"></span><div class="tokei-alert-inner"></div></div></div>
+	<div class="modal-footer"><button type="button" class="btn tokei-btn-important" data-dismiss="modal">OK</button></div>
+	</div>
+	</div>
+	</div>
+	<!--
+		4.2.5 (15) モダールウィンドウを表示する
+		・modal_error(エラー用、OKボタンのみ配置)
+		
+		chosahyo.jsでMODAL_ERRORを指定すると利用できます。
+	-->
+	<div class="modal fade" id="modal_error" data-backdrop="static" tabindex="-1">
+	<div class="modal-dialog">
+	<div class="modal-content">
+	<div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span>×</span></button><h4 class="modal-title"></h4></div>
+	<div class="modal-body"><div class="alert alert-danger tokei-alert-danger cf"><span class="glyphicon tokei-glyphicon-danger" aria-hidden="true"></span><div class="tokei-alert-inner"></div></div></div>
+	<div class="modal-footer"><button type="button" class="btn tokei-btn-important" data-dismiss="modal">OK</button></div>
+	</div>
+	</div>
+	</div>
+</form>>
+<!-- End text definitions -->
+
+
+</div>
+</body>
+</html>

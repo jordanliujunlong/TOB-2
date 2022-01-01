@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+<link rel="stylesheet" href="./js/lib/bootstrap-3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="./js/lib/bootstrap-3.3.6/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="./css/toukei.main.css">
+<script src="./js/lib/jquery-1.11.3.min.js"></script>
+<script src="./js/lib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+<script src="./js/tokei.main.js"></script>
+<script src="./js/chosahyo.js"></script>
+
+<div id ="common-bar">
+	<button type="button-1" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" style="position: absolute; left: 450px; top: 15px;z-index: 10">回答の一時保存</button>
+	<button type="button-2" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" style="position: absolute; left: 620px; top: 15px;z-index: 10">一時保存した回答の取得</button>
+	<a href="javascript:CmnPageClear(myForm)"><button type="button-3" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" style="position: absolute; left: 860px; top: 15px;z-index: 10">クリア</button></a>
+	<a href="./1.html"><button type="button-5" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" style="position: absolute; left: 180px; top: 804px; z-index: 10;">1ページ目</button></a>
+	<a href="javascript:CmnExecChk12(myForm)"><button type="button-5" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" style="position: absolute; left: 350px; top: 870px; z-index: 10;">調査票一覧</button></a>
+	<a href="javascript:CmnExecChk12(myForm)"><button type="button-5" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" style="position: absolute; left: 630px; top: 870px; z-index: 10;">入力チェック</button></a>
+	<a href="javascript:CmnExecChk12(myForm)"><button type="button-5" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" style="position: absolute; left: 800px; top: 870px; z-index: 10;">回答の送信</button></a>
+	<a href="javascript:CmnExecChk12(myForm)"><button type="button-5" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" style="position: absolute; left: 940px; top: 870px; z-index: 10;">ログアウト</button></a>
+	<input
+	action="action"
+    onclick="window.history.go(-1); return false;"
+	class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command"
+    type="submit"
+	style="position: absolute; left: 180px; top: 870px; width: 120px; z-index: 10"
+    value="前ページへ"
+/>
+</div>
+<script>
+function disable0() {
+	if (document.getElementsByClassName('checkbox-1')[0].checked){
+		document.getElementsByClassName('checkbox-1')[8].checked=false;
+		document.getElementsByClassName('checkbox-1')[9].checked=false;
+		for (i=0;i<8;i++){
+			document.getElementsByClassName('checkbox-button')[i].disabled=false;
+		}
+		document.getElementById('color_11').style.backgroundColor='yellow';
+		document.getElementById('color_12').style.backgroundColor='yellow';
+		document.getElementById('color_13').style.backgroundColor='yellow';
+		document.getElementById('color_14').style.backgroundColor='yellow';
+		document.getElementById('color_15').style.backgroundColor='yellow';
+		document.getElementById('color_16').style.backgroundColor='yellow';
+		document.getElementById('color_17').style.backgroundColor='yellow';
+		document.getElementById('color_18').style.backgroundColor='yellow';
+	} else {
+		for (i=0;i<8;i++){
+			document.getElementsByClassName('checkbox-button')[i].disabled=true;
+		}
+		document.getElementById('color_11').style.backgroundColor='grey';
+		document.getElementById('color_12').style.backgroundColor='grey';
+		document.getElementById('color_13').style.backgroundColor='grey';
+		document.getElementById('color_14').style.backgroundColor='grey';
+		document.getElementById('color_15').style.backgroundColor='grey';
+		document.getElementById('color_16').style.backgroundColor='grey';
+		document.getElementById('color_17').style.backgroundColor='grey';
+		document.getElementById('color_18').style.backgroundColor='grey';
+	}
+}
+function disable1() {
+	for (i=1;i<8;i++){
+		if (document.getElementsByClassName('checkbox-1')[i].checked){
+			n=true;
+			break;
+		}
+	}
+	document.getElementsByClassName('checkbox-1')[8].checked=false;
+	document.getElementsByClassName('checkbox-1')[9].checked=false;
+}
+function disable2() {
+	if (document.getElementsByClassName('checkbox-1')[8].checked){
+		for (i=1;i<8;i++){
+			document.getElementsByClassName('checkbox-1')[i].checked=false;
+		}
+		document.getElementsByClassName('checkbox-1')[9].checked=false;
+	}
+}
+function disable3() {
+	if (document.getElementsByClassName('checkbox-1')[9].checked){
+		for (i=1;i<9;i++){
+			document.getElementsByClassName('checkbox-1')[i].checked=false;
+		}
+	}
+}
+</script>
+<div id="p12" style="overflow: hidden; position: relative; background-color: white; width: 918px; height: 1299px;left: 185px; top: 65px;">
+
+<!-- Begin shared CSS values -->
+<style class="shared-css" type="text/css" >
+.t {
+	transform-origin: bottom left;
+	z-index: 2;
+	position: absolute;
+	white-space: pre;
+	overflow: visible;
+	line-height: 1.5;
+}
+</style>
+<!-- End shared CSS values -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_12{left:38px;bottom:1218px;letter-spacing:0.29px;}
+#t2_12{left:79px;bottom:1218px;letter-spacing:0.34px;}
+#t3_12{left:64px;bottom:1193px;letter-spacing:0.34px;}
+#t4_12{left:64px;bottom:1168px;letter-spacing:0.32px;}
+#t5_12{left:225px;bottom:1168px;letter-spacing:0.55px;}
+#t6_12{left:269px;bottom:1168px;letter-spacing:0.3px;}
+#t7_12{left:115px;bottom:757px;letter-spacing:0.33px;}
+#t8_12{left:486px;bottom:757px;letter-spacing:0.55px;}
+#t9_12{left:531px;bottom:757px;letter-spacing:0.3px;}
+#ta_12{left:247px;bottom:619px;letter-spacing:0.47px;}
+#tb_12{left:708px;bottom:677px;}
+#tc_12{left:128px;bottom:714px;letter-spacing:0.37px;}
+#td_12{left:229px;bottom:714px;letter-spacing:0.37px;}
+#te_12{left:315px;bottom:714px;letter-spacing:0.37px;}
+#tf_12{left:401px;bottom:714px;letter-spacing:0.37px;}
+#tg_12{left:494px;bottom:714px;letter-spacing:0.37px;}
+#th_12{left:843px;bottom:797px;letter-spacing:0.11px;}
+#ti_12{left:72px;bottom:855px;letter-spacing:0.36px;}
+#tj_12{left:146px;bottom:677px;}
+#tk_12{left:241px;bottom:677px;}
+#tl_12{left:335px;bottom:677px;}
+#tm_12{left:428px;bottom:677px;}
+#tn_12{left:521px;bottom:677px;}
+#to_12{left:574px;bottom:714px;letter-spacing:0.39px;}
+#tp_12{left:615px;bottom:677px;}
+#tq_12{left:802px;bottom:677px;}
+#tr_12{left:115px;bottom:889px;letter-spacing:0.38px;}
+#ts_12{left:806px;bottom:889px;}
+#tt_12{left:806px;bottom:924px;}
+#tu_12{left:115px;bottom:924px;letter-spacing:0.34px;}
+#tv_12{left:803px;bottom:820px;letter-spacing:0.28px;}
+#tw_12{left:806px;bottom:855px;}
+#tx_12{left:72px;bottom:820px;letter-spacing:0.34px;}
+#ty_12{left:83px;bottom:1061px;}
+#tz_12{left:83px;bottom:1044px;}
+#t10_12{left:85px;bottom:1027px;}
+#t11_12{left:84px;bottom:1010px;}
+#t12_12{left:83px;bottom:993px;}
+#t13_12{left:83px;bottom:972px;}
+#t14_12{left:84px;bottom:958px;}
+#t15_12{left:806px;bottom:992px;}
+#t16_12{left:115px;bottom:1130px;letter-spacing:0.35px;}
+#t17_12{left:115px;bottom:992px;letter-spacing:0.34px;}
+#t18_12{left:115px;bottom:958px;letter-spacing:0.35px;}
+#t19_12{left:806px;bottom:958px;}
+#t1a_12{left:115px;bottom:1027px;letter-spacing:0.37px;}
+#t1b_12{left:806px;bottom:1027px;}
+#t1c_12{left:806px;bottom:1130px;}
+#t1d_12{left:115px;bottom:1096px;letter-spacing:0.37px;}
+#t1e_12{left:806px;bottom:1096px;}
+#t1f_12{left:115px;bottom:1061px;letter-spacing:0.35px;}
+#t1g_12{left:806px;bottom:1061px;}
+#t1h_12{left:689px;bottom:723px;letter-spacing:0.36px;}
+#t1i_12{left:681px;bottom:706px;letter-spacing:0.37px;}
+#t1j_12{left:761px;bottom:714px;letter-spacing:0.39px;}
+#t1k_12{left:838px;bottom:654px;letter-spacing:0.11px;}
+#t1l_12{left:109px;bottom:578px;letter-spacing:0.47px;}
+#t1m_12{left:437px;bottom:15px;letter-spacing:0.02px;word-spacing:-0.08px;}
+
+.s1{font-size:15px;font-family:MS-PMincho_235;color:#000;}
+.s2{font-size:15px;font-family:MS-PGothic_239;color:#000;-webkit-text-stroke:0.4px #000;text-stroke:0.4px #000;}
+.s3{font-size:18px;font-family:MS-PGothic_239;color:#000;-webkit-text-stroke:0.5px #000;text-stroke:0.5px #000;}
+.s4{font-size:12px;font-family:MS-PMincho_235;color:#000;}
+.s5{font-size:15px;font-family:MS-Mincho_23d;color:#000;}
+.s6{font-size:15px;font-family:MS-PMincho_235_1;color:#000;}
+.s7{font-size:17px;font-family:MS-PGothic_239;color:#000;}
+.t.m0_12{transform:matrix(1,0,0,1,0,0);}
+.k{
+	background-image: radial-gradient(black 30%, transparent 30%);
+	background-size: 3px 3px;
+ }
+
+#q_15_mionaoshi_1{left:790px;bottom:1129px;}
+#q_15_mionaoshi_2{left:790px;bottom:1095px;}
+#q_15_mionaoshi_3{left:790px;bottom:1060px;}
+#q_15_mionaoshi_4{left:790px;bottom:1026px;}
+#q_15_mionaoshi_5{left:790px;bottom:991px;}
+#q_15_mionaoshi_6{left:790px;bottom:957px;}
+#q_15_mionaoshi_7{left:790px;bottom:923px;}
+#q_15_mionaoshi_8{left:790px;bottom:888px;}
+#q_15_mionaoshi_9{left:790px;bottom:854px;}
+#q_15_mionaoshi_10{left:790px;bottom:819px;}
+
+#q_15_taiguminaoshi_1{left:130px;bottom:676px;}
+#q_15_taiguminaoshi_2{left:225px;bottom:676px;}
+#q_15_taiguminaoshi_3{left:319px;bottom:676px;}
+#q_15_taiguminaoshi_4{left:413px;bottom:676px;}
+#q_15_taiguminaoshi_5{left:504px;bottom:676px;}
+#q_15_taiguminaoshi_6{left:599px;bottom:676px;}
+#q_15_taiguminaoshi_7{left:692px;bottom:676px;}
+#q_15_taiguminaoshi_8{left:787px;bottom:676px;}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts12" type="text/css" >
+
+@font-face {
+	font-family: MS-Mincho_23d;
+	src: url("css/fonts/MS-Mincho_23d.woff") format("woff");
+}
+
+@font-face {
+	font-family: MS-PGothic_239;
+	src: url("css/fonts/MS-PGothic_239.woff") format("woff");
+}
+
+@font-face {
+	font-family: MS-PMincho_235;
+	src: url("css/fonts/MS-PMincho_235.woff") format("woff");
+}
+
+@font-face {
+	font-family: MS-PMincho_235_1;
+	src: url("css/fonts/MS-PMincho_235_1.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin page background -->
+<div id="pg12Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg12" style="-webkit-user-select: none;"><object width="918" height="1299" data="img/12/12.svg" type="image/svg+xml" id="pdf12" style="width:918px; height:1299px; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<form name="myForm">
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_12" class="t s1">問15</div>
+<div id ="q_15_mionaoshi_1"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" onclick="disable0()" name="q_15_mionaoshi" value="1">
+</div>
+<div id ="q_15_mionaoshi_2"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" onclick="disable1()" name="q_15_mionaoshi" value="2">
+</div>
+<div id ="q_15_mionaoshi_3"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" onclick="disable1()" name="q_15_mionaoshi" value="3">
+</div>
+<div id ="q_15_mionaoshi_4"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" onclick="disable1()" name="q_15_mionaoshi" value="4">
+</div>
+<div id ="q_15_mionaoshi_5"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" onclick="disable1()" name="q_15_mionaoshi" value="5">
+</div>
+<div id ="q_15_mionaoshi_6"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" onclick="disable1()" name="q_15_mionaoshi" value="6">
+</div>
+<div id ="q_15_mionaoshi_7"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" onclick="disable1()" name="q_15_mionaoshi" value="7">
+</div>
+<div id ="q_15_mionaoshi_8"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" onclick="disable1()" name="q_15_mionaoshi" value="8">
+</div>
+<div id ="q_15_mionaoshi_9"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" onclick="disable2()" name="q_15_mionaoshi" value="9">
+</div>
+<div id ="q_15_mionaoshi_10"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" onclick="disable3()"name="q_15_mionaoshi" value="10">
+</div>
+
+<div id ="q_15_taiguminaoshi_1"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-button"  disabled="true" name="q_15_taiguminaoshi" value="1">
+</div>
+<div id ="q_15_taiguminaoshi_2"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-button"  disabled="true" name="q_15_taiguminaoshi" value="2">
+</div>
+<div id ="q_15_taiguminaoshi_3"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-button"  disabled="true" name="q_15_taiguminaoshi" value="3">
+</div>
+<div id ="q_15_taiguminaoshi_4"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-button"  disabled="true" name="q_15_taiguminaoshi" value="4">
+</div>
+<div id ="q_15_taiguminaoshi_5"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-button" disabled="true" name="q_15_taiguminaoshi" value="5">
+</div>
+<div id ="q_15_taiguminaoshi_6"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-button"  disabled="true" name="q_15_taiguminaoshi" value="6">
+</div>
+<div id ="q_15_taiguminaoshi_7"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-button"  disabled="true" name="q_15_taiguminaoshi" value="7">
+</div>
+<div id ="q_15_taiguminaoshi_8"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-button"  disabled="true" name="q_15_taiguminaoshi" value="8">
+</div>
+
+<div id ="color_1" style="background-color: yellow; left:760px;bottom:1126px; width: 100px; height: 31px;z-index: 1; " class="t s1_3 k"></div>
+<div id ="color_2" style="background-color: yellow; left:760px;bottom:1092px; width: 100px; height: 31px;z-index: 1; " class="t s1_3 k"></div>
+<div id ="color_3" style="background-color: yellow; left:760px;bottom:1057.5px; width: 100px; height: 31px;z-index: 1; " class="t s1_3 k"></div>
+<div id ="color_4" style="background-color: yellow; left:760px;bottom:1023px; width: 100px; height: 31px;z-index: 1; " class="t s1_3 k"></div>
+<div id ="color_5" style="background-color: yellow; left:760px;bottom:988.5px; width: 100px; height: 31px;z-index: 1; " class="t s1_3 k"></div>
+<div id ="color_6" style="background-color: yellow; left:760px;bottom:954px; width: 100px; height: 31px;z-index: 1; " class="t s1_3 k"></div>
+<div id ="color_7" style="background-color: yellow; left:760px;bottom:919.5px; width: 100px; height: 31px;z-index: 1; " class="t s1_3 k"></div>
+<div id ="color_8" style="background-color: yellow; left:760px;bottom:885.5px; width: 100px; height: 31px;z-index: 1; " class="t s1_3 k"></div>
+<div id ="color_9" style="background-color: yellow; left:760px;bottom:851px; width: 100px; height: 31px;z-index: 1; " class="t s1_3 k"></div>
+<div id ="color_10" style="background-color: yellow; left:760px;bottom:816.5px; width: 100px; height: 31px;z-index: 1; " class="t s1_3 k"></div>
+
+<div id ="color_11" style="background-color: grey; left:105px;bottom:675px; width: 91px; height: 28px;z-index: 1; " class="t s1_3 k"></div>
+<div id ="color_12" style="background-color: grey; left:198.5px;bottom:675px; width: 91.5px; height: 28px;z-index: 1; " class="t s1_3 k"></div>
+<div id ="color_13" style="background-color: grey; left:292.5px;bottom:675px; width: 91px; height: 28px;z-index: 1; " class="t s1_3 k"></div>
+<div id ="color_14" style="background-color: grey; left:385.8px;bottom:675px; width: 91px; height: 28px;z-index: 1; " class="t s1_3 k"></div>
+<div id ="color_15" style="background-color: grey; left:478.5px;bottom:675px; width: 91.5px; height: 28px;z-index: 1; " class="t s1_3 k"></div>
+<div id ="color_16" style="background-color: grey; left:572.5px;bottom:675px; width: 91px; height: 28px;z-index: 1; " class="t s1_3 k"></div>
+<div id ="color_17" style="background-color: grey; left:666px;bottom:675px; width: 91.5px; height: 28px;z-index: 1; " class="t s1_3 k"></div>
+<div id ="color_18" style="background-color: grey; left:759.5px;bottom:675px; width: 91.5px; height: 28px;z-index: 1; " class="t s1_3 k"></div>
+
+
+<div id="t2_12" class="t s1">令和２年４月（中小企業の場合は、令和３年４月）に施行された「不合理な待遇差の禁止」（事業主は、パートタイム･有期雇用</div>
+<div id="t3_12" class="t s1">労働者の待遇について、正社員との間で不合理な差を設けてはならない。）の規定に対応するため、どのような見直しを行い</div>
+<div id="t4_12" class="t s1">ましたか。該当するものを</div>
+<div id="t5_12" class="t s2">すべて</div>
+<div id="t6_12" class="t s1">選んでください。</div>
+<div id="t7_12" class="t s1">具体的にどのような待遇を見直しましたか。該当するものを</div>
+<div id="t8_12" class="t s2">すべて</div>
+<div id="t9_12" class="t s1">選んでください。</div>
+<div id="ta_12" class="t s3">これで調査は終わりです。ご協力ありがとうございました。</div>
+<div id="tb_12" class="t s1">7</div>
+<div id="tc_12" class="t s1">基本給</div>
+<div id="td_12" class="t s1">賞与</div>
+<div id="te_12" class="t s1">退職金</div>
+<div id="tf_12" class="t s1">通勤手当</div>
+<div id="tg_12" class="t s1">扶養手当</div>
+<div id="th_12" class="t s4"></div>
+<div id="ti_12" class="t s1">見直しは特にしていない</div>
+<div id="tj_12" class="t s1">１</div>
+<div id="tk_12" class="t s1">2</div>
+<div id="tl_12" class="t s1">3</div>
+<div id="tm_12" class="t s1">4</div>
+<div id="tn_12" class="t s1">5</div>
+<div id="to_12" class="t s1">その他の手当</div>
+<div id="tp_12" class="t s1">6</div>
+<div id="tq_12" class="t s1">8</div>
+<div id="tr_12" class="t s1">その他の見直し</div>
+<div id="ts_12" class="t s5">8</div>
+<div id="tt_12" class="t s5">7</div>
+<div id="tu_12" class="t s1">パートタイム･有期雇用労働者の活用を縮小（外注化、機械化、自動化など）</div>
+<div id="tv_12" class="t s5">10</div>
+<div id="tw_12" class="t s5">9</div>
+<div id="tx_12" class="t s1">待遇差はない</div>
+<div id="ty_12" class="t s1">見</div>
+<div id="tz_12" class="t s1">直</div>
+<div id="t10_12" class="t s1">し</div>
+<div id="t11_12" class="t s1">を</div>
+<div id="t12_12" class="t s1">行</div>
+<div id="t13_12" class="t m0_12 s6">っ</div>
+<div id="t14_12" class="t s1">た</div>
+<div id="t15_12" class="t s5">5</div>
+<div id="t16_12" class="t s1">パートタイム・有期雇用労働者の待遇の見直し</div>
+<div id="t17_12" class="t s1">パートタイム･有期雇用労働者の正社員化</div>
+<div id="t18_12" class="t s1">正社員転換制度の導入･拡充</div>
+<div id="t19_12" class="t s5">6</div>
+<div id="t1a_12" class="t s1">正社員の職務内容等の見直し</div>
+<div id="t1b_12" class="t s5">4</div>
+<div id="t1c_12" class="t s5">1</div>
+<div id="t1d_12" class="t s1">正社員の待遇の見直し</div>
+<div id="t1e_12" class="t s5">2</div>
+<div id="t1f_12" class="t s1">パートタイム･有期雇用労働者の職務内容等の見直し</div>
+<div id="t1g_12" class="t s5">3</div>
+<div id="t1h_12" class="t s1">有給の</div>
+<div id="t1i_12" class="t s1">休暇制度</div>
+<div id="t1j_12" class="t s1">その他の待遇</div>
+<div id="t1k_12" class="t s4"></div>
+<div id="t1l_12" class="t s3" style="left:235px;">「回答の送信」ボタンをクリックして回答を送信してください。</div>
+<div id="t1m_12" class="t s7">- 12 -</div>
+<!--
+	4.2.5 (15) モダールウィンドウを表示する
+	・modal_conf(確認、キャンセル／OKボタンを配置)
+	
+	chosahyo.jsでMODAL_CONFを指定すると利用できます。
+-->
+<div class="modal fade" id="modal_conf" data-backdrop="static" tabindex="-1">
+	<div class="modal-dialog">
+	<div class="modal-content">
+	<div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span>×</span></button><h4 class="modal-title"></h4></div>
+	<div class="modal-body"><div class="alert alert-success tokei-alert-confirmation cf"><span class="glyphicon tokei-glyphicon-confirmation" aria-hidden="true"></span><div class="tokei-alert-inner"></div></div></div>
+	<div class="modal-footer"><button type="button" class="btn tokei-btn-important" data-dismiss="modal">OK</button></div>
+	</div>
+	</div>
+	</div>
+	<!--
+		4.2.5 (15) モダールウィンドウを表示する
+		・modal_warn(警告、OKボタンのみ配置)
+		
+		chosahyo.jsでMODAL_WARNを指定すると利用できます。
+	-->
+	<div class="modal fade" id="modal_warn" data-backdrop="static" tabindex="-1">
+	<div class="modal-dialog">
+	<div class="modal-content">
+	<div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span>×</span></button><h4 class="modal-title"></h4></div>
+	<div class="modal-body"><div class="alert alert-warning tokei-alert-warning cf"><span class="glyphicon tokei-glyphicon-warning" aria-hidden="true"></span><div class="tokei-alert-inner"></div></div></div>
+	<div class="modal-footer"><button type="button" class="btn tokei-btn-important" data-dismiss="modal">OK</button></div>
+	</div>
+	</div>
+	</div>
+	<!--
+		4.2.5 (15) モダールウィンドウを表示する
+		・modal_error(エラー用、OKボタンのみ配置)
+		
+		chosahyo.jsでMODAL_ERRORを指定すると利用できます。
+	-->
+	<div class="modal fade" id="modal_error" data-backdrop="static" tabindex="-1">
+	<div class="modal-dialog">
+	<div class="modal-content">
+	<div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span>×</span></button><h4 class="modal-title"></h4></div>
+	<div class="modal-body"><div class="alert alert-danger tokei-alert-danger cf"><span class="glyphicon tokei-glyphicon-danger" aria-hidden="true"></span><div class="tokei-alert-inner"></div></div></div>
+	<div class="modal-footer"><button type="button" class="btn tokei-btn-important" data-dismiss="modal">OK</button></div>
+	</div>
+	</div>
+	</div>
+</form>>
+<!-- End text definitions -->
+
+
+</div>
+</body>
+</html>

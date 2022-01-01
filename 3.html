@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<link rel="stylesheet" href="./js/lib/bootstrap-3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="./js/lib/bootstrap-3.3.6/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="./css/toukei.main.css">
+<script src="./js/lib/jquery-1.11.3.min.js"></script>
+<script src="./js/lib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+<script src="./js/tokei.main.js"></script>
+<script src="./js/chosahyo.js"></script>
+
+<div id ="common-bar">
+	<button type="button-1" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" style="position: absolute; left: 450px; top: 15px;z-index: 10">回答の一時保存</button>
+	<button type="button-2" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" style="position: absolute; left: 620px; top: 15px;z-index: 10">一時保存した回答の取得</button>
+	<a href="javascript:CmnPageClear(myForm)"><button type="button-3" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" style="position: absolute; left: 860px; top: 15px;z-index: 10">クリア</button></a>
+	<a href="javascript:CmnExecChk3(myForm)"><button type="button-5" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" style="position: absolute; left: 880px; top: 1200px; z-index: 10;">次ページへ</button></a>
+    <input
+	action="action"
+    onclick="window.history.go(-1); return false;"
+	class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command"
+    type="submit"
+	style="position: absolute; left: 250px; top: 1200px; width: 120px; z-index: 10"
+    value="前ページへ"
+/>
+</div>	 
+
+<div id="p3" style="overflow: hidden; position: relative; background-color: white; width: 918px; height: 1299px;left: 185px; top: 55px;">
+
+<!-- Begin shared CSS values -->
+<style class="shared-css" type="text/css" >
+.t {
+	transform-origin: bottom left;
+	z-index: 2;
+	position: absolute;
+	white-space: pre;
+	overflow: visible;
+	line-height: 1.5;
+}
+</style>
+<!-- End shared CSS values -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_3{left:38px;bottom:1218px;letter-spacing:0.3px;}
+#t2_3{left:73px;bottom:1218px;letter-spacing:0.35px;}
+#t3_3{left:72px;bottom:1193px;letter-spacing:0.32px;}
+#t4_3{left:72px;bottom:1168px;letter-spacing:0.25px;}
+#t5_3{left:82px;bottom:1143px;letter-spacing:0.37px;}
+#t6_3{left:295px;bottom:1143px;letter-spacing:0.33px;}
+#t7_3{left:72px;bottom:1119px;letter-spacing:0.3px;}
+#t8_3{left:47px;bottom:1085px;letter-spacing:0.33px;word-spacing:-0.06px;}
+#t9_3{left:595px;bottom:1085px;letter-spacing:0.32px;}
+#ta_3{left:47px;bottom:984px;letter-spacing:0.15px;}
+#tb_3{left:74px;bottom:984px;letter-spacing:0.35px;}
+#tc_3{left:59px;bottom:960px;letter-spacing:0.31px;}
+#td_3{left:47px;bottom:413px;letter-spacing:0.11px;}
+#te_3{left:68px;bottom:413px;letter-spacing:0.54px;}
+#tf_3{left:308px;bottom:413px;letter-spacing:0.36px;}
+#tg_3{left:480px;bottom:436px;letter-spacing:0.37px;}
+#th_3{left:505px;bottom:495px;letter-spacing:0.11px;}
+#ti_3{left:505px;bottom:458px;letter-spacing:0.11px;}
+#tj_3{left:803px;bottom:553px;letter-spacing:0.37px;}
+#tk_3{left:505px;bottom:535px;letter-spacing:0.11px;}
+#tl_3{left:505px;bottom:574px;letter-spacing:0.11px;}
+#tm_3{left:829px;bottom:574px;letter-spacing:0.11px;}
+#tn_3{left:580px;bottom:639px;letter-spacing:0.03px;}
+#to_3{left:635px;bottom:621px;letter-spacing:0.01px;}
+#tp_3{left:72px;bottom:572px;letter-spacing:0.56px;}
+#tq_3{left:72px;bottom:555px;letter-spacing:0.5px;}
+#tr_3{left:215px;bottom:582px;}
+#ts_3{left:72px;bottom:494px;letter-spacing:0.56px;}
+#tt_3{left:72px;bottom:477px;letter-spacing:0.49px;}
+#tu_3{left:215px;bottom:504px;}
+#tv_3{left:215px;bottom:465px;}
+#tw_3{left:215px;bottom:543px;}
+#tx_3{left:505px;bottom:651px;letter-spacing:0.11px;}
+#ty_3{left:505px;bottom:613px;letter-spacing:0.11px;}
+#tz_3{left:505px;bottom:827px;letter-spacing:0.11px;}
+#t10_3{left:480px;bottom:729px;letter-spacing:0.37px;}
+#t11_3{left:505px;bottom:787px;letter-spacing:0.11px;}
+#t12_3{left:215px;bottom:835px;}
+#t13_3{left:215px;bottom:796px;}
+#t14_3{left:188px;bottom:920px;letter-spacing:0.61px;}
+#t15_3{left:72px;bottom:855px;letter-spacing:0.46px;}
+#t16_3{left:215px;bottom:873px;}
+#t17_3{left:505px;bottom:865px;letter-spacing:0.11px;}
+#t18_3{left:89px;bottom:785px;letter-spacing:0.03px;}
+#t19_3{left:89px;bottom:767px;}
+#t1a_3{left:72px;bottom:650px;letter-spacing:0.56px;}
+#t1b_3{left:72px;bottom:632px;letter-spacing:0.5px;}
+#t1c_3{left:215px;bottom:659px;}
+#t1d_3{left:215px;bottom:757px;}
+#t1e_3{left:314px;bottom:1011px;letter-spacing:0.13px;}
+#t1f_3{left:72px;bottom:363px;letter-spacing:0.56px;}
+#t1g_3{left:72px;bottom:346px;letter-spacing:0.42px;}
+#t1h_3{left:505px;bottom:750px;letter-spacing:0.11px;}
+#t1i_3{left:327px;bottom:1029px;}
+#t1j_3{left:505px;bottom:229px;letter-spacing:0.11px;}
+#t1k_3{left:505px;bottom:365px;letter-spacing:0.11px;}
+#t1l_3{left:215px;bottom:334px;}
+#t1m_3{left:215px;bottom:236px;}
+#t1n_3{left:215px;bottom:620px;}
+#t1o_3{left:215px;bottom:373px;}
+#t1p_3{left:505px;bottom:327px;letter-spacing:0.11px;}
+#t1q_3{left:480px;bottom:306px;letter-spacing:0.37px;}
+#t1r_3{left:505px;bottom:266px;letter-spacing:0.11px;}
+#t1s_3{left:150px;bottom:699px;letter-spacing:0.54px;}
+#t1t_3{left:480px;bottom:207px;letter-spacing:0.37px;}
+#t1u_3{left:72px;bottom:274px;letter-spacing:0.56px;}
+#t1v_3{left:72px;bottom:256px;letter-spacing:0.56px;}
+#t1w_3{left:72px;bottom:239px;letter-spacing:0.34px;}
+#t1x_3{left:215px;bottom:275px;}
+#t1y_3{left:441px;bottom:15px;letter-spacing:0.03px;word-spacing:-0.09px;}
+
+.s1_3{font-size:15px;font-family:MS-PMincho_235;color:#000;}
+.s2_3{font-size:15px;font-family:MeiryoUI-Bold_23k;color:#000;}
+.s3_3{font-size:15px;font-family:MS-PMincho_235;color:#000;-webkit-text-stroke:0.4px #000;text-stroke:0.4px #000;}
+.s4_3{font-size:15px;font-family:MS-Mincho_23d;color:#000;}
+.s5_3{font-size:12px;font-family:MS-Mincho_23d;color:#000;}
+.s6_3{font-size:17px;font-family:MS-Mincho_23d;color:#000;}
+.s7_3{font-size:21px;font-family:MS-PMincho_235;color:#000;-webkit-text-stroke:0.6px #000;text-stroke:0.6px #000;}
+.s8_3{font-size:9px;font-family:MS-PMincho_235;color:#000;}
+.s9_3{font-size:12px;font-family:MS-PMincho_235;color:#000;}
+.sa_3{font-size:17px;font-family:MS-PGothic_239;color:#000;}
+
+#q_2_rodonizu{left:34.3px;bottom:1027px;letter-spacing:0.33px;word-spacing:-0.06px;}
+#q_2_syosai_sesyain_man{left:214px;bottom:867.5px;letter-spacing:0.46px;}
+#q_2_syosai_sesyain_female{left:214px;bottom:829px;letter-spacing:0.46px;}
+#q_2_syosai_tanjikan_man{left:214px;bottom:790px;letter-spacing:0.46px;}
+#q_2_syosai_tanjikan_female{left:214px;bottom:751.5px;letter-spacing:0.46px;}
+#q_2_syosai_muki_part_man{left:214px;bottom:654px;letter-spacing:0.46px;}
+#q_2_syosai_muki_part_female{left:214px;bottom:615px;letter-spacing:0.46px;}
+#q_2_syosai_yuki_part_man{left:214px;bottom:576px;letter-spacing:0.46px;}
+#q_2_syosai_yuki_part_female{left:214px;bottom:538px;letter-spacing:0.46px;}
+#q_2_syosai_yuki_full_man{left:214px;bottom:498px;letter-spacing:0.46px;}
+#q_2_syosai_yuki_full_female{left:214px;bottom:460px;letter-spacing:0.46px;}
+#q_2_syosai_rinji_man{left:214px;bottom:367px;letter-spacing:0.46px;}
+#q_2_syosai_rinji_female{left:214px;bottom:329px;letter-spacing:0.46px;}
+#q_2_syosai_haken_man{left:214px;bottom:269px;letter-spacing:0.46px;}
+#q_2_syosai_haken_female{left:214px;bottom:231px;letter-spacing:0.46px;}
+#q_2_syosai_tenengo{left:536.5px;bottom:576px;letter-spacing:0.46px;}
+.form_input{background-color: yellow;border-style: hidden;}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts3" type="text/css" >
+
+@font-face {
+	font-family: MS-Mincho_23d;
+	src: url("css/fonts/MS-Mincho_23d.woff") format("woff");
+}
+
+@font-face {
+	font-family: MS-PGothic_239;
+	src: url("css/fonts/MS-PGothic_239.woff") format("woff");
+}
+
+@font-face {
+	font-family: MS-PMincho_235;
+	src: url("css/fonts/MS-PMincho_235.woff") format("woff");
+}
+
+@font-face {
+	font-family: MeiryoUI-Bold_23k;
+	src: url("css/fonts/MeiryoUI-Bold_23k.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin page background -->
+<div id="pg3Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg3" style="-webkit-user-select: none;"><object width="918" height="1299" data="img/3/3.svg" type="image/svg+xml" id="pdf3" style="width:918px; height:1299px; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+
+<div id="t1_3" class="t s1_3">問２</div>
+
+<form name="myForm" class="form-horizontal tokei-table-box" style="z-index: -99;">
+<div id="t2_3" class="t s1_3">令和３年10月1日現在の貴事業所の状況についてお答えください。</div>
+<div id="t3_3" class="t s1_3">※(1)の常用労働者数には、(3)の「臨時労働者」や「派遣労働者（受け入れ）」を含みません。また、他社から出向してきている労働</div>
+<div id="t4_3" class="t s1_3">者は(1)、(2)ともに計上し、請負労働者は(1)、(2)ともに除きます。</div>
+<div id="t5_3" class="t s2_3">貴事業所が派遣元事業所の場合</div>
+<div id="t6_3" class="t s1_3">は、派遣労働者として派遣中の労働者のうち、常用労働者に該当する者は(1)に計上します</div>
+<div id="t7_3" class="t s1_3">が、(2)では除きます。派遣労働者として登録しているだけで雇用契約のない者は、(1)、(2)ともに除きます。</div>
+<div id="t8_3" class="t s1_3">(1) 問１で回答いただいた組織全体の常用労働者数のうち、貴事業所の常用労働者数</div>
+<div id ="q_2_rodonizu"  class="t s1_3">
+	<input type ="text" class="form_input" name="q_2_rodonizu" style="width:253px;height:47px;text-align: right;">
+</div>
+<div id="t9_3" class="t s1_3">は何人ですか。</div>
+<div id="ta_3" class="t s1_3">(2)</div>
+<div id="tb_3" class="t s1_3">令和３年10月1日現在、貴事業所で雇用する常用労働者の性別、就業形態別の内訳の人数を下記の区分により分類し、記入</div>
+<div id="tc_3" class="t s1_3">してください。</div>
+<div id="td_3" class="t s1_3">(3) </div>
+<div id="te_3" class="t s3_3">貴事業所で就業している労働者数等</div>
+<div id="tf_3" class="t s1_3">について下記の区分により分類してそれぞれお答えください。</div>
+<div id="tg_3" class="t s4_3">(人)</div>
+<div id="th_3" class="t s5_3"></div>
+<div id="ti_3" class="t s5_3"></div>
+<div id="tj_3" class="t s4_3">(人)</div>
+<div id="tk_3" class="t s5_3"></div>
+<div id="tl_3" class="t s5_3"></div>
+<div id="tm_3" class="t s5_3"></div>
+<div id="tn_3" class="t s6_3">うち定年後、継続雇用している</div>
+<div id="to_3" class="t s6_3">労働者数（注9）</div>
+<div id="tp_3" class="t s4_3">有期雇用パート</div>
+<div id="tq_3" class="t s4_3">タイム（注7）</div>
+<div id="tr_3" class="t s6_3">男</div>
+<div id="ts_3" class="t s4_3">有期雇用フルタ</div>
+<div id="tt_3" class="t s4_3">イム（注8）</div>
+<div id="tu_3" class="t s6_3">男</div>
+<div id="tv_3" class="t s6_3">女</div>
+<div id="tw_3" class="t s6_3">女</div>
+<div id="tx_3" class="t s5_3"></div>
+<div id="ty_3" class="t s5_3"></div>
+<div id="tz_3" class="t s5_3"></div>
+<div id="t10_3" class="t s4_3">(人)</div>
+<div id="t11_3" class="t s5_3"></div>
+<div id="t12_3" class="t s6_3">女</div>
+<div id="t13_3" class="t s6_3">男</div>
+<div id="t14_3" class="t s7_3">該当する労働者がいない場合は「０」を記入してください。</div>
+<div id="t15_3" class="t s4_3">正社員(注3）</div>
+<div id ="q_2_syosai_sesyain_man"  class="t s1_3">
+	<input type ="text" class="form_input" name="q_2_syosai_sesyain_man" style="width:252px;height:36px;text-align: right;">
+</div>
+<div id ="q_2_syosai_sesyain_female"  class="t s1_3">
+	<input type ="text" class="form_input" name="q_2_syosai_sesyain_female" style="width:252px;height:36px;text-align: right;">
+</div>
+<div id ="q_2_syosai_tanjikan_man"  class="t s1_3">
+	<input type ="text" class="form_input" name="q_2_syosai_tanjikan_man" style="width:252px;height:36px;text-align: right;">
+</div>
+<div id ="q_2_syosai_tanjikan_female"  class="t s1_3">
+	<input type ="text" class="form_input" name="q_2_syosai_tanjikan_female" style="width:252px;height:36px;text-align: right;">
+</div>
+<div id ="q_2_syosai_muki_part_man"  class="t s1_3">
+	<input type ="text" class="form_input" name="q_2_syosai_muki_part_man" style="width:252px;height:36px;text-align: right;">
+</div>
+<div id ="q_2_syosai_muki_part_female"  class="t s1_3">
+	<input type ="text" class="form_input" name="q_2_syosai_muki_part_female" style="width:252px;height:36px;text-align: right;">
+</div>
+<div id ="q_2_syosai_yuki_part_man"  class="t s1_3">
+	<input type ="text" class="form_input" name="q_2_syosai_yuki_part_man" style="width:252px;height:36px;text-align: right;">
+</div>
+<div id ="q_2_syosai_yuki_part_female"  class="t s1_3">
+	<input type ="text" class="form_input" name="q_2_syosai_yuki_part_female" style="width:252px;height:36px;text-align: right;">
+</div>
+<div id ="q_2_syosai_yuki_full_man"  class="t s1_3">
+	<input type ="text" class="form_input" name="q_2_syosai_yuki_full_man" style="width:252px;height:36px;text-align: right;">
+</div>
+<div id ="q_2_syosai_yuki_full_female"  class="t s1_3">
+	<input type ="text" class="form_input" name="q_2_syosai_yuki_full_female" style="width:252px;height:36px;text-align: right;">
+</div>
+<div id ="q_2_syosai_rinji_man"  class="t s1_3">
+	<input type ="text" class="form_input" name="q_2_syosai_rinji_man" style="width:252px;height:36px;text-align: right;">
+</div>
+<div id ="q_2_syosai_rinji_female"  class="t s1_3">
+	<input type ="text" class="form_input" name="q_2_syosai_rinji_female" style="width:252px;height:36px;text-align: right;">
+</div>
+<div id ="q_2_syosai_haken_man"  class="t s1_3">
+	<input type ="text" class="form_input" name="q_2_syosai_haken_man" style="width:252px;height:36px;text-align: right;">
+</div>
+<div id ="q_2_syosai_haken_female"  class="t s1_3">
+	<input type ="text" class="form_input" name="q_2_syosai_haken_female" style="width:252px;height:36px;text-align: right;">
+</div>
+<div id ="q_2_syosai_tenengo"  class="t s1_3">
+	<input type ="text" class="form_input" name="q_2_syosai_tenengo" style="width:252px;height:36px;text-align: right;">
+</div>
+<div id="t16_3" class="t s6_3">男</div>
+<div id="t17_3" class="t s5_3"></div>
+<div id="t18_3" class="t s6_3">うち短時間正</div>
+<div id="t19_3" class="t s6_3">社員(注4）</div>
+<div id="t1a_3" class="t s4_3">無期雇用パート</div>
+<div id="t1b_3" class="t s4_3">タイム（注6）</div>
+<div id="t1c_3" class="t s6_3">男</div>
+<div id="t1d_3" class="t s6_3">女</div>
+<div id="t1e_3" class="t s8_3"></div>
+<div id="t1f_3" class="t s4_3">臨時労働者</div>
+<div id="t1g_3" class="t s4_3">（注10）</div>
+<div id="t1h_3" class="t s5_3"></div>
+<div id="t1i_3" class="t s9_3">人</div>
+<div id="t1j_3" class="t s5_3"></div>
+<div id="t1k_3" class="t s5_3"></div>
+<div id="t1l_3" class="t s6_3">女</div>
+<div id="t1m_3" class="t s6_3">女</div>
+<div id="t1n_3" class="t s6_3">女</div>
+<div id="t1o_3" class="t s6_3">男</div>
+<div id="t1p_3" class="t s5_3"></div>
+<div id="t1q_3" class="t s4_3">(人)</div>
+<div id="t1r_3" class="t s5_3"></div>
+<div id="t1s_3" class="t s4_3">パートタイム・有期雇用労働者（注5）</div>
+<div id="t1t_3" class="t s4_3">(人)</div>
+<div id="t1u_3" class="t s4_3">派遣労働者（受</div>
+<div id="t1v_3" class="t s4_3">け入れ）（注</div>
+<div id="t1w_3" class="t s4_3">11）</div>
+<div id="t1x_3" class="t s6_3">男</div>
+<div id="t1y_3" class="t sa_3">- 3 -</div>
+</form>
+<!-- End text definitions -->
+<div class="modal fade" id="modal_info" data-backdrop="static" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span>×</span></button><h4 class="modal-title"></h4></div>
+<div class="modal-body"><div class="alert alert-info tokei-alert-info cf"><span class="glyphicon tokei-glyphicon-info" aria-hidden="true"></span><div class="tokei-alert-inner"></div></div></div>
+<div class="modal-footer"><button type="button" class="btn tokei-btn-important" data-dismiss="modal">OK</button></div>
+</div>
+</div>
+</div>
+<!--
+	4.2.5 (15) モダールウィンドウを表示する
+	・modal_conf(確認、キャンセル／OKボタンを配置)
+	
+	chosahyo.jsでMODAL_CONFを指定すると利用できます。
+-->
+<div class="modal fade" id="modal_conf" data-backdrop="static" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span>×</span></button><h4 class="modal-title"></h4></div>
+<div class="modal-body"><div class="alert alert-success tokei-alert-confirmation cf"><span class="glyphicon tokei-glyphicon-confirmation" aria-hidden="true"></span><div class="tokei-alert-inner"></div></div></div>
+<div class="modal-footer"><button type="button" class="btn tokei-btn-important" data-dismiss="modal">OK</button></div>
+</div>
+</div>
+</div>
+<!--
+	4.2.5 (15) モダールウィンドウを表示する
+	・modal_warn(警告、OKボタンのみ配置)
+	
+	chosahyo.jsでMODAL_WARNを指定すると利用できます。
+-->
+<div class="modal fade" id="modal_warn" data-backdrop="static" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span>×</span></button><h4 class="modal-title"></h4></div>
+<div class="modal-body"><div class="alert alert-warning tokei-alert-warning cf"><span class="glyphicon tokei-glyphicon-warning" aria-hidden="true"></span><div class="tokei-alert-inner"></div></div></div>
+<div class="modal-footer"><button type="button" class="btn tokei-btn-important" data-dismiss="modal">OK</button></div>
+</div>
+</div>
+</div>
+<!--
+	4.2.5 (15) モダールウィンドウを表示する
+	・modal_error(エラー用、OKボタンのみ配置)
+	
+	chosahyo.jsでMODAL_ERRORを指定すると利用できます。
+-->
+<div class="modal fade" id="modal_error" data-backdrop="static" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span>×</span></button><h4 class="modal-title"></h4></div>
+<div class="modal-body"><div class="alert alert-danger tokei-alert-danger cf"><span class="glyphicon tokei-glyphicon-danger" aria-hidden="true"></span><div class="tokei-alert-inner"></div></div></div>
+<div class="modal-footer"><button type="button" class="btn tokei-btn-important" data-dismiss="modal">OK</button></div>
+</div>
+</div>
+</div>
+
+
+</div>
+</body>
+</html>

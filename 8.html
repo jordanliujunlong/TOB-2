@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;" onload="ColorAjustment()">
+<script>
+	function ColorAjustment() {
+		var val =JSON.parse(localStorage.getItem("checkedArray"));
+		for (i=0;i<2;i++){
+			if (val[0] == "false"){
+			document.getElementsByClassName('infinite')[i].style.backgroundColor = "grey";
+			document.getElementsByClassName('radio-1')[i].disabled=true;
+			}
+			if (val[1] == "false"){
+				document.getElementsByClassName('limit_1')[i].style.backgroundColor = "grey";
+				document.getElementsByClassName('radio-2')[i].disabled=true;
+			}
+			if (val[2] == "false"){
+				document.getElementsByClassName('limit_2')[i].style.backgroundColor = "grey";
+				document.getElementsByClassName('radio-3')[i].disabled =true;
+			}
+		}
+	}
+
+</script>
+
+
+<link rel="stylesheet" href="./js/lib/bootstrap-3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="./js/lib/bootstrap-3.3.6/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="./css/toukei.main.css">
+<script src="./js/lib/jquery-1.11.3.min.js"></script>
+<script src="./js/lib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+<script src="./js/tokei.main.js"></script>
+<script src="./js/chosahyo.js"></script>
+
+<div id ="common-bar">
+	<button type="button-1" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" style="position: absolute; left: 450px; top: 15px;z-index: 10">回答の一時保存</button>
+	<button type="button-2" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" style="position: absolute; left: 620px; top: 15px;z-index: 10">一時保存した回答の取得</button>
+	<a href="javascript:CmnPageClear(myForm)"><button type="button-3" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" style="position: absolute; left: 860px; top: 15px;z-index: 10">クリア</button></a>
+	<a href="javascript:CmnExecChk8(myForm)"><button type="button-5" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" style="position: absolute; left: 880px; top: 1250px; z-index: 10;">次ページへ</button></a>
+    <input
+	action="action"
+    onclick="window.history.go(-1); return false;"
+	class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command"
+    type="submit"
+	style="position: absolute; left: 250px; top: 1250px; width: 120px; z-index: 10"
+    value="前ページへ"
+/>
+</div>
+
+<div id="p8" style="overflow: hidden; position: relative; background-color: white; width: 918px; height: 1299px;left: 185px; top: 65px;">
+
+<!-- Begin shared CSS values -->
+<style class="shared-css" type="text/css" >
+.t {
+	transform-origin: bottom left;
+	z-index: 2;
+	position: absolute;
+	white-space: pre;
+	overflow: visible;
+	line-height: 1.5;
+}
+</style>
+<!-- End shared CSS values -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_8{left:38px;bottom:1216px;letter-spacing:0.29px;}
+#t2_8{left:79px;bottom:1216px;}
+#t3_8{left:87px;bottom:1216px;letter-spacing:0.52px;}
+#t4_8{left:285px;bottom:1216px;}
+#t5_8{left:292px;bottom:1216px;letter-spacing:0.31px;}
+#t6_8{left:315px;bottom:1216px;letter-spacing:0.56px;}
+#t7_8{left:362px;bottom:1216px;letter-spacing:0.35px;}
+#t8_8{left:47px;bottom:1195px;letter-spacing:0.13px;word-spacing:-0.05px;}
+#t9_8{left:76px;bottom:1195px;letter-spacing:0.52px;}
+#ta_8{left:274px;bottom:1195px;letter-spacing:0.27px;}
+#tb_8{left:302px;bottom:1195px;letter-spacing:0.56px;}
+#tc_8{left:349px;bottom:1195px;letter-spacing:0.32px;}
+#td_8{left:72px;bottom:1110px;letter-spacing:0.34px;}
+#te_8{left:72px;bottom:1073px;letter-spacing:0.34px;}
+#tf_8{left:302px;bottom:980px;letter-spacing:0.33px;}
+#tg_8{left:72px;bottom:945px;}
+#th_8{left:80px;bottom:945px;letter-spacing:0.52px;}
+#ti_8{left:278px;bottom:945px;letter-spacing:0.27px;}
+#tj_8{left:306px;bottom:945px;letter-spacing:0.56px;}
+#tk_8{left:353px;bottom:945px;letter-spacing:0.34px;}
+#tl_8{left:571px;bottom:945px;letter-spacing:0.56px;}
+#tm_8{left:618px;bottom:945px;letter-spacing:0.33px;}
+#tn_8{left:72px;bottom:924px;letter-spacing:0.34px;}
+#to_8{left:170px;bottom:924px;letter-spacing:0.55px;}
+#tp_8{left:215px;bottom:924px;letter-spacing:0.3px;}
+#tq_8{left:47px;bottom:530px;letter-spacing:0.13px;word-spacing:-0.05px;}
+#tr_8{left:76px;bottom:530px;letter-spacing:0.53px;}
+#ts_8{left:274px;bottom:530px;letter-spacing:0.27px;}
+#tt_8{left:316px;bottom:530px;letter-spacing:0.56px;}
+#tu_8{left:362px;bottom:530px;letter-spacing:0.32px;}
+#tv_8{left:64px;bottom:506px;letter-spacing:0.34px;}
+#tw_8{left:162px;bottom:506px;letter-spacing:0.55px;}
+#tx_8{left:206px;bottom:506px;letter-spacing:0.3px;}
+#ty_8{left:82px;bottom:433px;letter-spacing:0.37px;}
+#tz_8{left:190px;bottom:434px;letter-spacing:-0.18px;}
+#t10_8{left:82px;bottom:397px;letter-spacing:0.37px;}
+#t11_8{left:221px;bottom:398px;letter-spacing:-0.18px;}
+#t12_8{left:82px;bottom:360px;letter-spacing:0.37px;}
+#t13_8{left:206px;bottom:360px;letter-spacing:0.32px;}
+#t14_8{left:82px;bottom:324px;letter-spacing:0.35px;}
+#t15_8{left:72px;bottom:268px;letter-spacing:-0.19px;}
+#t16_8{left:115px;bottom:268px;}
+#t17_8{left:122px;bottom:268px;letter-spacing:-0.11px;}
+#t18_8{left:206px;bottom:268px;letter-spacing:-0.28px;}
+#t19_8{left:72px;bottom:247px;letter-spacing:-0.27px;}
+#t1a_8{left:72px;bottom:225px;letter-spacing:-0.14px;}
+#t1b_8{left:117px;bottom:225px;}
+#t1c_8{left:124px;bottom:225px;letter-spacing:-0.11px;}
+#t1d_8{left:235px;bottom:225px;letter-spacing:-0.27px;}
+#t1e_8{left:72px;bottom:203px;letter-spacing:-0.27px;}
+#t1f_8{left:72px;bottom:182px;letter-spacing:-0.26px;}
+#t1g_8{left:72px;bottom:160px;letter-spacing:-0.14px;}
+#t1h_8{left:117px;bottom:160px;}
+#t1i_8{left:124px;bottom:160px;letter-spacing:-0.11px;}
+#t1j_8{left:221px;bottom:160px;letter-spacing:-0.28px;}
+#t1k_8{left:72px;bottom:138px;letter-spacing:-0.26px;}
+#t1l_8{left:284px;bottom:1036px;}
+#t1m_8{left:284px;bottom:1073px;}
+#t1n_8{left:367px;bottom:471px;letter-spacing:0.37px;}
+#t1o_8{left:360px;bottom:888px;letter-spacing:0.37px;}
+#t1p_8{left:265px;bottom:1148px;letter-spacing:0.34px;}
+#t1q_8{left:72px;bottom:1036px;letter-spacing:0.34px;}
+#t1r_8{left:411px;bottom:1036px;}
+#t1s_8{left:391px;bottom:1148px;letter-spacing:0.35px;}
+#t1t_8{left:480px;bottom:1064px;letter-spacing:0.11px;}
+#t1u_8{left:480px;bottom:1028px;letter-spacing:0.11px;}
+#t1v_8{left:82px;bottom:707px;letter-spacing:0.35px;}
+#t1w_8{left:82px;bottom:779px;letter-spacing:0.37px;}
+#t1x_8{left:411px;bottom:1073px;}
+#t1y_8{left:82px;bottom:743px;letter-spacing:0.36px;}
+#t1z_8{left:82px;bottom:666px;letter-spacing:0.37px;}
+#t20_8{left:82px;bottom:816px;letter-spacing:0.36px;}
+#t21_8{left:710px;bottom:563px;letter-spacing:0.11px;}
+#t22_8{left:82px;bottom:852px;letter-spacing:0.37px;}
+#t23_8{left:284px;bottom:1111px;}
+#t24_8{left:411px;bottom:1111px;}
+#t25_8{left:670px;bottom:852px;}
+#t26_8{left:706px;bottom:301px;letter-spacing:0.11px;}
+#t27_8{left:480px;bottom:1102px;letter-spacing:0.11px;}
+#t28_8{left:116px;bottom:1148px;letter-spacing:0.37px;}
+#t29_8{left:82px;bottom:588px;letter-spacing:0.38px;}
+#t2a_8{left:670px;bottom:707px;}
+#t2b_8{left:670px;bottom:666px;}
+#t2c_8{left:670px;bottom:816px;}
+#t2d_8{left:670px;bottom:588px;}
+#t2e_8{left:670px;bottom:434px;}
+#t2f_8{left:670px;bottom:743px;}
+#t2g_8{left:670px;bottom:361px;}
+#t2h_8{left:670px;bottom:325px;}
+#t2i_8{left:670px;bottom:625px;}
+#t2j_8{left:670px;bottom:398px;}
+#t2k_8{left:670px;bottom:779px;}
+#t2l_8{left:82px;bottom:625px;letter-spacing:0.35px;}
+#t2m_8{left:441px;bottom:15px;letter-spacing:0.03px;word-spacing:-0.09px;}
+.k{
+	background-image: radial-gradient(black 30%, transparent 30%);
+	background-size: 3px 3px;
+ }
+
+.s1_8{font-size:15px;font-family:MS-PMincho_235;color:#000;}
+.s2_8{font-size:15px;font-family:MS-PGothic_239;color:#000;-webkit-text-stroke:0.4px #000;text-stroke:0.4px #000;}
+.s3_8{font-size:15px;font-family:MS-PGothic_239;color:#000;}
+.s4_8{font-size:14px;font-family:MS-Mincho_23d;color:#000;}
+.s5_8{font-size:15px;font-family:MS-Mincho_23d;color:#000;}
+.s6_8{font-size:14px;font-family:MS-PMincho_235;color:#000;}
+.s7_8{font-size:14px;font-family:MS-PGothic_239;color:#000;-webkit-text-stroke:0.4px #000;text-stroke:0.4px #000;}
+.s8_8{font-size:12px;font-family:MS-PMincho_235;color:#000;}
+.s9_8{font-size:17px;font-family:MS-PGothic_239;color:#000;}
+
+#q_10_1_change_muki_part_1{left:270px;bottom:1110px;letter-spacing:0.34px;}
+#q_10_1_change_muki_part_2{left:400px;bottom:1110px;letter-spacing:0.34px;}
+
+#q_10_1_change_yuki_part_1{left:270px;bottom:1073px;letter-spacing:0.34px;}
+#q_10_1_change_yuki_part_2{left:400px;bottom:1073px;letter-spacing:0.34px;}
+
+#q_10_1_change_yuki_full_1{left:270px;bottom:1036px;letter-spacing:0.34px;}
+#q_10_1_change_yuki_full_2{left:400px;bottom:1036px;letter-spacing:0.34px;}
+
+#q_10_1_change_kijyun_1{left:650px;bottom:852px;letter-spacing:0.34px;}
+#q_10_1_change_kijyun_2{left:650px;bottom:816px;letter-spacing:0.34px;}
+#q_10_1_change_kijyun_3{left:650px;bottom:779px;letter-spacing:0.34px;}
+#q_10_1_change_kijyun_4{left:650px;bottom:743px;letter-spacing:0.34px;}
+#q_10_1_change_kijyun_5{left:650px;bottom:707px;letter-spacing:0.34px;}
+#q_10_1_change_kijyun_6{left:650px;bottom:666px;letter-spacing:0.34px;}
+#q_10_1_change_kijyun_7{left:650px;bottom:625px;letter-spacing:0.34px;}
+#q_10_1_change_kijyun_8{left:650px;bottom:588px;letter-spacing:0.34px;}
+
+#q_10_2_change_type_1{left:650px;bottom:433px;letter-spacing:0.34px;}
+#q_10_2_change_type_2{left:650px;bottom:397px;letter-spacing:0.34px;}
+#q_10_2_change_type_3{left:650px;bottom:360px;letter-spacing:0.34px;}
+#q_10_2_change_type_4{left:650px;bottom:324px;letter-spacing:0.34px;}
+
+
+#color_1{left:225px;bottom:1104px;letter-spacing:0.28px;width:125px;height:35px;background-color: yellow;}
+#color_2{left:352px;bottom:1104px;letter-spacing:0.28px;width:124px;height:35px;background-color: yellow;}
+#color_3{left:225.5px;bottom:1067px;letter-spacing:0.28px;width:124px;height:35px;background-color: yellow;}
+#color_4{left:352px;bottom:1067px;letter-spacing:0.28px;width:124px;height:35px;background-color: yellow;}
+#color_5{left:225.5px;bottom:1030px;letter-spacing:0.28px;width:124px;height:35px;background-color: yellow;}
+#color_6{left:352px;bottom:1030px;letter-spacing:0.28px;width:124px;height:35px;background-color: yellow;}
+
+#color_7{left:624px;bottom:846px;letter-spacing:0.28px;width:99.5px;height:34px;background-color: yellow;}
+#color_8{left:624px;bottom:810px;letter-spacing:0.28px;width:99.5px;height:34px;background-color: yellow;}
+#color_9{left:624px;bottom:774px;letter-spacing:0.28px;width:99.5px;height:34px;background-color: yellow;}
+#color_10{left:624px;bottom:737.5px;letter-spacing:0.28px;width:99.5px;height:34px;background-color: yellow;}
+#color_11{left:624px;bottom:701.5px;letter-spacing:0.28px;width:99.5px;height:34px;background-color: yellow;}
+#color_12{left:624px;bottom:655.5px;letter-spacing:0.28px;width:99.5px;height:44px;background-color: yellow;}
+#color_13{left:624px;bottom:619.5px;letter-spacing:0.28px;width:99.5px;height:34px;background-color: yellow;}
+#color_14{left:624px;bottom:583px;letter-spacing:0.28px;width:99.5px;height:34px;background-color: yellow;}
+
+#color_15{left:624px;bottom:428px;letter-spacing:0.28px;width:99.5px;height:34px;background-color: yellow;}
+#color_16{left:624px;bottom:392.2px;letter-spacing:0.28px;width:99.5px;height:34px;background-color: yellow;}
+#color_17{left:624px;bottom:355.8px;letter-spacing:0.28px;width:99.5px;height:33.5px;background-color: yellow;}
+#color_18{left:624px;bottom:319.5px;letter-spacing:0.28px;width:99.5px;height:34px;background-color: yellow;}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts8" type="text/css" >
+
+@font-face {
+	font-family: MS-Mincho_23d;
+	src: url("css/fonts/MS-Mincho_23d.woff") format("woff");
+}
+
+@font-face {
+	font-family: MS-PGothic_239;
+	src: url("css/fonts/MS-PGothic_239.woff") format("woff");
+}
+
+@font-face {
+	font-family: MS-PMincho_235;
+	src: url("css/fonts/MS-PMincho_235.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin page background -->
+<div id="pg8Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg8" style="-webkit-user-select: none;"><object width="918" height="1299" data="img/8/8.svg" type="image/svg+xml" id="pdf8" style="width:918px; height:1299px; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<form name="myForm">
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_8" class="t s1_8">問10</div>
+
+<div id ="color_1"  class="t s6_10 infinite"></div>
+<div id ="color_2"  class="t s6_10 infinite"></div>
+<div id ="color_3"  class="t s6_10 limit_1"></div>
+<div id ="color_4"  class="t s6_10 limit_1"></div>
+<div id ="color_5"  class="t s6_10 limit_2"></div>
+<div id ="color_6"  class="t s6_10 limit_2"></div>
+
+<div id ="color_7"  class="t s6_10 k"></div>
+<div id ="color_8"  class="t s6_10 k"></div>
+<div id ="color_9"  class="t s6_10 k"></div>
+<div id ="color_10"  class="t s6_10 k"></div>
+<div id ="color_11"  class="t s6_10 k"></div>
+<div id ="color_12"  class="t s6_10 k"></div>
+<div id ="color_13"  class="t s6_10 k"></div>
+<div id ="color_14"  class="t s6_10 k"></div>
+<div id ="color_15"  class="t s6_10 k"></div>
+<div id ="color_16"  class="t s6_10 k"></div>
+<div id ="color_17"  class="t s6_10 k"></div>
+<div id ="color_18"  class="t s6_10 k"></div>
+
+<div id ="q_10_1_change_muki_part_1"  class="t s1_3">
+	<input type ="radio" class="radio-1" name="q_10_1_change_muki_part" value="1">
+</div>
+<div id ="q_10_1_change_muki_part_2"  class="t s1_3">
+	<input type ="radio" class="radio-1" name="q_10_1_change_muki_part" value="2">
+</div>
+
+<div id ="q_10_1_change_yuki_part_1"  class="t s1_3">
+	<input type ="radio" class="radio-2" name="q_10_1_change_yuki_part" value="1">
+</div>
+<div id ="q_10_1_change_yuki_part_2"  class="t s1_3">
+	<input type ="radio" class="radio-2" name="q_10_1_change_yuki_part" value="2">
+</div>
+
+<div id ="q_10_1_change_yuki_full_1"  class="t s1_3">
+	<input type ="radio" class="radio-3" name="q_10_1_change_yuki_full" value="1">
+</div>
+<div id ="q_10_1_change_yuki_full_2"  class="t s1_3">
+	<input type ="radio" class="radio-3" name="q_10_1_change_yuki_full" value="2">
+</div>
+
+<div id ="q_10_1_change_kijyun_1"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-button" name="q_10_1_change_kijyun" value="1">
+</div>
+<div id ="q_10_1_change_kijyun_2"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-button" name="q_10_1_change_kijyun" value="2">
+</div>
+<div id ="q_10_1_change_kijyun_3"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-button" name="q_10_1_change_kijyun" value="3">
+</div>
+<div id ="q_10_1_change_kijyun_4"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-button" name="q_10_1_change_kijyun" value="4">
+</div>
+<div id ="q_10_1_change_kijyun_5"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-button" name="q_10_1_change_kijyun" value="5">
+</div>
+<div id ="q_10_1_change_kijyun_6"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-button" name="q_10_1_change_kijyun" value="6">
+</div>
+<div id ="q_10_1_change_kijyun_7"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-button" name="q_10_1_change_kijyun" value="7">
+</div>
+<div id ="q_10_1_change_kijyun_8"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-button" name="q_10_1_change_kijyun" value="8">
+</div>
+
+<div id ="q_10_2_change_type_1"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-button" name="q_10_2_change_type" value="1">
+</div>
+<div id ="q_10_2_change_type_2"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-button" name="q_10_2_change_type" value="2">
+</div>
+<div id ="q_10_2_change_type_3"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-button" name="q_10_2_change_type" value="3">
+</div>
+<div id ="q_10_2_change_type_4"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-button" name="q_10_2_change_type" value="4">
+</div>
+
+<div id="t2_8" class="t s1_8">「</div>
+<div id="t3_8" class="t s2_8">パートタイム・有期雇用労働者</div>
+<div id="t4_8" class="t s3_8">」</div>
+<div id="t5_8" class="t s1_8">の「</div>
+<div id="t6_8" class="t s2_8">正社員</div>
+<div id="t7_8" class="t s1_8">」への転換についてお答えください。</div>
+<div id="t8_8" class="t s1_8">(1) 「</div>
+<div id="t9_8" class="t s2_8">パートタイム・有期雇用労働者</div>
+<div id="ta_8" class="t s1_8">」を「</div>
+<div id="tb_8" class="t s2_8">正社員</div>
+<div id="tc_8" class="t s1_8">」へ転換する制度がありますか。</div>
+<div id="td_8" class="t s1_8">無期雇用パートタイム</div>
+<div id="te_8" class="t s1_8">有期雇用パートタイム</div>
+<div id="tf_8" class="t s1_8">「１」を選択した場合は下へお進みください。</div>
+<div id="tg_8" class="t s1_8">「</div>
+<div id="th_8" class="t s2_8">パートタイム・有期雇用労働者</div>
+<div id="ti_8" class="t s1_8">」を「</div>
+<div id="tj_8" class="t s2_8">正社員</div>
+<div id="tk_8" class="t s1_8">」に転換する際に、何に基づいて「</div>
+<div id="tl_8" class="t s2_8">正社員</div>
+<div id="tm_8" class="t s1_8">」への転換を実施していますか。</div>
+<div id="tn_8" class="t s1_8">該当するものを</div>
+<div id="to_8" class="t s2_8">すべて</div>
+<div id="tp_8" class="t s1_8">選んでください。</div>
+<div id="tq_8" class="t s1_8">(2) 「</div>
+<div id="tr_8" class="t s2_8">パートタイム・有期雇用労働者</div>
+<div id="ts_8" class="t s1_8">」から「</div>
+<div id="tt_8" class="t s2_8">正社員</div>
+<div id="tu_8" class="t s1_8">」への転換に当たり、どのような雇用形態がありますか。</div>
+<div id="tv_8" class="t s1_8">該当するものを</div>
+<div id="tw_8" class="t s2_8">すべて</div>
+<div id="tx_8" class="t s1_8">選んでください。</div>
+<div id="ty_8" class="t s1_8">短時間正社員</div>
+<div id="tz_8" class="t s4_8">(注4)</div>
+<div id="t10_8" class="t s1_8">勤務地限定正社員</div>
+<div id="t11_8" class="t s4_8">(注19)</div>
+<div id="t12_8" class="t s1_8">職種限定正社員</div>
+<div id="t13_8" class="t s5_8">(注20)</div>
+<div id="t14_8" class="t s1_8">勤務地・職種の限定のないフルタイムの正社員</div>
+<div id="t15_8" class="t s6_8">（注4）</div>
+<div id="t16_8" class="t s6_8">「</div>
+<div id="t17_8" class="t s7_8">短時間正社員</div>
+<div id="t18_8" class="t s6_8">」とは、無期労働契約を締結し、時間当たりの基本給及び賞与・退職金等の算定方法等が同種のフルタイム</div>
+<div id="t19_8" class="t s6_8">正社員と同等で、所定労働時間（日数）が短い正社員をいいます。</div>
+<div id="t1a_8" class="t s6_8">(注19)</div>
+<div id="t1b_8" class="t s6_8">「</div>
+<div id="t1c_8" class="t s7_8">勤務地限定正社員</div>
+<div id="t1d_8" class="t s6_8">」とは、企業において、正社員に対して勤務地の変更（転勤）を一般的に行っている場合に、無期労働契</div>
+<div id="t1e_8" class="t s6_8">約ではあるが、転勤するエリアが限定されていたり、転居を伴う転勤がなかったり、あるいは転勤が一切ないなど、通常の正社員とは異</div>
+<div id="t1f_8" class="t s6_8">なる雇用管理を行う正社員をいいます。</div>
+<div id="t1g_8" class="t s6_8">(注20)</div>
+<div id="t1h_8" class="t s6_8">「</div>
+<div id="t1i_8" class="t s7_8">職種限定正社員</div>
+<div id="t1j_8" class="t s6_8">」とは、企業において、無期労働契約ではあるが、担当する職務内容や仕事の範囲が他の業務と明確に区</div>
+<div id="t1k_8" class="t s6_8">別され、限定されているなど、通常の正社員とは異なる雇用管理を行う正社員をいいます。</div>
+<div id="t1l_8" class="t s1_8">1</div>
+<div id="t1m_8" class="t s1_8">1</div>
+<div id="t1n_8" class="t s1_8">雇用形態</div>
+<div id="t1o_8" class="t s1_8">転換の基準</div>
+<div id="t1p_8" class="t s1_8">制度有り</div>
+<div id="t1q_8" class="t s1_8">有期雇用フルタイム</div>
+<div id="t1r_8" class="t s1_8">2</div>
+<div id="t1s_8" class="t s1_8">制度無し</div>
+<div id="t1t_8" class="t s8_8"></div>
+<div id="t1u_8" class="t s8_8"></div>
+<div id="t1v_8" class="t s1_8">（一定の）職務経験年数</div>
+<div id="t1w_8" class="t s1_8">筆記試験の結果</div>
+<div id="t1x_8" class="t s1_8">2</div>
+<div id="t1y_8" class="t s1_8">人事部門などによる面接の結果</div>
+<div id="t1z_8" class="t s1_8">職場内の格付け等級制度における（一定の）位置付け</div>
+<div id="t20_8" class="t s1_8">パートタイム・有期雇用労働者の所属する部署の上司の推薦</div>
+<div id="t21_8" class="t s8_8"></div>
+<div id="t22_8" class="t s1_8">人事評価の結果</div>
+<div id="t23_8" class="t s1_8">1</div>
+<div id="t24_8" class="t s1_8">2</div>
+<div id="t25_8" class="t s5_8">1</div>
+<div id="t26_8" class="t s8_8"></div>
+<div id="t27_8" class="t s8_8"></div>
+<div id="t28_8" class="t s1_8">就業形態</div>
+<div id="t29_8" class="t s1_8">その他</div>
+<div id="t2a_8" class="t s5_8">5</div>
+<div id="t2b_8" class="t s5_8">6</div>
+<div id="t2c_8" class="t s5_8">2</div>
+<div id="t2d_8" class="t s5_8">8</div>
+<div id="t2e_8" class="t s5_8">1</div>
+<div id="t2f_8" class="t s5_8">4</div>
+<div id="t2g_8" class="t s5_8">3</div>
+<div id="t2h_8" class="t s5_8">4</div>
+<div id="t2i_8" class="t s5_8">7</div>
+<div id="t2j_8" class="t s5_8">2</div>
+<div id="t2k_8" class="t s5_8">3</div>
+<div id="t2l_8" class="t s1_8">パートタイム・有期雇用労働者の保有する資格</div>
+<div id="t2m_8" class="t s9_8">- 8 -</div>
+<!-- End text definitions -->
+<!--
+	4.2.5 (15) モダールウィンドウを表示する
+	・modal_conf(確認、キャンセル／OKボタンを配置)
+	
+	chosahyo.jsでMODAL_CONFを指定すると利用できます。
+-->
+<div class="modal fade" id="modal_conf" data-backdrop="static" tabindex="-1">
+	<div class="modal-dialog">
+	<div class="modal-content">
+	<div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span>×</span></button><h4 class="modal-title"></h4></div>
+	<div class="modal-body"><div class="alert alert-success tokei-alert-confirmation cf"><span class="glyphicon tokei-glyphicon-confirmation" aria-hidden="true"></span><div class="tokei-alert-inner"></div></div></div>
+	<div class="modal-footer"><button type="button" class="btn tokei-btn-important" data-dismiss="modal">OK</button></div>
+	</div>
+	</div>
+	</div>
+	<!--
+		4.2.5 (15) モダールウィンドウを表示する
+		・modal_warn(警告、OKボタンのみ配置)
+		
+		chosahyo.jsでMODAL_WARNを指定すると利用できます。
+	-->
+	<div class="modal fade" id="modal_warn" data-backdrop="static" tabindex="-1">
+	<div class="modal-dialog">
+	<div class="modal-content">
+	<div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span>×</span></button><h4 class="modal-title"></h4></div>
+	<div class="modal-body"><div class="alert alert-warning tokei-alert-warning cf"><span class="glyphicon tokei-glyphicon-warning" aria-hidden="true"></span><div class="tokei-alert-inner"></div></div></div>
+	<div class="modal-footer"><button type="button" class="btn tokei-btn-important" data-dismiss="modal">OK</button></div>
+	</div>
+	</div>
+	</div>
+	<!--
+		4.2.5 (15) モダールウィンドウを表示する
+		・modal_error(エラー用、OKボタンのみ配置)
+		
+		chosahyo.jsでMODAL_ERRORを指定すると利用できます。
+	-->
+	<div class="modal fade" id="modal_error" data-backdrop="static" tabindex="-1">
+	<div class="modal-dialog">
+	<div class="modal-content">
+	<div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span>×</span></button><h4 class="modal-title"></h4></div>
+	<div class="modal-body"><div class="alert alert-danger tokei-alert-danger cf"><span class="glyphicon tokei-glyphicon-danger" aria-hidden="true"></span><div class="tokei-alert-inner"></div></div></div>
+	<div class="modal-footer"><button type="button" class="btn tokei-btn-important" data-dismiss="modal">OK</button></div>
+	</div>
+	</div>
+	</div>
+</form>
+<!-- End text definitions -->
+
+
+</div>
+</body>
+</html>

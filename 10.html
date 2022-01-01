@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+<link rel="stylesheet" href="./js/lib/bootstrap-3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="./js/lib/bootstrap-3.3.6/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="./css/toukei.main.css">
+<script src="./js/lib/jquery-1.11.3.min.js"></script>
+<script src="./js/lib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+<script src="./js/tokei.main.js"></script>
+<script src="./js/chosahyo.js"></script>
+
+<div id ="common-bar">
+	<button type="button-1" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" style="position: absolute; left: 450px; top: 15px;z-index: 10">回答の一時保存</button>
+	<button type="button-2" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" style="position: absolute; left: 620px; top: 15px;z-index: 10">一時保存した回答の取得</button>
+	<a href="javascript:CmnPageClear(myForm)"><button type="button-3" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" style="position: absolute; left: 860px; top: 15px;z-index: 10">クリア</button></a>
+	
+	<a href="javascript:CmnExecChk10(myForm)"><button type="button-5" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" style="position: absolute; left: 880px; top: 1300px; z-index: 10;">次ページへ</button></a>
+    <input
+	action="action"
+    onclick="window.history.go(-1); return false;"
+	class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command"
+    type="submit"
+	style="position: absolute; left: 250px; top: 1300px; width: 120px; z-index: 10"
+    value="前ページへ"
+/>
+</div>
+<script>
+		function exclude2() {
+			for (i=0;i<4;i++){
+				document.getElementsByClassName('checkbox-1')[i].disabled =true;
+			}
+			document.getElementById('color_5').style.backgroundColor ="grey";
+			document.getElementById('color_6').style.backgroundColor ="grey";
+			document.getElementById('color_7').style.backgroundColor ="grey";
+			document.getElementById('color_8').style.backgroundColor ="grey";
+			document.getElementById('color_9').style.backgroundColor ="grey";
+		}
+		function exclude1() {
+			for (i=0;i<4;i++){
+				document.getElementsByClassName('checkbox-1')[i].disabled =false;
+			}
+			document.getElementById('color_5').style.backgroundColor ="yellow";
+			document.getElementById('color_6').style.backgroundColor ="yellow";
+			document.getElementById('color_7').style.backgroundColor ="yellow";
+			document.getElementById('color_8').style.backgroundColor ="yellow";
+			document.getElementById('color_9').style.backgroundColor ="yellow";
+		}
+		function exclude3() {
+			for (i=0;i<19;i++){
+				document.getElementsByClassName('radio-1')[i].disabled =false;
+				document.getElementsByClassName('kin-sen')[i].style.backgroundColor ="yellow";
+			}
+		}
+		function exclude4() {
+			for (i=0;i<19;i++){
+				document.getElementsByClassName('radio-1')[i].disabled =true;
+				document.getElementsByClassName('kin-sen')[i].style.backgroundColor ="grey";
+			}
+		}
+</script>
+
+<div id="p10" style="overflow: hidden; position: relative; background-color: white; width: 918px; height: 1299px;left: 185px; top: 65px;">
+
+<!-- Begin shared CSS values -->
+<style class="shared-css" type="text/css" >
+.t {
+	transform-origin: bottom left;
+	z-index: 2;
+	position: absolute;
+	white-space: pre;
+	overflow: visible;
+	line-height: 1.5;
+}
+</style>
+<!-- End shared CSS values -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_10{left:47px;bottom:1226px;letter-spacing:0.15px;}
+#t2_10{left:74px;bottom:1226px;letter-spacing:0.33px;}
+#t3_10{left:459px;bottom:1226px;letter-spacing:0.52px;}
+#t4_10{left:657px;bottom:1226px;letter-spacing:0.35px;}
+#t5_10{left:57px;bottom:1202px;letter-spacing:0.34px;}
+#t6_10{left:132px;bottom:1002px;letter-spacing:0.31px;}
+#t7_10{left:47px;bottom:971px;letter-spacing:0.15px;}
+#t8_10{left:74px;bottom:971px;letter-spacing:0.34px;}
+#t9_10{left:569px;bottom:971px;letter-spacing:0.55px;}
+#ta_10{left:614px;bottom:971px;letter-spacing:0.3px;}
+#tb_10{left:123px;bottom:785px;letter-spacing:0.39px;}
+#tc_10{left:38px;bottom:699px;letter-spacing:0.29px;}
+#td_10{left:79px;bottom:699px;}
+#te_10{left:87px;bottom:699px;letter-spacing:0.53px;}
+#tf_10{left:220px;bottom:699px;letter-spacing:0.27px;}
+#tg_10{left:319px;bottom:699px;letter-spacing:0.52px;}
+#th_10{left:517px;bottom:699px;letter-spacing:0.22px;}
+#ti_10{left:543px;bottom:699px;letter-spacing:0.56px;}
+#tj_10{left:590px;bottom:699px;letter-spacing:0.35px;}
+#tk_10{left:63px;bottom:674px;letter-spacing:0.33px;}
+#tl_10{left:47px;bottom:554px;letter-spacing:0.11px;}
+#tm_10{left:79px;bottom:554px;}
+#tn_10{left:86px;bottom:554px;letter-spacing:0.54px;}
+#to_10{left:219px;bottom:554px;letter-spacing:0.27px;}
+#tp_10{left:275px;bottom:554px;letter-spacing:0.51px;}
+#tq_10{left:356px;bottom:554px;}
+#tr_10{left:364px;bottom:554px;letter-spacing:0.56px;}
+#ts_10{left:473px;bottom:554px;letter-spacing:0.28px;}
+#tt_10{left:47px;bottom:424px;letter-spacing:0.11px;}
+#tu_10{left:79px;bottom:424px;}
+#tv_10{left:86px;bottom:424px;letter-spacing:0.54px;}
+#tw_10{left:219px;bottom:424px;letter-spacing:0.28px;}
+#tx_10{left:275px;bottom:424px;letter-spacing:0.52px;}
+#ty_10{left:473px;bottom:424px;letter-spacing:0.34px;}
+#tz_10{left:67px;bottom:400px;letter-spacing:0.33px;}
+#t10_10{left:370px;bottom:400px;letter-spacing:0.53px;}
+#t11_10{left:395px;bottom:400px;letter-spacing:0.3px;}
+#t12_10{left:72px;bottom:117px;letter-spacing:-0.28px;}
+#t13_10{left:72px;bottom:99px;letter-spacing:0.33px;}
+#t14_10{left:455px;bottom:1145px;letter-spacing:0.32px;}
+#t15_10{left:455px;bottom:1128px;letter-spacing:0.31px;}
+#t16_10{left:455px;bottom:1111px;letter-spacing:0.35px;}
+#t17_10{left:513px;bottom:1061px;}
+#t18_10{left:307px;bottom:457px;letter-spacing:0.11px;}
+#t19_10{left:72px;bottom:1154px;letter-spacing:0.33px;}
+#t1a_10{left:72px;bottom:1137px;letter-spacing:0.36px;}
+#t1b_10{left:72px;bottom:1119px;letter-spacing:0.35px;}
+#t1c_10{left:72px;bottom:1102px;letter-spacing:0.31px;}
+#t1d_10{left:200px;bottom:1154px;letter-spacing:0.33px;}
+#t1e_10{left:200px;bottom:1137px;letter-spacing:0.36px;}
+#t1f_10{left:200px;bottom:1119px;letter-spacing:0.33px;}
+#t1g_10{left:200px;bottom:1102px;letter-spacing:0.35px;}
+#t1h_10{left:328px;bottom:1160px;letter-spacing:-0.25px;}
+#t1i_10{left:328px;bottom:1145px;letter-spacing:-0.24px;}
+#t1j_10{left:328px;bottom:1129px;letter-spacing:-0.28px;}
+#t1k_10{left:328px;bottom:1114px;letter-spacing:-0.27px;}
+#t1l_10{left:328px;bottom:1098px;letter-spacing:-0.26px;}
+#t1m_10{left:838px;bottom:135px;letter-spacing:0.11px;}
+#t1n_10{left:666px;bottom:822px;letter-spacing:0.28px;}
+#t1o_10{left:593px;bottom:289px;}
+#t1p_10{left:798px;bottom:247px;}
+#t1q_10{left:798px;bottom:330px;}
+#t1r_10{left:294px;bottom:215px;letter-spacing:-0.29px;}
+#t1s_10{left:294px;bottom:199px;letter-spacing:-0.26px;}
+#t1t_10{left:778px;bottom:365px;letter-spacing:0.37px;}
+#t1u_10{left:294px;bottom:298px;letter-spacing:-0.29px;}
+#t1v_10{left:294px;bottom:282px;letter-spacing:-0.24px;}
+#t1w_10{left:798px;bottom:289px;}
+#t1x_10{left:491px;bottom:206px;}
+#t1y_10{left:531px;bottom:135px;letter-spacing:0.11px;}
+#t1z_10{left:633px;bottom:135px;letter-spacing:0.11px;}
+#t20_10{left:121px;bottom:520px;letter-spacing:0.31px;}
+#t21_10{left:666px;bottom:931px;letter-spacing:0.28px;}
+#t22_10{left:666px;bottom:786px;letter-spacing:0.28px;}
+#t23_10{left:798px;bottom:162px;}
+#t24_10{left:294px;bottom:256px;letter-spacing:-0.29px;}
+#t25_10{left:294px;bottom:240px;letter-spacing:-0.25px;}
+#t26_10{left:491px;bottom:289px;}
+#t27_10{left:123px;bottom:858px;letter-spacing:0.36px;}
+#t28_10{left:130px;bottom:484px;}
+#t29_10{left:258px;bottom:484px;}
+#t2a_10{left:464px;bottom:365px;letter-spacing:0.37px;}
+#t2b_10{left:593px;bottom:330px;}
+#t2c_10{left:123px;bottom:822px;letter-spacing:0.35px;}
+#t2d_10{left:706px;bottom:760px;letter-spacing:0.11px;}
+#t2e_10{left:123px;bottom:895px;letter-spacing:0.37px;}
+#t2f_10{left:79px;bottom:268px;letter-spacing:0.34px;}
+#t2g_10{left:696px;bottom:289px;}
+#t2h_10{left:185px;bottom:339px;letter-spacing:0.34px;}
+#t2i_10{left:174px;bottom:321px;letter-spacing:0.35px;}
+#t2j_10{left:666px;bottom:858px;letter-spacing:0.28px;}
+#t2k_10{left:696px;bottom:247px;}
+#t2l_10{left:735px;bottom:135px;letter-spacing:0.11px;}
+#t2m_10{left:696px;bottom:330px;}
+#t2n_10{left:182px;bottom:264px;letter-spacing:0.37px;}
+#t2o_10{left:181px;bottom:247px;letter-spacing:0.34px;}
+#t2p_10{left:182px;bottom:230px;letter-spacing:0.3px;}
+#t2q_10{left:696px;bottom:206px;}
+#t2r_10{left:798px;bottom:206px;}
+#t2s_10{left:491px;bottom:330px;}
+#t2t_10{left:130px;bottom:1061px;}
+#t2u_10{left:593px;bottom:247px;}
+#t2v_10{left:566px;bottom:365px;letter-spacing:0.37px;}
+#t2w_10{left:240px;bottom:520px;letter-spacing:0.35px;}
+#t2x_10{left:385px;bottom:1061px;}
+#t2y_10{left:258px;bottom:1061px;}
+#t2z_10{left:684px;bottom:365px;letter-spacing:0.37px;}
+#t30_10{left:666px;bottom:895px;letter-spacing:0.28px;}
+#t31_10{left:123px;bottom:931px;letter-spacing:0.37px;}
+#t32_10{left:593px;bottom:162px;}
+#t33_10{left:696px;bottom:162px;}
+#t34_10{left:82px;bottom:162px;letter-spacing:0.35px;}
+#t35_10{left:491px;bottom:247px;}
+#t36_10{left:593px;bottom:206px;}
+#t37_10{left:565px;bottom:1034px;letter-spacing:0.11px;}
+#t38_10{left:49px;bottom:639px;letter-spacing:0.27px;word-spacing:0.22px;}
+#t39_10{left:107px;bottom:639px;letter-spacing:0.36px;}
+#t3a_10{left:238px;bottom:639px;letter-spacing:0.26px;}
+#t3b_10{left:49px;bottom:623px;letter-spacing:0.26px;}
+#t3c_10{left:49px;bottom:606px;letter-spacing:0.26px;}
+#t3d_10{left:49px;bottom:589px;letter-spacing:0.27px;}
+#t3e_10{left:462px;bottom:509px;}
+#t3f_10{left:471px;bottom:509px;letter-spacing:-0.06px;}
+#t3g_10{left:462px;bottom:488px;letter-spacing:-0.06px;}
+#t3h_10{left:437px;bottom:15px;letter-spacing:0.02px;word-spacing:-0.08px;}
+
+#q_11_2_taigusasetsume_1{left:30px;bottom:1059px;}
+#q_11_2_taigusasetsume_2{left:160px;bottom:1059px;}
+#q_11_2_taigusasetsume_3{left:286px;bottom:1059px;}
+#q_11_2_taigusasetsume_4{left:414px;bottom:1059px;}
+
+#q_11_3_setsumehoho_1{left:655px;bottom:930px;}
+#q_11_3_setsumehoho_2{left:655px;bottom:894px;}
+#q_11_3_setsumehoho_3{left:655px;bottom:857px;}
+#q_11_3_setsumehoho_4{left:655px;bottom:821px;}
+#q_11_3_setsumehoho_5{left:655px;bottom:785px;}
+
+#q_12_1_syokumu_same_with_sesyain_1{left:33px;bottom:483px;}
+#q_12_1_syokumu_same_with_sesyain_2{left:160px;bottom:483px;}
+
+#q_12_2_kihonchinkin_1{left:387px;bottom:329px;z-index: 99;}
+#q_12_2_kihonchinkin_2{left:387px;bottom:288px;z-index: 99;}
+#q_12_2_kihonchinkin_3{left:387px;bottom:246px;z-index: 99;}
+#q_12_2_kihonchinkin_4{left:387px;bottom:205px;z-index: 99;}
+
+#q_12_2_syokuyakuteate_1{left:493px;bottom:329px;z-index: 98;}
+#q_12_2_syokuyakuteate_2{left:493px;bottom:288px;z-index: 98;}
+#q_12_2_syokuyakuteate_3{left:493px;bottom:246px;z-index: 98;}
+#q_12_2_syokuyakuteate_4{left:493px;bottom:205px;z-index: 98;}
+#q_12_2_syokuyakuteate_5{left:493px;bottom:161px;z-index: 98;}
+
+#q_12_2_syoyo_1{left:594px;bottom:329px;z-index: 97;}
+#q_12_2_syoyo_2{left:594px;bottom:288px;z-index: 97;}
+#q_12_2_syoyo_3{left:594px;bottom:246px;z-index: 97;}
+#q_12_2_syoyo_4{left:594px;bottom:205px;z-index: 97;}
+#q_12_2_syoyo_5{left:594px;bottom:161px;z-index: 97;}
+
+#q_12_2_taisyokukin_1{left:694px;bottom:329px;z-index: 96;}
+#q_12_2_taisyokukin_2{left:694px;bottom:288px;z-index: 96;}
+#q_12_2_taisyokukin_3{left:694px;bottom:246px;z-index: 96;}
+#q_12_2_taisyokukin_4{left:694px;bottom:205px;z-index: 96;}
+#q_12_2_taisyokukin_5{left:694px;bottom:161px;z-index: 96;}
+.k{
+	background-image: radial-gradient(black 30%, transparent 30%);
+	background-size: 3px 3px;
+ }
+
+.s1_10{font-size:15px;font-family:MS-PMincho_235;color:#000;}
+.s2_10{font-size:15px;font-family:MS-PGothic_239;color:#000;-webkit-text-stroke:0.4px #000;text-stroke:0.4px #000;}
+.s3_10{font-size:15px;font-family:MS-PMincho_235;color:#000;-webkit-text-stroke:0.4px #000;text-stroke:0.4px #000;}
+.s4_10{font-size:14px;font-family:MS-PMincho_235;color:#000;}
+.s5_10{font-size:12px;font-family:MS-PMincho_235;color:#000;}
+.s6_10{font-size:15px;font-family:MS-Mincho_23d;color:#000;}
+.s7_10{font-size:17px;font-family:MS-PGothic_239;color:#000;-webkit-text-stroke:0.5px #000;text-stroke:0.5px #000;}
+.s8_10{font-size:17px;font-family:MS-PGothic_239;color:#000;}
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts10" type="text/css" >
+
+@font-face {
+	font-family: MS-Mincho_23d;
+	src: url("css/fonts/MS-Mincho_23d.woff") format("woff");
+}
+
+@font-face {
+	font-family: MS-PGothic_239;
+	src: url("css/fonts/MS-PGothic_239.woff") format("woff");
+}
+
+@font-face {
+	font-family: MS-PMincho_235;
+	src: url("css/fonts/MS-PMincho_235.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin page background -->
+<div id="pg10Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg10" style="-webkit-user-select: none;"><object width="918" height="1299" data="img/10/10.svg" type="image/svg+xml" id="pdf10" style="width:918px; height:1299px; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<form name="myForm" >
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_10" class="t s1_10">(2)</div>
+<div id="t2_10" class="t s1_10">令和２年４月以降(中小企業の場合は、令和３年４月以降）、「</div>
+<div id ="q_11_2_taigusasetsume_1"  class="t s6_10">
+	<input type ="radio" class="radio-button" onclick= "exclude1()"name="q_11_2_taigusasetsume" value="1">
+</div>
+<div id ="q_11_2_taigusasetsume_2"  class="t s6_10">
+	<input type ="radio" class="radio-button" onclick= "exclude1()"name="q_11_2_taigusasetsume" value="2">
+</div>
+<div id ="q_11_2_taigusasetsume_3"  class="t s6_10">
+	<input type ="radio" class="radio-button" onclick= "exclude1()"name="q_11_2_taigusasetsume" value="3">
+</div>
+<div id ="q_11_2_taigusasetsume_4"  class="t s6_10">
+	<input type ="radio" class="radio-button" onclick= "exclude2()" name="q_11_2_taigusasetsume" value="4">
+</div>
+
+<div id ="q_11_3_setsumehoho_1"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" name="q_11_3_setsumehoho" value="1">
+</div>
+<div id ="q_11_3_setsumehoho_2"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" name="q_11_3_setsumehoho" value="2">
+</div>
+<div id ="q_11_3_setsumehoho_3"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" name="q_11_3_setsumehoho" value="3">
+</div>
+<div id ="q_11_3_setsumehoho_4"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" name="q_11_3_setsumehoho" value="4">
+</div>
+<div id ="q_11_3_setsumehoho_5"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" name="q_11_3_setsumehoho" value="5">
+</div>
+
+<div id ="q_12_1_syokumu_same_with_sesyain_1"  class="t s6_10">
+	<input type ="radio" class="radio-button" onclick= "exclude3()" name="q_12_1_syokumu_same_with_sesyain" value="1">
+</div>
+<div id ="q_12_1_syokumu_same_with_sesyain_2" class="t s6_10">
+	<input type ="radio" class="radio-button" onclick= "exclude4()"  name="q_12_1_syokumu_same_with_sesyain" value="2">
+</div>
+
+<div id ="q_12_2_kihonchinkin_1"  class="t s6_10">
+	<input type ="radio" class="radio-1" name="q_12_2_kihonchinkin" value="1">
+</div>
+<div id ="q_12_2_kihonchinkin_2"  class="t s6_10">
+	<input type ="radio" class="radio-1" name="q_12_2_kihonchinkin" value="2">
+</div>
+<div id ="q_12_2_kihonchinkin_3"  class="t s6_10">
+	<input type ="radio" class="radio-1" name="q_12_2_kihonchinkin" value="3">
+</div>
+<div id ="q_12_2_kihonchinkin_4"  class="t s6_10">
+	<input type ="radio" class="radio-1" name="q_12_2_kihonchinkin" value="4">
+</div>
+
+<div id ="q_12_2_syokuyakuteate_1"  class="t s6_10">
+	<input type ="radio" class="radio-1" name="q_12_2_syokuyakuteate" value="1">
+</div>
+<div id ="q_12_2_syokuyakuteate_2"  class="t s6_10">
+	<input type ="radio" class="radio-1" name="q_12_2_syokuyakuteate" value="2">
+</div>
+<div id ="q_12_2_syokuyakuteate_3"  class="t s6_10">
+	<input type ="radio" class="radio-1" name="q_12_2_syokuyakuteate" value="3">
+</div>
+<div id ="q_12_2_syokuyakuteate_4"  class="t s6_10">
+	<input type ="radio" class="radio-1" name="q_12_2_syokuyakuteate" value="4">
+</div>
+<div id ="q_12_2_syokuyakuteate_5"  class="t s6_10">
+	<input type ="radio" class="radio-1" name="q_12_2_syokuyakuteate" value="5">
+</div>
+
+
+<div id ="q_12_2_syoyo_1"  class="t s6_10">
+	<input type ="radio" class="radio-1" name="q_12_2_syoyo" value="1">
+</div>
+<div id ="q_12_2_syoyo_2"  class="t s6_10">
+	<input type ="radio" class="radio-1" name="q_12_2_syoyo" value="2">
+</div>
+<div id ="q_12_2_syoyo_3"  class="t s6_10">
+	<input type ="radio" class="radio-1" name="q_12_2_syoyo" value="3">
+</div>
+<div id ="q_12_2_syoyo_4"  class="t s6_10">
+	<input type ="radio" class="radio-1" name="q_12_2_syoyo" value="4">
+</div>
+<div id ="q_12_2_syoyo_5"  class="t s6_10">
+	<input type ="radio" class="radio-1" name="q_12_2_syoyo" value="5">
+</div>
+
+<div id ="q_12_2_taisyokukin_1"  class="t s6_10">
+	<input type ="radio" class="radio-1" name="q_12_2_taisyokukin" value="1">
+</div>
+<div id ="q_12_2_taisyokukin_2"  class="t s6_10">
+	<input type ="radio" class="radio-1" name="q_12_2_taisyokukin" value="2">
+</div>
+<div id ="q_12_2_taisyokukin_3"  class="t s6_10">
+	<input type ="radio" class="radio-1" name="q_12_2_taisyokukin" value="3">
+</div>
+<div id ="q_12_2_taisyokukin_4"  class="t s6_10">
+	<input type ="radio" class="radio-1" name="q_12_2_taisyokukin" value="4">
+</div>
+<div id ="q_12_2_taisyokukin_5"  class="t s6_10">
+	<input type ="radio" class="radio-1" name="q_12_2_taisyokukin" value="5">
+</div>
+
+<div id ="color_1" style="background-color: yellow; left:71.5px;bottom:1055px; width: 124px; height: 34px;z-index: 1; " class="t s1_3"></div>
+<div id ="color_2" style="background-color: yellow; left:199.3px;bottom:1055px; width: 124.3px; height: 34px;z-index: 1; " class="t s1_3"></div>
+<div id ="color_3" style="background-color: yellow; left:326.8px;bottom:1055px; width: 124px; height: 34px;z-index: 1; " class="t s1_3"></div>
+<div id ="color_4" style="background-color: yellow; left:453.5px;bottom:1055px; width: 124.5px; height: 34px;z-index: 1; " class="t s1_3"></div>
+
+<div id ="color_5" style="background-color: yellow; left:624px;bottom:925.5px; width: 99px; height: 33px;z-index: 1; " class="t s1_3 k"></div>
+<div id ="color_6" style="background-color: yellow; left:624px;bottom:889.5px; width: 99px; height: 34.5px;z-index: 1; " class="t s1_3 k"></div>
+<div id ="color_7" style="background-color: yellow; left:624px;bottom:853px; width: 99px; height: 34px;z-index: 1; " class="t s1_3 k"></div>
+<div id ="color_8" style="background-color: yellow; left:624px;bottom:816.5px; width: 99px; height: 34.5px;z-index: 1; " class="t s1_3 k"></div>
+<div id ="color_9" style="background-color: yellow; left:624px;bottom:780px; width: 99px; height: 34px;z-index: 1; " class="t s1_3 k"></div>
+
+
+<div id ="color_10" style="background-color: yellow; left:71.5px;bottom:478px; width: 125px; height: 34px;z-index: 1; " class="t s1_3"></div>
+<div id ="color_11" style="background-color: yellow; left:198.5px;bottom:478px; width: 125px; height: 34px;z-index: 1; " class="t s1_3"></div>
+
+<div id ="color_12" style="background-color: yellow; left:445px;bottom:321.5px; width: 99px; height: 38.5px;z-index: 1; " class="t s1_3 kin-sen"></div>
+<div id ="color_13" style="background-color: yellow; left:547px;bottom:321.5px; width: 99px; height: 38.5px;z-index: 1; " class="t s1_3 kin-sen"></div>
+<div id ="color_14" style="background-color: yellow; left:649px;bottom:321.5px; width: 99px; height: 38.5px;z-index: 1; " class="t s1_3 kin-sen"></div>
+<div id ="color_15" style="background-color: yellow; left:751px;bottom:321.5px; width: 99px; height: 38.5px;z-index: 1; " class="t s1_3 kin-sen"></div>
+
+<div id ="color_16" style="background-color: yellow; left:445px;bottom:281px; width: 99px; height: 38.5px;z-index: 1; " class="t s1_3 kin-sen"></div>
+<div id ="color_17" style="background-color: yellow; left:547px;bottom:281px; width: 99px; height: 38.5px;z-index: 1; " class="t s1_3 kin-sen"></div>
+<div id ="color_18" style="background-color: yellow; left:649px;bottom:281px; width: 99px; height: 38.5px;z-index: 1; " class="t s1_3 kin-sen"></div>
+<div id ="color_19" style="background-color: yellow; left:751px;bottom:281px; width: 99px; height: 38.5px;z-index: 1; " class="t s1_3 kin-sen"></div>
+
+<div id ="color_20" style="background-color: yellow; left:445px;bottom:239.5px; width: 99px; height: 38.5px;z-index: 1; " class="t s1_3 kin-sen"></div>
+<div id ="color_21" style="background-color: yellow; left:547px;bottom:239.5px; width: 99px; height: 38.5px;z-index: 1; " class="t s1_3 kin-sen"></div>
+<div id ="color_22" style="background-color: yellow; left:649px;bottom:239.5px; width: 99px; height: 38.5px;z-index: 1; " class="t s1_3 kin-sen"></div>
+<div id ="color_23" style="background-color: yellow; left:751px;bottom:239.5px; width: 99px; height: 38.5px;z-index: 1; " class="t s1_3 kin-sen"></div>
+
+<div id ="color_24" style="background-color: yellow; left:445px;bottom:198px; width: 99px; height: 38.5px;z-index: 1; " class="t s1_3 kin-sen"></div>
+<div id ="color_25" style="background-color: yellow; left:547px;bottom:198px; width: 99px; height: 38.5px;z-index: 1; " class="t s1_3 kin-sen"></div>
+<div id ="color_26" style="background-color: yellow; left:649px;bottom:198px; width: 99px; height: 38.5px;z-index: 1; " class="t s1_3 kin-sen"></div>
+<div id ="color_27" style="background-color: yellow; left:751px;bottom:198px; width: 99px; height: 38.5px;z-index: 1; " class="t s1_3 kin-sen"></div>
+
+<div id ="color_28" style="background-color: yellow; left:547px;bottom:153.5px; width: 99px; height: 42px;z-index: 1; " class="t s1_3 kin-sen"></div>
+<div id ="color_29" style="background-color: yellow; left:649px;bottom:153.5px; width: 99px; height:42px;z-index: 1; " class="t s1_3 kin-sen"></div>
+<div id ="color_30" style="background-color: yellow; left:751px;bottom:153.5px; width: 99px; height:42px;z-index: 1; " class="t s1_3 kin-sen"></div>
+
+<div id="t3_10" class="t s2_10">パートタイム・有期雇用労働者</div>
+<div id="t4_10" class="t s1_10">」に対し「正社員との待遇差の内容</div>
+<div id="t5_10" class="t s1_10">や理由」について説明をしていますか。</div>
+<div id="t6_10" class="t s1_10">「１」、「２」、「３」を選択した場合は下へお進みください。</div>
+<div id="t7_10" class="t s1_10">(3)</div>
+<div id="t8_10" class="t s1_10">具体的にどのように説明していますか（説明する予定ですか）。該当するものを</div>
+<div id="t9_10" class="t s2_10">すべて</div>
+<div id="ta_10" class="t s1_10">選んでください。</div>
+<div id="tb_10" class="t s1_10">その他</div>
+<div id="tc_10" class="t s1_10">問12</div>
+<div id="td_10" class="t s1_10">「</div>
+<div id="te_10" class="t s2_10">正社員と職務が同じ</div>
+<div id="tf_10" class="t s1_10">」（注21)である「</div>
+<div id="tg_10" class="t s2_10">パートタイム・有期雇用労働者</div>
+<div id="th_10" class="t s1_10">」と「</div>
+<div id="ti_10" class="t s2_10">正社員</div>
+<div id="tj_10" class="t s1_10">」について、その待遇状況を比較して</div>
+<div id="tk_10" class="t s1_10">お答えください。</div>
+<div id="tl_10" class="t s1_10">(1) </div>
+<div id="tm_10" class="t s1_10">「</div>
+<div id="tn_10" class="t s2_10">正社員と職務が同じ</div>
+<div id="to_10" class="t s1_10">」である「</div>
+<div id="tp_10" class="t s2_10">パートタイム</div>
+<div id="tq_10" class="t s3_10">・</div>
+<div id="tr_10" class="t s2_10">有期雇用労働者</div>
+<div id="ts_10" class="t s1_10">」はいますか。</div>
+<div id="tt_10" class="t s1_10">(2) </div>
+<div id="tu_10" class="t s1_10">「</div>
+<div id="tv_10" class="t s2_10">正社員と職務が同じ</div>
+<div id="tw_10" class="t s1_10">」である「</div>
+<div id="tx_10" class="t s2_10">パートタイム・有期雇用労働者</div>
+<div id="ty_10" class="t s1_10">」の基本賃金（基本給）、役職手当、賞与、退職金の支払</div>
+<div id="tz_10" class="t s1_10">はどうなっていますか。それぞれ該当するものを</div>
+<div id="t10_10" class="t s2_10">１つ</div>
+<div id="t11_10" class="t s1_10">選んでください。</div>
+<div id="t12_10" class="t s4_10">※職務（業務の内容及び責任の程度）、職務の成果、能力、経験、勤続年数、学歴等の上記基本賃金（基本給）等の算定の要素となる</div>
+<div id="t13_10" class="t s1_10">ものです。</div>
+<div id="t14_10" class="t s1_10">説明をしたことはな</div>
+<div id="t15_10" class="t s1_10">く、今後も説明をす</div>
+<div id="t16_10" class="t s1_10">る予定はない</div>
+<div id="t17_10" class="t s1_10">4</div>
+<div id="t18_10" class="t s5_10"></div>
+<div id="t19_10" class="t s1_10">パートタイム・有期</div>
+<div id="t1a_10" class="t s1_10">雇用労働者から求</div>
+<div id="t1b_10" class="t s1_10">められ、説明をして</div>
+<div id="t1c_10" class="t s1_10">いる</div>
+<div id="t1d_10" class="t s1_10">パートタイム・有期</div>
+<div id="t1e_10" class="t s1_10">雇用労働者から求</div>
+<div id="t1f_10" class="t s1_10">められなかったが、</div>
+<div id="t1g_10" class="t s1_10">説明をしている</div>
+<div id="t1h_10" class="t s4_10">説明をしたことはない</div>
+<div id="t1i_10" class="t s4_10">が、パートタイム・有</div>
+<div id="t1j_10" class="t s4_10">期雇用労働者から求</div>
+<div id="t1k_10" class="t s4_10">められれば説明をす</div>
+<div id="t1l_10" class="t s4_10">る予定である</div>
+<div id="t1m_10" class="t s5_10"></div>
+<div id="t1n_10" class="t s6_10">04</div>
+<div id="t1o_10" class="t s6_10">2</div>
+<div id="t1p_10" class="t s6_10">3</div>
+<div id="t1q_10" class="t s6_10">1</div>
+<div id="t1r_10" class="t s4_10">正社員とは算定要素※</div>
+<div id="t1s_10" class="t s4_10">が全く異なる</div>
+<div id="t1t_10" class="t s1_10">退職金</div>
+<div id="t1u_10" class="t s4_10">正社員と算定要素※が</div>
+<div id="t1v_10" class="t s4_10">全て共通している</div>
+<div id="t1w_10" class="t s6_10">2</div>
+<div id="t1x_10" class="t s6_10">4</div>
+<div id="t1y_10" class="t s5_10"></div>
+<div id="t1z_10" class="t s5_10"></div>
+<div id="t20_10" class="t s1_10">いる</div>
+<div id="t21_10" class="t s6_10">01</div>
+<div id="t22_10" class="t s6_10">05</div>
+<div id="t23_10" class="t s6_10">5</div>
+<div id="t24_10" class="t s4_10">正社員と算定要素※が</div>
+<div id="t25_10" class="t s4_10">一部共通している</div>
+<div id="t26_10" class="t s6_10">2</div>
+<div id="t27_10" class="t s1_10">説明会を開催</div>
+<div id="t28_10" class="t s1_10">1</div>
+<div id="t29_10" class="t s1_10">2</div>
+<div id="t2a_10" class="t s1_10">基本賃金</div>
+<div id="t2b_10" class="t s6_10">1</div>
+<div id="t2c_10" class="t s1_10">説明資料（冊子等）を作成・配布、社内システム等で掲載・周知</div>
+<div id="t2d_10" class="t s5_10"></div>
+<div id="t2e_10" class="t s1_10">個別の問合せに応じて口頭で説明</div>
+<div id="t2f_10" class="t s1_10">支払っている</div>
+<div id="t2g_10" class="t s6_10">2</div>
+<div id="t2h_10" class="t s1_10">正社員と同様の算定方法（制度・基準）</div>
+<div id="t2i_10" class="t s1_10">に基づいている</div>
+<div id="t2j_10" class="t s6_10">03</div>
+<div id="t2k_10" class="t s6_10">3</div>
+<div id="t2l_10" class="t s5_10"></div>
+<div id="t2m_10" class="t s6_10">1</div>
+<div id="t2n_10" class="t s1_10">正社員の算定</div>
+<div id="t2o_10" class="t s1_10">方法（制度・基</div>
+<div id="t2p_10" class="t s1_10">準）とは異なる</div>
+<div id="t2q_10" class="t s6_10">4</div>
+<div id="t2r_10" class="t s6_10">4</div>
+<div id="t2s_10" class="t s6_10">1</div>
+<div id="t2t_10" class="t s1_10">1</div>
+<div id="t2u_10" class="t s6_10">3</div>
+<div id="t2v_10" class="t s1_10">役職手当</div>
+<div id="t2w_10" class="t s1_10">いない</div>
+<div id="t2x_10" class="t s1_10">3</div>
+<div id="t2y_10" class="t s1_10">2</div>
+<div id="t2z_10" class="t s1_10">賞与</div>
+<div id="t30_10" class="t s6_10">02</div>
+<div id="t31_10" class="t s1_10">個別の問合せに応じて書面等を発行</div>
+<div id="t32_10" class="t s6_10">5</div>
+<div id="t33_10" class="t s6_10">5</div>
+<div id="t34_10" class="t s1_10">支払っていない</div>
+<div id="t35_10" class="t s6_10">3</div>
+<div id="t36_10" class="t s6_10">4</div>
+<div id="t37_10" class="t s5_10"></div>
+<div id="t38_10" class="t s1_10">（注21） 「</div>
+<div id="t39_10" class="t s2_10">正社員と職務が同じ</div>
+<div id="t3a_10" class="t s1_10">」は、業務の内容及び責任の程度が正社員と同じことをいいます。通常従事する業務の内容だけで</div>
+<div id="t3b_10" class="t s1_10">なく、作業のレベル（難易度）、求められる能力、責任や権限の範囲も含めてお考えください。トラブル発生などの臨時・緊急の対</div>
+<div id="t3c_10" class="t s1_10">応、ノルマや与えられた権限といった業務上の責任について、正社員と同じように課されるか考慮するとともに、作業を行う上で必</div>
+<div id="t3d_10" class="t s1_10">要な能力、作業の難易度、肉体的・精神的負担なども含めて判断してください。</div>
+<div id="t3e_10" class="t s7_10">「</div>
+<div id="t3f_10" class="t s7_10">２」を選択した場合は、問１４</div>
+<div id="t3g_10" class="t s7_10">へお進みください。</div>
+<div id="t3h_10" class="t s8_10">- 10 -</div>
+<div class="modal fade" id="modal_info" data-backdrop="static" tabindex="-1">
+	<div class="modal-dialog">
+	<div class="modal-content">
+	<div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span>×</span></button><h4 class="modal-title"></h4></div>
+	<div class="modal-body"><div class="alert alert-info tokei-alert-info cf"><span class="glyphicon tokei-glyphicon-info" aria-hidden="true"></span><div class="tokei-alert-inner"></div></div></div>
+	<div class="modal-footer"><button type="button" class="btn tokei-btn-important" data-dismiss="modal">OK</button></div>
+	</div>
+	</div>
+	</div>
+	<!--
+		4.2.5 (15) モダールウィンドウを表示する
+		・modal_conf(確認、キャンセル／OKボタンを配置)
+		
+		chosahyo.jsでMODAL_CONFを指定すると利用できます。
+	-->
+	<div class="modal fade" id="modal_conf" data-backdrop="static" tabindex="-1">
+	<div class="modal-dialog">
+	<div class="modal-content">
+	<div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span>×</span></button><h4 class="modal-title"></h4></div>
+	<div class="modal-body"><div class="alert alert-success tokei-alert-confirmation cf"><span class="glyphicon tokei-glyphicon-confirmation" aria-hidden="true"></span><div class="tokei-alert-inner"></div></div></div>
+	<div class="modal-footer"><button type="button" class="btn tokei-btn-important" data-dismiss="modal">OK</button></div>
+	</div>
+	</div>
+	</div>
+	<!--
+		4.2.5 (15) モダールウィンドウを表示する
+		・modal_warn(警告、OKボタンのみ配置)
+		
+		chosahyo.jsでMODAL_WARNを指定すると利用できます。
+	-->
+	<div class="modal fade" id="modal_warn" data-backdrop="static" tabindex="-1">
+	<div class="modal-dialog">
+	<div class="modal-content">
+	<div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span>×</span></button><h4 class="modal-title"></h4></div>
+	<div class="modal-body"><div class="alert alert-warning tokei-alert-warning cf"><span class="glyphicon tokei-glyphicon-warning" aria-hidden="true"></span><div class="tokei-alert-inner"></div></div></div>
+	<div class="modal-footer"><button type="button" class="btn tokei-btn-important" data-dismiss="modal">OK</button></div>
+	</div>
+	</div>
+	</div>
+	<!--
+		4.2.5 (15) モダールウィンドウを表示する
+		・modal_error(エラー用、OKボタンのみ配置)
+		
+		chosahyo.jsでMODAL_ERRORを指定すると利用できます。
+	-->
+	<div class="modal fade" id="modal_error" data-backdrop="static" tabindex="-1">
+	<div class="modal-dialog">
+	<div class="modal-content">
+	<div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span>×</span></button><h4 class="modal-title"></h4></div>
+	<div class="modal-body"><div class="alert alert-danger tokei-alert-danger cf"><span class="glyphicon tokei-glyphicon-danger" aria-hidden="true"></span><div class="tokei-alert-inner"></div></div></div>
+	<div class="modal-footer"><button type="button" class="btn tokei-btn-important" data-dismiss="modal">OK</button></div>
+	</div>
+	</div>
+	</div>
+</form>
+<!-- End text definitions -->
+
+
+</div>
+</body>
+</html>

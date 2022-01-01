@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;" onload="ColorAjustment()" >
+<script>
+		function ColorAjustment() {
+			var val =JSON.parse(localStorage.getItem("checkedArray"));
+			for (i=0;i<5;i++){
+				if (val[0] == "false"){
+				document.getElementsByClassName('infinite')[i].style.backgroundColor = "grey";
+				document.getElementsByClassName('radio-1')[i].disabled=true;
+				}
+				if (val[1] == "false"){
+					document.getElementsByClassName('limit_1')[i].style.backgroundColor = "grey";
+					document.getElementsByClassName('radio-2')[i].disabled=true;
+				}
+				if (val[2] == "false"){
+					document.getElementsByClassName('limit_2')[i].style.backgroundColor = "grey";
+					document.getElementsByClassName('radio-3')[i].disabled =true;
+				}
+			}
+		}
+		function exclude1() {
+			for (i=0;i<7;i++){
+				if (document.getElementsByClassName('checkbox-1')[i].checked){
+					var n = true;
+					break;
+				}
+			}
+			if (n == true){
+				console.log(i);
+				document.getElementsByClassName('checkbox-1')[7].checked = false;
+			}
+		}
+		function exclude2() {
+			if (document.getElementsByClassName('checkbox-1')[7].checked){
+				for (i=0;i<7;i++){
+					document.getElementsByClassName('checkbox-1')[i].checked =false;
+				}
+			}
+		}
+		function exclude3() {
+			for (i=0;i<3;i++){
+				if (document.getElementsByClassName('checkbox-2')[i].checked){
+					document.getElementsByClassName('checkbox-2')[3].checked =false;
+					document.getElementsByClassName('checkbox-2')[4].checked =false;
+				}
+			}
+		}
+		function exclude4() {
+			if (document.getElementsByClassName('checkbox-2')[3].checked){
+				for (i=0;i<3;i++){
+					document.getElementsByClassName('checkbox-2')[i].checked =false;
+				}
+				document.getElementsByClassName('checkbox-2')[4].checked =false;
+			}
+		}
+		function exclude5() {
+			if (document.getElementsByClassName('checkbox-2')[4].checked){
+				for (i=0;i<4;i++){
+					document.getElementsByClassName('checkbox-2')[i].checked =false;
+				}
+			}
+		}
+</script>
+<link rel="stylesheet" href="./js/lib/bootstrap-3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="./js/lib/bootstrap-3.3.6/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="./css/toukei.main.css">
+<script src="./js/lib/jquery-1.11.3.min.js"></script>
+<script src="./js/lib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+<script src="./js/tokei.main.js"></script>
+<script src="./js/chosahyo.js"></script>
+
+<div id ="common-bar">
+	<button type="button-1" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" style="position: absolute; left: 450px; top: 15px;z-index: 10">回答の一時保存</button>
+	<button type="button-2" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" style="position: absolute; left: 620px; top: 15px;z-index: 10">一時保存した回答の取得</button>
+	<a href="javascript:CmnPageClear(myForm)"><button type="button-3" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" style="position: absolute; left: 860px; top: 15px;z-index: 10">クリア</button></a>
+	<a href="javascript:CmnExecChk9(myForm)"><button type="button-5" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" style="position: absolute; left: 880px; top: 1200px; z-index: 10;">次ページへ</button></a>
+    <input
+	action="action"
+    onclick="window.history.go(-1); return false;"
+	class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command"
+    type="submit"
+	style="position: absolute; left: 250px; top: 1200px; width: 120px; z-index: 10"
+    value="前ページへ"
+/>
+</div>
+
+<div id="p9" style="overflow: hidden; position: relative; background-color: white; width: 918px; height: 1299px;left: 185px; top: 65px;">
+
+<!-- Begin shared CSS values -->
+<style class="shared-css" type="text/css" >
+.t {
+	transform-origin: bottom left;
+	z-index: 2;
+	position: absolute;
+	white-space: pre;
+	overflow: visible;
+	line-height: 1.5;
+}
+</style>
+<!-- End shared CSS values -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_9{left:47px;bottom:1226px;letter-spacing:0.32px;word-spacing:-0.08px;}
+#t2_9{left:596px;bottom:1226px;letter-spacing:0.52px;}
+#t3_9{left:793px;bottom:1226px;letter-spacing:0.3px;}
+#t4_9{left:64px;bottom:1202px;letter-spacing:0.33px;}
+#t5_9{left:47px;bottom:936px;letter-spacing:0.11px;}
+#t6_9{left:79px;bottom:936px;}
+#t7_9{left:86px;bottom:936px;letter-spacing:0.52px;}
+#t8_9{left:284px;bottom:936px;letter-spacing:0.27px;}
+#t9_9{left:313px;bottom:936px;letter-spacing:0.56px;}
+#ta_9{left:359px;bottom:936px;letter-spacing:0.31px;}
+#tb_9{left:72px;bottom:913px;letter-spacing:0.34px;}
+#tc_9{left:170px;bottom:913px;letter-spacing:0.55px;}
+#td_9{left:215px;bottom:913px;letter-spacing:0.3px;}
+#te_9{left:82px;bottom:576px;letter-spacing:0.32px;}
+#tf_9{left:38px;bottom:508px;letter-spacing:0.29px;}
+#tg_9{left:79px;bottom:508px;}
+#th_9{left:87px;bottom:508px;letter-spacing:0.54px;}
+#ti_9{left:285px;bottom:508px;letter-spacing:0.35px;}
+#tj_9{left:47px;bottom:483px;letter-spacing:0.15px;}
+#tk_9{left:74px;bottom:483px;letter-spacing:0.33px;}
+#tl_9{left:590px;bottom:483px;letter-spacing:0.52px;}
+#tm_9{left:787px;bottom:483px;letter-spacing:0.34px;}
+#tn_9{left:64px;bottom:458px;letter-spacing:0.34px;}
+#to_9{left:74px;bottom:434px;letter-spacing:0.35px;}
+#tp_9{left:172px;bottom:434px;letter-spacing:0.75px;}
+#tq_9{left:219px;bottom:434px;letter-spacing:0.3px;}
+#tr_9{left:846px;bottom:1058px;letter-spacing:0.11px;}
+#ts_9{left:846px;bottom:1022px;letter-spacing:0.11px;}
+#tt_9{left:846px;bottom:987px;letter-spacing:0.11px;}
+#tu_9{left:267px;bottom:1031px;}
+#tv_9{left:394px;bottom:1031px;}
+#tw_9{left:521px;bottom:1031px;}
+#tx_9{left:649px;bottom:1031px;}
+#ty_9{left:267px;bottom:994px;}
+#tz_9{left:592px;bottom:1159px;letter-spacing:0.36px;}
+#t10_9{left:592px;bottom:1142px;letter-spacing:0.33px;}
+#t11_9{left:595px;bottom:1124px;letter-spacing:0.36px;}
+#t12_9{left:602px;bottom:1107px;letter-spacing:0.32px;}
+#t13_9{left:720px;bottom:1167px;letter-spacing:0.36px;}
+#t14_9{left:720px;bottom:1150px;letter-spacing:0.33px;}
+#t15_9{left:723px;bottom:1133px;letter-spacing:0.36px;}
+#t16_9{left:725px;bottom:1116px;letter-spacing:0.31px;}
+#t17_9{left:745px;bottom:1098px;letter-spacing:0.33px;}
+#t18_9{left:214px;bottom:1164px;letter-spacing:-0.27px;}
+#t19_9{left:521px;bottom:1067px;}
+#t1a_9{left:267px;bottom:1067px;}
+#t1b_9{left:394px;bottom:1067px;}
+#t1c_9{left:338px;bottom:1123px;letter-spacing:0.37px;}
+#t1d_9{left:347px;bottom:1106px;letter-spacing:0.32px;}
+#t1e_9{left:394px;bottom:994px;}
+#t1f_9{left:521px;bottom:994px;}
+#t1g_9{left:649px;bottom:994px;}
+#t1h_9{left:777px;bottom:994px;}
+#t1i_9{left:777px;bottom:1067px;}
+#t1j_9{left:332px;bottom:879px;letter-spacing:0.32px;}
+#t1k_9{left:193px;bottom:393px;letter-spacing:0.35px;}
+#t1l_9{left:108px;bottom:1133px;letter-spacing:0.37px;}
+#t1m_9{left:670px;bottom:775px;}
+#t1n_9{left:193px;bottom:329px;letter-spacing:0.35px;}
+#t1o_9{left:183px;bottom:312px;letter-spacing:0.34px;}
+#t1p_9{left:82px;bottom:285px;letter-spacing:0.36px;}
+#t1q_9{left:670px;bottom:698px;}
+#t1r_9{left:108px;bottom:613px;letter-spacing:0.38px;}
+#t1s_9{left:80px;bottom:366px;letter-spacing:0.36px;}
+#t1t_9{left:83px;bottom:348px;letter-spacing:0.35px;}
+#t1u_9{left:772px;bottom:393px;}
+#t1v_9{left:772px;bottom:357px;}
+#t1w_9{left:772px;bottom:248px;}
+#t1x_9{left:812px;bottom:224px;letter-spacing:0.11px;}
+#t1y_9{left:772px;bottom:321px;}
+#t1z_9{left:82px;bottom:248px;letter-spacing:0.34px;}
+#t20_9{left:772px;bottom:285px;}
+#t21_9{left:76px;bottom:817px;}
+#t22_9{left:76px;bottom:803px;}
+#t23_9{left:78px;bottom:789px;}
+#t24_9{left:77px;bottom:775px;}
+#t25_9{left:76px;bottom:758px;}
+#t26_9{left:77px;bottom:747px;}
+#t27_9{left:76px;bottom:733px;}
+#t28_9{left:78px;bottom:719px;}
+#t29_9{left:78px;bottom:705px;}
+#t2a_9{left:78px;bottom:690px;}
+#t2b_9{left:76px;bottom:676px;}
+#t2c_9{left:77px;bottom:663px;}
+#t2d_9{left:78px;bottom:648px;}
+#t2e_9{left:710px;bottom:553px;letter-spacing:0.11px;}
+#t2f_9{left:670px;bottom:738px;}
+#t2g_9{left:670px;bottom:847px;}
+#t2h_9{left:777px;bottom:1031px;}
+#t2i_9{left:466px;bottom:1132px;letter-spacing:0.37px;}
+#t2j_9{left:470px;bottom:1115px;letter-spacing:0.31px;}
+#t2k_9{left:490px;bottom:1097px;letter-spacing:0.33px;}
+#t2l_9{left:108px;bottom:775px;letter-spacing:0.34px;}
+#t2m_9{left:108px;bottom:811px;letter-spacing:0.33px;}
+#t2n_9{left:670px;bottom:811px;}
+#t2o_9{left:108px;bottom:662px;letter-spacing:0.35px;}
+#t2p_9{left:98px;bottom:645px;letter-spacing:0.2px;}
+#t2q_9{left:72px;bottom:1068px;letter-spacing:-0.25px;}
+#t2r_9{left:72px;bottom:1032px;letter-spacing:-0.3px;}
+#t2s_9{left:127px;bottom:1031px;letter-spacing:0.32px;}
+#t2t_9{left:72px;bottom:996px;letter-spacing:-0.26px;}
+#t2u_9{left:108px;bottom:707px;letter-spacing:0.35px;}
+#t2v_9{left:98px;bottom:689px;letter-spacing:0.33px;}
+#t2w_9{left:108px;bottom:738px;letter-spacing:0.37px;}
+#t2x_9{left:108px;bottom:847px;letter-spacing:0.36px;}
+#t2y_9{left:649px;bottom:1067px;}
+#t2z_9{left:193px;bottom:366px;letter-spacing:0.36px;}
+#t30_9{left:183px;bottom:348px;letter-spacing:0.35px;}
+#t31_9{left:209px;bottom:1123px;letter-spacing:0.38px;}
+#t32_9{left:220px;bottom:1106px;letter-spacing:0.36px;}
+#t33_9{left:670px;bottom:577px;}
+#t34_9{left:670px;bottom:653px;}
+#t35_9{left:670px;bottom:613px;}
+#t36_9{left:441px;bottom:15px;letter-spacing:0.03px;word-spacing:-0.09px;}
+.k{
+	background-image: radial-gradient(black 30%, transparent 30%);
+	background-size: 3px 3px;
+ }
+
+.s1_9{font-size:15px;font-family:MS-PMincho_235;color:#000;}
+.s2_9{font-size:15px;font-family:MS-PGothic_239;color:#000;-webkit-text-stroke:0.4px #000;text-stroke:0.4px #000;}
+.s3_9{font-size:15px;font-family:MS-Gothic_23h;color:#000;-webkit-text-stroke:0.4px #000;text-stroke:0.4px #000;}
+.s4_9{font-size:12px;font-family:MS-PMincho_235;color:#000;}
+.s5_9{font-size:14px;font-family:MS-PMincho_235;color:#000;}
+.s6_9{font-size:15px;font-family:MS-Mincho_23d;color:#000;}
+.s7_9{font-size:12px;font-family:MS-PMincho_235_1;color:#000;}
+.s8_9{font-size:17px;font-family:MS-PGothic_239;color:#000;}
+.t.m0_9{transform:matrix(1,0,0,1,0,0);}
+
+#q_10_3_kibo_muki_part_1{left:246px;bottom:1066px;letter-spacing:-0.25px;}
+#q_10_3_kibo_muki_part_2{left:372px;bottom:1066px;letter-spacing:-0.25px;}
+#q_10_3_kibo_muki_part_3{left:499px;bottom:1066px;letter-spacing:-0.25px;}
+#q_10_3_kibo_muki_part_4{left:626px;bottom:1066px;letter-spacing:-0.25px;}
+#q_10_3_kibo_muki_part_5{left:753px;bottom:1066px;letter-spacing:-0.25px;}
+
+#q_10_3_kibo_yuki_part_1{left:246px;bottom:1030px;letter-spacing:-0.25px;}
+#q_10_3_kibo_yuki_part_2{left:372px;bottom:1030px;letter-spacing:-0.25px;}
+#q_10_3_kibo_yuki_part_3{left:499px;bottom:1030px;letter-spacing:-0.25px;}
+#q_10_3_kibo_yuki_part_4{left:626px;bottom:1030px;letter-spacing:-0.25px;}
+#q_10_3_kibo_yuki_part_5{left:753px;bottom:1030px;letter-spacing:-0.25px;}
+
+#q_10_3_kibo_yuki_full_1{left:246px;bottom:994px;letter-spacing:-0.25px;}
+#q_10_3_kibo_yuki_full_2{left:372px;bottom:994px;letter-spacing:-0.25px;}
+#q_10_3_kibo_yuki_full_3{left:499px;bottom:994px;letter-spacing:-0.25px;}
+#q_10_3_kibo_yuki_full_4{left:626px;bottom:994px;letter-spacing:-0.25px;}
+#q_10_3_kibo_yuki_full_5{left:753px;bottom:994px;letter-spacing:-0.25px;}
+
+#q_10_4_shisyo_1{left:646px;bottom:846px;letter-spacing:-0.25px;}
+#q_10_4_shisyo_2{left:646px;bottom:810px;letter-spacing:-0.25px;}
+#q_10_4_shisyo_3{left:646px;bottom:774px;letter-spacing:-0.25px;}
+#q_10_4_shisyo_4{left:646px;bottom:737px;letter-spacing:-0.25px;}
+#q_10_4_shisyo_5{left:646px;bottom:698px;letter-spacing:-0.25px;}
+#q_10_4_shisyo_6{left:646px;bottom:652px;letter-spacing:-0.25px;}
+#q_10_4_shisyo_7{left:646px;bottom:612px;letter-spacing:-0.25px;}
+#q_10_4_shisyo_8{left:646px;bottom:576px;letter-spacing:-0.25px;}
+
+#q_11_1_taigusetsume_1{left:746px;bottom:392px;letter-spacing:-0.25px;}
+#q_11_1_taigusetsume_2{left:746px;bottom:356px;letter-spacing:-0.25px;}
+#q_11_1_taigusetsume_3{left:746px;bottom:320px;letter-spacing:-0.25px;}
+#q_11_1_taigusetsume_4{left:746px;bottom:284px;letter-spacing:-0.25px;}
+#q_11_1_taigusetsume_5{left:746px;bottom:247px;letter-spacing:-0.25px;}
+
+
+#color_1{left:207.5px;bottom:1062px;letter-spacing:0.28px;width:125px;height:33px;background-color: yellow;}
+#color_2{left:335px;bottom:1062px;letter-spacing:0.28px;width:124px;height:33px;background-color: yellow;}
+#color_3{left:461.5px;bottom:1062px;letter-spacing:0.28px;width:125.5px;height:33px;background-color: yellow;}
+#color_4{left:589.5px;bottom:1062px;letter-spacing:0.28px;width:125.5px;height:33px;background-color: yellow;}
+#color_5{left:717px;bottom:1062px;letter-spacing:0.28px;width:125.5px;height:33px;background-color: yellow;}
+
+#color_6{left:207.5px;bottom:1025.5px;letter-spacing:0.28px;width:125px;height:34px;background-color: yellow;}
+#color_7{left:335px;bottom:1025.5px;letter-spacing:0.28px;width:124px;height:33px;background-color: yellow;}
+#color_8{left:461.5px;bottom:1025.5px;letter-spacing:0.28px;width:125.5px;height:33px;background-color: yellow;}
+#color_9{left:589.5px;bottom:1025.5px;letter-spacing:0.28px;width:125.5px;height:33px;background-color: yellow;}
+#color_10{left:717px;bottom:1025.5px;letter-spacing:0.28px;width:125.5px;height:33px;background-color: yellow;}
+
+#color_11{left:207.5px;bottom:988.5px;letter-spacing:0.28px;width:125px;height:34px;background-color: yellow;}
+#color_12{left:335px;bottom:988.5px;letter-spacing:0.28px;width:124px;height:34px;background-color: yellow;}
+#color_13{left:461.5px;bottom:988.5px;letter-spacing:0.28px;width:125.5px;height:34px;background-color: yellow;}
+#color_14{left:589.5px;bottom:988.5px;letter-spacing:0.28px;width:125.5px;height:34px;background-color: yellow;}
+#color_15{left:717px;bottom:988.5px;letter-spacing:0.28px;width:125.5px;height:34px;background-color: yellow;}
+
+#color_16{left:623.5px;bottom:842px;letter-spacing:0.28px;width:99.5px;height:33px;background-color: yellow;}
+#color_17{left:623.5px;bottom:806px;letter-spacing:0.28px;width:99.5px;height:33.5px;background-color: yellow;}
+#color_18{left:623.5px;bottom:770px;letter-spacing:0.28px;width:99.5px;height:33.5px;background-color: yellow;}
+#color_19{left:623.5px;bottom:733px;letter-spacing:0.28px;width:99.5px;height:34px;background-color: yellow;}
+#color_20{left:623.5px;bottom:688.5px;letter-spacing:0.28px;width:99.5px;height:42px;background-color: yellow;}
+#color_21{left:623.5px;bottom:644px;letter-spacing:0.28px;width:99.5px;height:42px;background-color: yellow;}
+#color_22{left:623.5px;bottom:607.5px;letter-spacing:0.28px;width:99.5px;height:34px;background-color: yellow;}
+#color_23{left:623.5px;bottom:572px;letter-spacing:0.28px;width:99.5px;height:33.5px;background-color: yellow;}
+
+#color_25{left:726px;bottom:388px;letter-spacing:0.28px;width:99.5px;height:34px;background-color: yellow;}
+#color_26{left:726px;bottom:352px;letter-spacing:0.28px;width:99.5px;height:33.5px;background-color: yellow;}
+#color_27{left:726px;bottom:315.6px;letter-spacing:0.28px;width:99.5px;height:33.6px;background-color: yellow;}
+#color_28{left:726px;bottom:279px;letter-spacing:0.28px;width:99.5px;height:33.5px;background-color: yellow;}
+#color_29{left:726px;bottom:243px;letter-spacing:0.28px;width:99.5px;height:33.6px;background-color: yellow;}
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts9" type="text/css" >
+
+@font-face {
+	font-family: MS-Gothic_23h;
+	src: url("css/fonts/MS-Gothic_23h.woff") format("woff");
+}
+
+@font-face {
+	font-family: MS-Mincho_23d;
+	src: url("css/fonts/MS-Mincho_23d.woff") format("woff");
+}
+
+@font-face {
+	font-family: MS-PGothic_239;
+	src: url("css/fonts/MS-PGothic_239.woff") format("woff");
+}
+
+@font-face {
+	font-family: MS-PMincho_235;
+	src: url("css/fonts/MS-PMincho_235.woff") format("woff");
+}
+
+@font-face {
+	font-family: MS-PMincho_235_1;
+	src: url("css/fonts/MS-PMincho_235_1.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin page background -->
+<div id="pg9Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg9" style="-webkit-user-select: none;"><object width="918" height="1299" data="img/9/9.svg" type="image/svg+xml" id="pdf9" style="width:918px; height:1299px; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<form name="myForm">
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_9" class="t s1_9">(3) 過去３年間（平成30年10月～令和３年９月）に正社員への転換を希望し、転換した「</div>
+
+<div id ="color_1"  class="t s6_10 infinite"></div>
+<div id ="color_2"  class="t s6_10 infinite"></div>
+<div id ="color_3"  class="t s6_10 infinite" ></div>
+<div id ="color_4"  class="t s6_10 infinite"></div>
+<div id ="color_5"  class="t s6_10 infinite"></div>
+
+<div id ="color_6"  class="t s6_10 limit_1"></div>
+<div id ="color_7"  class="t s6_10 limit_1"></div>
+<div id ="color_8"  class="t s6_10 limit_1"></div>
+<div id ="color_9"  class="t s6_10 limit_1"></div>
+<div id ="color_10"  class="t s6_10 limit_1"></div>
+
+<div id ="color_11"  class="t s6_10 limit_2"></div>
+<div id ="color_12"  class="t s6_10 limit_2"></div>
+<div id ="color_13"  class="t s6_10 limit_2"></div>
+<div id ="color_14"  class="t s6_10 limit_2"></div>
+<div id ="color_15"  class="t s6_10 limit_2"></div>
+
+<div id ="color_16"  class="t s6_10 k"></div>
+<div id ="color_17"  class="t s6_10 k"></div>
+<div id ="color_18"  class="t s6_10 k"></div>
+<div id ="color_19"  class="t s6_10 k"></div>
+<div id ="color_20"  class="t s6_10 k"></div>
+<div id ="color_21"  class="t s6_10 k"></div>
+<div id ="color_22"  class="t s6_10 k"></div>
+
+<div id ="color_23"  class="t s6_10"></div>
+
+
+<div id ="color_25"  class="t s6_10 k"></div>
+<div id ="color_26"  class="t s6_10 k"></div>
+
+<div id ="color_27"  class="t s6_10 k"></div>
+<div id ="color_28"  class="t s6_10"></div>
+<div id ="color_29"  class="t s6_10"></div>
+
+<div id ="q_10_3_kibo_muki_part_1"  class="t s1_3">
+	<input type ="radio" class="radio-1" name="q_10_3_kibo_muki_part" value="1">
+</div>
+<div id ="q_10_3_kibo_muki_part_2"  class="t s1_3">
+	<input type ="radio" class="radio-1" name="q_10_3_kibo_muki_part" value="2">
+</div>
+<div id ="q_10_3_kibo_muki_part_3"  class="t s1_3">
+	<input type ="radio" class="radio-1" name="q_10_3_kibo_muki_part" value="3">
+</div>
+<div id ="q_10_3_kibo_muki_part_4"  class="t s1_3">
+	<input type ="radio" class="radio-1" name="q_10_3_kibo_muki_part" value="4">
+</div>
+<div id ="q_10_3_kibo_muki_part_5"  class="t s1_3">
+	<input type ="radio" class="radio-1" name="q_10_3_kibo_muki_part" value="5">
+</div>
+
+<div id ="q_10_3_kibo_yuki_part_1"  class="t s1_3">
+	<input type ="radio" class="radio-2" name="q_10_3_kibo_yuki_part" value="1">
+</div>
+<div id ="q_10_3_kibo_yuki_part_2"  class="t s1_3">
+	<input type ="radio" class="radio-2" name="q_10_3_kibo_yuki_part" value="2">
+</div>
+<div id ="q_10_3_kibo_yuki_part_3"  class="t s1_3">
+	<input type ="radio" class="radio-2" name="q_10_3_kibo_yuki_part" value="3">
+</div>
+<div id ="q_10_3_kibo_yuki_part_4"  class="t s1_3">
+	<input type ="radio" class="radio-2" name="q_10_3_kibo_yuki_part" value="4">
+</div>
+<div id ="q_10_3_kibo_yuki_part_5"  class="t s1_3">
+	<input type ="radio" class="radio-2" name="q_10_3_kibo_yuki_part" value="5">
+</div>
+
+<div id ="q_10_3_kibo_yuki_full_1"  class="t s1_3">
+	<input type ="radio" class="radio-3" name="q_10_3_kibo_yuki_full" value="1">
+</div>
+<div id ="q_10_3_kibo_yuki_full_2"  class="t s1_3">
+	<input type ="radio" class="radio-3" name="q_10_3_kibo_yuki_full" value="2">
+</div>
+<div id ="q_10_3_kibo_yuki_full_3"  class="t s1_3">
+	<input type ="radio" class="radio-3" name="q_10_3_kibo_yuki_full" value="3">
+</div>
+<div id ="q_10_3_kibo_yuki_full_4"  class="t s1_3">
+	<input type ="radio" class="radio-3" name="q_10_3_kibo_yuki_full" value="4">
+</div>
+<div id ="q_10_3_kibo_yuki_full_5"  class="t s1_3">
+	<input type ="radio" class="radio-3" name="q_10_3_kibo_yuki_full" value="5">
+</div>
+
+<div id ="q_10_4_shisyo_1"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" onclick= "exclude1()" name="q_10_4_shisyo" value="1">
+</div>
+<div id ="q_10_4_shisyo_2"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1"  onclick= "exclude1()"  name="q_10_4_shisyo" value="2">
+</div>
+<div id ="q_10_4_shisyo_3"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1"   onclick= "exclude1()" name="q_10_4_shisyo" value="3">
+</div>
+<div id ="q_10_4_shisyo_4"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1"   onclick= "exclude1()" name="q_10_4_shisyo" value="4">
+</div>
+<div id ="q_10_4_shisyo_5"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1"   onclick= "exclude1()" name="q_10_4_shisyo" value="5">
+</div>
+<div id ="q_10_4_shisyo_6"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1"   onclick= "exclude1()" name="q_10_4_shisyo" value="6">
+</div>
+<div id ="q_10_4_shisyo_7"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1"  onclick= "exclude1()"  name="q_10_4_shisyo" value="7">
+</div>
+<div id ="q_10_4_shisyo_8"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1"   onclick= "exclude2()" name="q_10_4_shisyo" value="8">
+</div>
+
+<div id ="q_11_1_taigusetsume_1"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-2"  onclick= "exclude3()" name="q_11_1_taigusetsume" value="1">
+</div>
+<div id ="q_11_1_taigusetsume_2"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-2" onclick= "exclude3()" name="q_11_1_taigusetsume" value="2">
+</div>
+<div id ="q_11_1_taigusetsume_3"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-2"  onclick= "exclude3()" name="q_11_1_taigusetsume" value="3">
+</div>
+<div id ="q_11_1_taigusetsume_4"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-2" onclick= "exclude4()" name="q_11_1_taigusetsume" value="4">
+</div>
+<div id ="q_11_1_taigusetsume_5"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-2" onclick= "exclude5()" name="q_11_1_taigusetsume" value="5">
+</div>
+<div id="t2_9" class="t s2_9">パートタイム・有期雇用労働者</div>
+<div id="t3_9" class="t s1_9">」はいました</div>
+<div id="t4_9" class="t s1_9">か。就業形態別に該当するものを選んでください。</div>
+<div id="t5_9" class="t s1_9">(4) </div>
+<div id="t6_9" class="t s1_9">「</div>
+<div id="t7_9" class="t s2_9">パートタイム・有期雇用労働者</div>
+<div id="t8_9" class="t s1_9">」を「</div>
+<div id="t9_9" class="t s2_9">正社員</div>
+<div id="ta_9" class="t s1_9">」に転換する上で支障となっていることはありますか。</div>
+<div id="tb_9" class="t s1_9">該当するものを</div>
+<div id="tc_9" class="t s2_9">すべて</div>
+<div id="td_9" class="t s1_9">選んでください。</div>
+<div id="te_9" class="t s1_9">支障となっていることはない</div>
+<div id="tf_9" class="t s1_9">問11</div>
+<div id="tg_9" class="t s1_9">「</div>
+<div id="th_9" class="t s2_9">パートタイム・有期雇用労働者</div>
+<div id="ti_9" class="t s1_9">」への待遇の説明についてお答えください。</div>
+<div id="tj_9" class="t s1_9">(1)</div>
+<div id="tk_9" class="t s1_9">令和２年４月以降(中小企業の場合は、令和３年４月以降)、雇用した（更新含む）「</div>
+<div id="tl_9" class="t s2_9">パートタイム・有期雇用労働者</div>
+<div id="tm_9" class="t s1_9">」に対して、</div>
+<div id="tn_9" class="t s1_9">雇入れ時（更新時含む）に待遇の説明をしていますか。実施している場合、どのように説明をしていますか。</div>
+<div id="to_9" class="t s1_9">該当するものを</div>
+<div id="tp_9" class="t s3_9">すべて</div>
+<div id="tq_9" class="t s1_9">選んでください。</div>
+<div id="tr_9" class="t s4_9"></div>
+<div id="ts_9" class="t s4_9"></div>
+<div id="tt_9" class="t s4_9"></div>
+<div id="tu_9" class="t s1_9">1</div>
+<div id="tv_9" class="t s1_9">2</div>
+<div id="tw_9" class="t s1_9">3</div>
+<div id="tx_9" class="t s1_9">4</div>
+<div id="ty_9" class="t s1_9">1</div>
+<div id="tz_9" class="t s1_9">正社員への転換を</div>
+<div id="t10_9" class="t s1_9">希望したパートタイ</div>
+<div id="t11_9" class="t s1_9">ム・有期雇用労働</div>
+<div id="t12_9" class="t s1_9">者はいなかった</div>
+<div id="t13_9" class="t s1_9">正社員への転換を</div>
+<div id="t14_9" class="t s1_9">希望したパートタイ</div>
+<div id="t15_9" class="t s1_9">ム・有期雇用労働</div>
+<div id="t16_9" class="t s1_9">者がいたかどうか</div>
+<div id="t17_9" class="t s1_9">わからない</div>
+<div id="t18_9" class="t s5_9">正社員への転換を希望したパートタイム・有期雇用労働者がいた</div>
+<div id="t19_9" class="t s1_9">3</div>
+<div id="t1a_9" class="t s1_9">1</div>
+<div id="t1b_9" class="t s1_9">2</div>
+<div id="t1c_9" class="t s1_9">正社員に転換した</div>
+<div id="t1d_9" class="t s1_9">者はいなかった</div>
+<div id="t1e_9" class="t s1_9">2</div>
+<div id="t1f_9" class="t s1_9">3</div>
+<div id="t1g_9" class="t s1_9">4</div>
+<div id="t1h_9" class="t s1_9">5</div>
+<div id="t1i_9" class="t s1_9">5</div>
+<div id="t1j_9" class="t s1_9">支障となっていること</div>
+<div id="t1k_9" class="t s1_9">個々のパートタイム・有期雇用労働者に対して、口頭で待遇の説明をしている</div>
+<div id="t1l_9" class="t s1_9">就業形態</div>
+<div id="t1m_9" class="t s6_9">3</div>
+<div id="t1n_9" class="t s1_9">個々のパートタイム・有期雇用労働者に対して、待遇の内容を記載した文書を交付</div>
+<div id="t1o_9" class="t s1_9">している</div>
+<div id="t1p_9" class="t s1_9">待遇の説明を実施していない</div>
+<div id="t1q_9" class="t s6_9">5</div>
+<div id="t1r_9" class="t s1_9">その他</div>
+<div id="t1s_9" class="t s1_9">待遇の説明を</div>
+<div id="t1t_9" class="t s1_9">実施している</div>
+<div id="t1u_9" class="t s6_9">1</div>
+<div id="t1v_9" class="t s6_9">2</div>
+<div id="t1w_9" class="t s6_9">5</div>
+<div id="t1x_9" class="t s4_9"></div>
+<div id="t1y_9" class="t s6_9">3</div>
+<div id="t1z_9" class="t s1_9">新たに雇入れた（更新含む）パートタイム・有期雇用労働者はいない</div>
+<div id="t20_9" class="t s6_9">4</div>
+<div id="t21_9" class="t s4_9">支</div>
+<div id="t22_9" class="t s4_9">障</div>
+<div id="t23_9" class="t s4_9">と</div>
+<div id="t24_9" class="t s4_9">な</div>
+<div id="t25_9" class="t m0_9 s7_9">っ</div>
+<div id="t26_9" class="t s4_9">て</div>
+<div id="t27_9" class="t s4_9">い</div>
+<div id="t28_9" class="t s4_9">る</div>
+<div id="t29_9" class="t s4_9">こ</div>
+<div id="t2a_9" class="t s4_9">と</div>
+<div id="t2b_9" class="t s4_9">が</div>
+<div id="t2c_9" class="t s4_9">あ</div>
+<div id="t2d_9" class="t s4_9">る</div>
+<div id="t2e_9" class="t s4_9"></div>
+<div id="t2f_9" class="t s6_9">4</div>
+<div id="t2g_9" class="t s6_9">1</div>
+<div id="t2h_9" class="t s1_9">5</div>
+<div id="t2i_9" class="t s1_9">正社員に転換した</div>
+<div id="t2j_9" class="t s1_9">者がいたかどうか</div>
+<div id="t2k_9" class="t s1_9">わからない</div>
+<div id="t2l_9" class="t s1_9">正社員としてのポストがない</div>
+<div id="t2m_9" class="t s1_9">正社員に転換すると雇用調整がしにくくなる</div>
+<div id="t2n_9" class="t s6_9">2</div>
+<div id="t2o_9" class="t s1_9">パートタイム・有期雇用労働者は転勤が困難な（場合が多い）ため正社員にしに</div>
+<div id="t2p_9" class="t s1_9">くい</div>
+<div id="t2q_9" class="t s5_9">無期雇用パートタイム</div>
+<div id="t2r_9" class="t s5_9">有期雇用</div>
+<div id="t2s_9" class="t s1_9">パートタイム</div>
+<div id="t2t_9" class="t s5_9">有期雇用フルタイム</div>
+<div id="t2u_9" class="t s1_9">パートタイム・有期雇用労働者は時間外労働が困難な（場合が多い）ため正社員</div>
+<div id="t2v_9" class="t s1_9">にしにくい</div>
+<div id="t2w_9" class="t s1_9">正社員転換への応募が少ない</div>
+<div id="t2x_9" class="t s1_9">正社員に転換するには能力が不足している</div>
+<div id="t2y_9" class="t s1_9">4</div>
+<div id="t2z_9" class="t s1_9">雇入れ時に説明会等で複数のパートタイム・有期雇用労働者に対して、口頭で待</div>
+<div id="t30_9" class="t s1_9">遇の説明をしている</div>
+<div id="t31_9" class="t s1_9">実際に正社員に転</div>
+<div id="t32_9" class="t s1_9">換した者がいた</div>
+<div id="t33_9" class="t s6_9">8</div>
+<div id="t34_9" class="t s6_9">6</div>
+<div id="t35_9" class="t s6_9">7</div>
+<div id="t36_9" class="t s8_9">- 9 -</div>
+
+<!-- End text definitions -->
+<!--
+	4.2.5 (15) モダールウィンドウを表示する
+	・modal_conf(確認、キャンセル／OKボタンを配置)
+	
+	chosahyo.jsでMODAL_CONFを指定すると利用できます。
+-->
+<div class="modal fade" id="modal_conf" data-backdrop="static" tabindex="-1">
+	<div class="modal-dialog">
+	<div class="modal-content">
+	<div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span>×</span></button><h4 class="modal-title"></h4></div>
+	<div class="modal-body"><div class="alert alert-success tokei-alert-confirmation cf"><span class="glyphicon tokei-glyphicon-confirmation" aria-hidden="true"></span><div class="tokei-alert-inner"></div></div></div>
+	<div class="modal-footer"><button type="button" class="btn tokei-btn-important" data-dismiss="modal">OK</button></div>
+	</div>
+	</div>
+	</div>
+	<!--
+		4.2.5 (15) モダールウィンドウを表示する
+		・modal_warn(警告、OKボタンのみ配置)
+		
+		chosahyo.jsでMODAL_WARNを指定すると利用できます。
+	-->
+	<div class="modal fade" id="modal_warn" data-backdrop="static" tabindex="-1">
+	<div class="modal-dialog">
+	<div class="modal-content">
+	<div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span>×</span></button><h4 class="modal-title"></h4></div>
+	<div class="modal-body"><div class="alert alert-warning tokei-alert-warning cf"><span class="glyphicon tokei-glyphicon-warning" aria-hidden="true"></span><div class="tokei-alert-inner"></div></div></div>
+	<div class="modal-footer"><button type="button" class="btn tokei-btn-important" data-dismiss="modal">OK</button></div>
+	</div>
+	</div>
+	</div>
+	<!--
+		4.2.5 (15) モダールウィンドウを表示する
+		・modal_error(エラー用、OKボタンのみ配置)
+		
+		chosahyo.jsでMODAL_ERRORを指定すると利用できます。
+	-->
+	<div class="modal fade" id="modal_error" data-backdrop="static" tabindex="-1">
+	<div class="modal-dialog">
+	<div class="modal-content">
+	<div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span>×</span></button><h4 class="modal-title"></h4></div>
+	<div class="modal-body"><div class="alert alert-danger tokei-alert-danger cf"><span class="glyphicon tokei-glyphicon-danger" aria-hidden="true"></span><div class="tokei-alert-inner"></div></div></div>
+	<div class="modal-footer"><button type="button" class="btn tokei-btn-important" data-dismiss="modal">OK</button></div>
+	</div>
+	</div>
+	</div>
+</form>>
+
+</div>
+</body>
+</html>

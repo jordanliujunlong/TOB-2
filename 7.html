@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;" onload="ColorAjustment()">
+	<script>
+		function ColorAjustment() {
+			var val =JSON.parse(localStorage.getItem("checkedArray"));
+			for (i=0;i<16;i++){
+				if (val[0] == "false"){
+				document.getElementsByClassName('infinite')[i].style.backgroundColor = "grey";
+				document.getElementsByClassName('checkbox-1')[i].disabled=true;
+				}
+				if (val[1] == "false"){
+					document.getElementsByClassName('limit_1')[i].style.backgroundColor = "grey";
+					document.getElementsByClassName('checkbox-2')[i].disabled=true;
+				}
+				if (val[2] == "false"){
+					document.getElementsByClassName('limit_2')[i].style.backgroundColor = "grey";
+					document.getElementsByClassName('checkbox-3')[i].disabled =true;
+				}
+			}
+		}
+
+		function disable() {
+		var val =JSON.parse(localStorage.getItem("checkedArray"));
+		for (i=0; i<16;i++){
+			if (document.getElementsByClassName("checkbox-0")[i].checked || document.getElementsByClassName("checkbox-1")[i].checked ||document.getElementsByClassName("checkbox-2")[i].checked || document.getElementsByClassName("checkbox-3")[i].checked){
+				document.getElementsByClassName("limit_3")[i].style.backgroundColor="grey";
+				document.getElementsByClassName("checkbox-5")[i].checked=false;
+
+				document.getElementsByClassName('se')[i].style.backgroundColor = "yellow";
+				document.getElementsByClassName('infinite')[i].style.backgroundColor = "yellow";
+				document.getElementsByClassName('limit_1')[i].style.backgroundColor = "yellow";
+				document.getElementsByClassName('limit_2')[i].style.backgroundColor = "yellow";
+			} else {
+				document.getElementsByClassName("limit_3")[i].style.backgroundColor="yellow";
+				document.getElementsByClassName("checkbox-5")[i].disabled=false;
+			}
+			if (val[0] == "false"){
+			document.getElementsByClassName('infinite')[i].style.backgroundColor = "grey";
+			document.getElementsByClassName('checkbox-1')[i].disabled=true;
+			}
+			if (val[1] == "false"){
+				document.getElementsByClassName('limit_1')[i].style.backgroundColor = "grey";
+				document.getElementsByClassName('checkbox-2')[i].disabled=true;
+			}
+			if (val[2] == "false"){
+				document.getElementsByClassName('limit_2')[i].style.backgroundColor = "grey";
+				document.getElementsByClassName('checkbox-3')[i].disabled=true;
+			}
+		}
+		
+	}
+	function disable1() {
+		var val =JSON.parse(localStorage.getItem("checkedArray"));
+		for (i=0; i<16;i++){
+			if (document.getElementsByClassName("checkbox-5")[i].checked){
+
+				document.getElementsByClassName("limit_3")[i].style.backgroundColor="yellow";
+
+				document.getElementsByClassName("infinite")[i].style.backgroundColor="grey";
+				document.getElementsByClassName("checkbox-1")[i].checked=false;
+
+				document.getElementsByClassName("limit_1")[i].style.backgroundColor="grey";
+				document.getElementsByClassName("checkbox-2")[i].checked=false;
+				
+				document.getElementsByClassName("limit_2")[i].style.backgroundColor="grey";
+				document.getElementsByClassName("checkbox-3")[i].checked=false;
+
+				document.getElementsByClassName("se")[i].style.backgroundColor="grey";
+				document.getElementsByClassName("checkbox-0")[i].checked=false;
+			} else{
+
+				document.getElementsByClassName("infinite")[i].style.backgroundColor="yellow";
+				document.getElementsByClassName("checkbox-1")[i].disabled=false;
+
+				document.getElementsByClassName("limit_1")[i].style.backgroundColor="yellow";
+				document.getElementsByClassName("checkbox-2")[i].disabled=false;
+				
+				document.getElementsByClassName("limit_2")[i].style.backgroundColor="yellow";
+				document.getElementsByClassName("checkbox-3")[i].disabled=false;
+
+				document.getElementsByClassName("se")[i].style.backgroundColor="yellow";
+				document.getElementsByClassName("checkbox-0")[i].disabled=false;
+
+				if (val[0] == "false"){
+				document.getElementsByClassName('infinite')[i].style.backgroundColor = "grey";
+				document.getElementsByClassName('checkbox-1')[i].disabled=true;
+				}
+				if (val[1] == "false"){
+					document.getElementsByClassName('limit_1')[i].style.backgroundColor = "grey";
+					document.getElementsByClassName('checkbox-2')[i].disabled=true;
+				}
+				if (val[2] == "false"){
+					document.getElementsByClassName('limit_2')[i].style.backgroundColor = "grey";
+					document.getElementsByClassName('checkbox-3')[i].disabled=true;
+				}
+			}
+		}
+	}
+	</script>
+
+<link rel="stylesheet" href="./js/lib/bootstrap-3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="./js/lib/bootstrap-3.3.6/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="./css/toukei.main.css">
+<script src="./js/lib/jquery-1.11.3.min.js"></script>
+<script src="./js/lib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+<script src="./js/tokei.main.js"></script>
+<script src="./js/chosahyo.js"></script>
+<div id ="common-bar">
+	<button type="button-1" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" style="position: absolute; left: 450px; top: 15px;z-index: 10">回答の一時保存</button>
+	<button type="button-2" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" style="position: absolute; left: 620px; top: 15px;z-index: 10">一時保存した回答の取得</button>
+	<a href="javascript:CmnPageClear(myForm)"><button type="button-3" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" style="position: absolute; left: 860px; top: 15px;z-index: 10">クリア</button></a>
+	<a href="javascript:CmnExecChk7(myForm)"><button type="button-5" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" style="position: absolute; left: 880px; top: 820px; z-index: 10;">次ページへ</button></a>
+    <input
+	action="action"
+    onclick="window.history.go(-1); return false;"
+	class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command"
+    type="submit"
+	style="position: absolute; left: 250px; top: 820px; width: 120px; z-index: 10"
+    value="前ページへ"
+/>
+</div>
+
+<div id="p7" style="overflow: hidden; position: relative; background-color: white; width: 918px; height: 1299px;left: 185px; top: 65px;">
+
+<!-- Begin shared CSS values -->
+<style class="shared-css" type="text/css" >
+.t {
+	transform-origin: bottom left;
+	z-index: 2;
+	position: absolute;
+	white-space: pre;
+	overflow: visible;
+	line-height: 1.5;
+}
+</style>
+<!-- End shared CSS values -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_7{left:38px;bottom:1226px;letter-spacing:0.3px;}
+#t2_7{left:73px;bottom:1226px;letter-spacing:0.35px;}
+#t3_7{left:66px;bottom:1202px;}
+#t4_7{left:74px;bottom:1202px;letter-spacing:0.56px;}
+#t5_7{left:121px;bottom:1202px;letter-spacing:0.31px;}
+#t6_7{left:167px;bottom:1202px;letter-spacing:0.52px;}
+#t7_7{left:365px;bottom:1202px;letter-spacing:0.35px;}
+#t8_7{left:57px;bottom:1178px;letter-spacing:0.34px;}
+#t9_7{left:405px;bottom:1178px;letter-spacing:0.55px;}
+#ta_7{left:449px;bottom:1178px;letter-spacing:0.3px;}
+#tb_7{left:474px;bottom:635px;}
+#tc_7{left:645px;bottom:577px;}
+#td_7{left:474px;bottom:1013px;}
+#te_7{left:117px;bottom:897px;letter-spacing:0.37px;}
+#tf_7{left:117px;bottom:955px;letter-spacing:0.37px;}
+#tg_7{left:645px;bottom:839px;}
+#th_7{left:474px;bottom:664px;}
+#ti_7{left:82px;bottom:722px;letter-spacing:0.34px;}
+#tj_7{left:82px;bottom:984px;letter-spacing:0.35px;}
+#tk_7{left:730px;bottom:809px;}
+#tl_7{left:559px;bottom:839px;}
+#tm_7{left:559px;bottom:955px;}
+#tn_7{left:474px;bottom:839px;}
+#to_7{left:559px;bottom:577px;}
+#tp_7{left:645px;bottom:868px;}
+#tq_7{left:559px;bottom:722px;}
+#tr_7{left:645px;bottom:722px;}
+#ts_7{left:645px;bottom:751px;}
+#tt_7{left:474px;bottom:606px;}
+#tu_7{left:730px;bottom:955px;}
+#tv_7{left:863px;bottom:892px;letter-spacing:0.11px;}
+#tw_7{left:730px;bottom:839px;}
+#tx_7{left:730px;bottom:1013px;}
+#ty_7{left:645px;bottom:984px;}
+#tz_7{left:730px;bottom:984px;}
+#t10_7{left:559px;bottom:1144px;letter-spacing:0.56px;}
+#t11_7{left:815px;bottom:984px;}
+#t12_7{left:559px;bottom:984px;}
+#t13_7{left:82px;bottom:664px;letter-spacing:0.37px;}
+#t14_7{left:815px;bottom:809px;}
+#t15_7{left:117px;bottom:839px;letter-spacing:0.37px;}
+#t16_7{left:617px;bottom:1088px;letter-spacing:0.37px;}
+#t17_7{left:609px;bottom:1070px;letter-spacing:0.32px;}
+#t18_7{left:815px;bottom:955px;}
+#t19_7{left:863px;bottom:921px;letter-spacing:0.11px;}
+#t1a_7{left:863px;bottom:950px;letter-spacing:0.11px;}
+#t1b_7{left:702px;bottom:1088px;letter-spacing:0.37px;}
+#t1c_7{left:700px;bottom:1070px;letter-spacing:0.31px;}
+#t1d_7{left:790px;bottom:1144px;letter-spacing:0.34px;}
+#t1e_7{left:786px;bottom:1127px;letter-spacing:0.31px;}
+#t1f_7{left:785px;bottom:1110px;letter-spacing:0.36px;}
+#t1g_7{left:780px;bottom:1092px;letter-spacing:0.37px;}
+#t1h_7{left:783px;bottom:1075px;letter-spacing:0.36px;}
+#t1i_7{left:783px;bottom:1058px;letter-spacing:0.36px;}
+#t1j_7{left:804px;bottom:1041px;letter-spacing:0.37px;}
+#t1k_7{left:117px;bottom:926px;letter-spacing:0.37px;}
+#t1l_7{left:863px;bottom:573px;letter-spacing:0.11px;}
+#t1m_7{left:815px;bottom:664px;}
+#t1n_7{left:815px;bottom:693px;}
+#t1o_7{left:815px;bottom:897px;}
+#t1p_7{left:863px;bottom:601px;letter-spacing:0.11px;}
+#t1q_7{left:863px;bottom:775px;letter-spacing:0.11px;}
+#t1r_7{left:863px;bottom:863px;letter-spacing:0.11px;}
+#t1s_7{left:863px;bottom:717px;letter-spacing:0.11px;}
+#t1t_7{left:815px;bottom:839px;}
+#t1u_7{left:863px;bottom:834px;letter-spacing:0.11px;}
+#t1v_7{left:730px;bottom:606px;}
+#t1w_7{left:730px;bottom:722px;}
+#t1x_7{left:815px;bottom:606px;}
+#t1y_7{left:815px;bottom:722px;}
+#t1z_7{left:863px;bottom:746px;letter-spacing:0.11px;}
+#t20_7{left:730px;bottom:664px;}
+#t21_7{left:863px;bottom:630px;letter-spacing:0.11px;}
+#t22_7{left:815px;bottom:751px;}
+#t23_7{left:863px;bottom:659px;letter-spacing:0.11px;}
+#t24_7{left:863px;bottom:688px;letter-spacing:0.11px;}
+#t25_7{left:645px;bottom:664px;}
+#t26_7{left:645px;bottom:780px;}
+#t27_7{left:645px;bottom:693px;}
+#t28_7{left:815px;bottom:780px;}
+#t29_7{left:730px;bottom:693px;}
+#t2a_7{left:730px;bottom:751px;}
+#t2b_7{left:730px;bottom:780px;}
+#t2c_7{left:815px;bottom:577px;}
+#t2d_7{left:559px;bottom:606px;}
+#t2e_7{left:730px;bottom:577px;}
+#t2f_7{left:474px;bottom:868px;}
+#t2g_7{left:730px;bottom:926px;}
+#t2h_7{left:474px;bottom:693px;}
+#t2i_7{left:559px;bottom:780px;}
+#t2j_7{left:559px;bottom:809px;}
+#t2k_7{left:474px;bottom:722px;}
+#t2l_7{left:730px;bottom:897px;}
+#t2m_7{left:730px;bottom:868px;}
+#t2n_7{left:559px;bottom:926px;}
+#t2o_7{left:82px;bottom:751px;letter-spacing:0.37px;}
+#t2p_7{left:474px;bottom:780px;}
+#t2q_7{left:559px;bottom:897px;}
+#t2r_7{left:559px;bottom:751px;}
+#t2s_7{left:559px;bottom:868px;}
+#t2t_7{left:559px;bottom:635px;}
+#t2u_7{left:82px;bottom:635px;letter-spacing:0.35px;}
+#t2v_7{left:474px;bottom:751px;}
+#t2w_7{left:559px;bottom:664px;}
+#t2x_7{left:815px;bottom:1013px;}
+#t2y_7{left:82px;bottom:693px;letter-spacing:0.35px;}
+#t2z_7{left:815px;bottom:868px;}
+#t30_7{left:645px;bottom:809px;}
+#t31_7{left:474px;bottom:955px;}
+#t32_7{left:82px;bottom:809px;letter-spacing:0.37px;}
+#t33_7{left:474px;bottom:809px;}
+#t34_7{left:645px;bottom:897px;}
+#t35_7{left:815px;bottom:926px;}
+#t36_7{left:79px;bottom:931px;}
+#t37_7{left:79px;bottom:914px;}
+#t38_7{left:79px;bottom:897px;}
+#t39_7{left:79px;bottom:880px;}
+#t3a_7{left:79px;bottom:862px;}
+#t3b_7{left:863px;bottom:1008px;letter-spacing:0.11px;}
+#t3c_7{left:863px;bottom:979px;letter-spacing:0.11px;}
+#t3d_7{left:863px;bottom:805px;letter-spacing:0.11px;}
+#t3e_7{left:645px;bottom:606px;}
+#t3f_7{left:82px;bottom:780px;letter-spacing:0.37px;}
+#t3g_7{left:645px;bottom:926px;}
+#t3h_7{left:474px;bottom:897px;}
+#t3i_7{left:559px;bottom:693px;}
+#t3j_7{left:82px;bottom:577px;letter-spacing:0.37px;}
+#t3k_7{left:730px;bottom:635px;}
+#t3l_7{left:815px;bottom:635px;}
+#t3m_7{left:645px;bottom:635px;}
+#t3n_7{left:82px;bottom:606px;letter-spacing:0.37px;}
+#t3o_7{left:474px;bottom:577px;}
+#t3p_7{left:82px;bottom:1013px;letter-spacing:0.36px;}
+#t3q_7{left:125px;bottom:1092px;letter-spacing:0.36px;}
+#t3r_7{left:455px;bottom:1079px;letter-spacing:0.37px;}
+#t3s_7{left:559px;bottom:1013px;}
+#t3t_7{left:532px;bottom:1088px;letter-spacing:0.37px;}
+#t3u_7{left:524px;bottom:1070px;letter-spacing:0.32px;}
+#t3v_7{left:645px;bottom:955px;}
+#t3w_7{left:117px;bottom:868px;letter-spacing:0.37px;}
+#t3x_7{left:645px;bottom:1013px;}
+#t3y_7{left:474px;bottom:984px;}
+#t3z_7{left:474px;bottom:926px;}
+#t40_7{left:441px;bottom:15px;letter-spacing:0.03px;word-spacing:-0.09px;}
+
+.s1_7{font-size:15px;font-family:MS-PMincho_235;color:#000;}
+.s2_7{font-size:15px;font-family:MS-PGothic_239;color:#000;-webkit-text-stroke:0.4px #000;text-stroke:0.4px #000;}
+.s3_7{font-size:12px;font-family:MS-PMincho_235;color:#000;}
+.s4_7{font-size:15px;font-family:MS-Mincho_23d;color:#000;}
+.s5_7{font-size:17px;font-family:MS-PGothic_239;color:#000;}
+.k{
+	background-image: radial-gradient(black 30%, transparent 30%);
+	background-size: 3px 3px;
+ }
+
+#q_9_treat_up_1{left:450px;bottom:1013px;z-index:99;letter-spacing:0.32px;}
+#q_9_treat_up_2{left:535px;bottom:1013px;z-index:99;letter-spacing:0.32px;}
+#q_9_treat_up_3{left:620px;bottom:1013px;z-index:99;letter-spacing:0.32px;}
+#q_9_treat_up_4{left:705px;bottom:1013px;z-index:99;letter-spacing:0.32px;}
+#q_9_treat_up_5{left:790px;bottom:1013px;z-index:99;letter-spacing:0.32px;}
+
+#q_9_treat_comment_1{left:450px;bottom:984px;z-index:98;letter-spacing:0.32px;}
+#q_9_treat_comment_2{left:535px;bottom:984px;z-index:98;letter-spacing:0.32px;}
+#q_9_treat_comment_3{left:620px;bottom:984px;z-index:98;letter-spacing:0.32px;}
+#q_9_treat_comment_4{left:705px;bottom:984px;z-index:98;letter-spacing:0.32px;}
+#q_9_treat_comment_5{left:790px;bottom:984px;z-index:98;letter-spacing:0.32px;}
+
+#q_9_treat_tsukin_1{left:450px;bottom:955px;z-index:97;letter-spacing:0.32px;}
+#q_9_treat_tsukin_2{left:535px;bottom:955px;z-index:97;letter-spacing:0.32px;}
+#q_9_treat_tsukin_3{left:620px;bottom:955px;z-index:97;letter-spacing:0.32px;}
+#q_9_treat_tsukin_4{left:705px;bottom:955px;z-index:97;letter-spacing:0.32px;}
+#q_9_treat_tsukin_5{left:790px;bottom:955px;z-index:97;letter-spacing:0.32px;}
+
+#q_9_treat_sekin_1{left:450px;bottom:926px;z-index:96;letter-spacing:0.32px;}
+#q_9_treat_sekin_2{left:535px;bottom:926px;z-index:96;letter-spacing:0.32px;}
+#q_9_treat_sekin_3{left:620px;bottom:926px;z-index:96;letter-spacing:0.32px;}
+#q_9_treat_sekin_4{left:705px;bottom:926px;z-index:96;letter-spacing:0.32px;}
+#q_9_treat_sekin_5{left:790px;bottom:926px;z-index:96;letter-spacing:0.32px;}
+
+#q_9_treat_yakusyoku_1{left:450px;bottom:897px;z-index:95;letter-spacing:0.32px;}
+#q_9_treat_yakusyoku_2{left:535px;bottom:897px;z-index:95;letter-spacing:0.32px;}
+#q_9_treat_yakusyoku_3{left:620px;bottom:897px;z-index:95;letter-spacing:0.32px;}
+#q_9_treat_yakusyoku_4{left:705px;bottom:897px;z-index:95;letter-spacing:0.32px;}
+#q_9_treat_yakusyoku_5{left:790px;bottom:897px;z-index:95;letter-spacing:0.32px;}
+
+#q_9_treat_family_1{left:450px;bottom:868px;z-index:94;letter-spacing:0.32px;}
+#q_9_treat_family_2{left:535px;bottom:868px;z-index:94;letter-spacing:0.32px;}
+#q_9_treat_family_3{left:620px;bottom:868px;z-index:94;letter-spacing:0.32px;}
+#q_9_treat_family_4{left:705px;bottom:868px;z-index:94;letter-spacing:0.32px;}
+#q_9_treat_family_5{left:790px;bottom:868px;z-index:94;letter-spacing:0.32px;}
+
+#q_9_treat_house_1{left:450px;bottom:839px;z-index:93;letter-spacing:0.32px;}
+#q_9_treat_house_2{left:535px;bottom:839px;z-index:93;letter-spacing:0.32px;}
+#q_9_treat_house_3{left:620px;bottom:839px;z-index:93;letter-spacing:0.32px;}
+#q_9_treat_house_4{left:705px;bottom:839px;z-index:93;letter-spacing:0.32px;}
+#q_9_treat_house_5{left:790px;bottom:839px;z-index:93;letter-spacing:0.32px;}
+
+#q_9_treat_bonus_1{left:450px;bottom:809px;z-index:92;letter-spacing:0.32px;}
+#q_9_treat_bonus_2{left:535px;bottom:809px;z-index:92;letter-spacing:0.32px;}
+#q_9_treat_bonus_3{left:620px;bottom:809px;z-index:92;letter-spacing:0.32px;}
+#q_9_treat_bonus_4{left:705px;bottom:809px;z-index:92;letter-spacing:0.32px;}
+#q_9_treat_bonus_5{left:790px;bottom:809px;z-index:92;letter-spacing:0.32px;}
+
+#q_9_treat_retire_1{left:450px;bottom:780px;z-index:91;letter-spacing:0.32px;}
+#q_9_treat_retire_2{left:535px;bottom:780px;z-index:91;letter-spacing:0.32px;}
+#q_9_treat_retire_3{left:620px;bottom:780px;z-index:91;letter-spacing:0.32px;}
+#q_9_treat_retire_4{left:705px;bottom:780px;z-index:91;letter-spacing:0.32px;}
+#q_9_treat_retire_5{left:790px;bottom:780px;z-index:91;letter-spacing:0.32px;}
+
+#q_9_treat_nenkin_1{left:450px;bottom:751px;z-index:90;letter-spacing:0.32px;}
+#q_9_treat_nenkin_2{left:535px;bottom:751px;z-index:90;letter-spacing:0.32px;}
+#q_9_treat_nenkin_3{left:620px;bottom:751px;z-index:90;letter-spacing:0.32px;}
+#q_9_treat_nenkin_4{left:705px;bottom:751px;z-index:90;letter-spacing:0.32px;}
+#q_9_treat_nenkin_5{left:790px;bottom:751px;z-index:90;letter-spacing:0.32px;}
+
+#q_9_treat_nengen_1{left:450px;bottom:722px;z-index:89;letter-spacing:0.32px;}
+#q_9_treat_nengen_2{left:535px;bottom:722px;z-index:89;letter-spacing:0.32px;}
+#q_9_treat_nengen_3{left:620px;bottom:722px;z-index:89;letter-spacing:0.32px;}
+#q_9_treat_nengen_4{left:705px;bottom:722px;z-index:89;letter-spacing:0.32px;}
+#q_9_treat_nengen_5{left:790px;bottom:722px;z-index:89;letter-spacing:0.32px;}
+
+#q_9_treat_holiday_1{left:450px;bottom:693px;z-index:88;letter-spacing:0.32px;}
+#q_9_treat_holiday_2{left:535px;bottom:693px;z-index:88;letter-spacing:0.32px;}
+#q_9_treat_holiday_3{left:620px;bottom:693px;z-index:88;letter-spacing:0.32px;}
+#q_9_treat_holiday_4{left:705px;bottom:693px;z-index:88;letter-spacing:0.32px;}
+#q_9_treat_holiday_5{left:790px;bottom:693px;z-index:88;letter-spacing:0.32px;}
+
+#q_9_treat_ketyo_1{left:450px;bottom:664px;z-index:87;letter-spacing:0.32px;}
+#q_9_treat_ketyo_2{left:535px;bottom:664px;z-index:87;letter-spacing:0.32px;}
+#q_9_treat_ketyo_3{left:620px;bottom:664px;z-index:87;letter-spacing:0.32px;}
+#q_9_treat_ketyo_4{left:705px;bottom:664px;z-index:87;letter-spacing:0.32px;}
+#q_9_treat_ketyo_5{left:790px;bottom:664px;z-index:87;letter-spacing:0.32px;}
+
+
+#q_9_treat_syokudo_1{left:450px;bottom:635px;z-index:86;letter-spacing:0.32px;}
+#q_9_treat_syokudo_2{left:535px;bottom:635px;z-index:86;letter-spacing:0.32px;}
+#q_9_treat_syokudo_3{left:620px;bottom:635px;z-index:86;letter-spacing:0.32px;}
+#q_9_treat_syokudo_4{left:705px;bottom:635px;z-index:86;letter-spacing:0.32px;}
+#q_9_treat_syokudo_5{left:790px;bottom:635px;z-index:86;letter-spacing:0.32px;}
+
+#q_9_treat_restroom_1{left:450px;bottom:606px;z-index:85;letter-spacing:0.32px;}
+#q_9_treat_restroom_2{left:535px;bottom:606px;z-index:85;letter-spacing:0.32px;}
+#q_9_treat_restroom_3{left:620px;bottom:606px;z-index:85;letter-spacing:0.32px;}
+#q_9_treat_restroom_4{left:705px;bottom:606px;z-index:85;letter-spacing:0.32px;}
+#q_9_treat_restroom_5{left:790px;bottom:606px;z-index:85;letter-spacing:0.32px;}
+
+#q_9_treat_kouisitsu_1{left:450px;bottom:577px;z-index:84;letter-spacing:0.32px;}
+#q_9_treat_kouisitsu_2{left:535px;bottom:577px;z-index:84;letter-spacing:0.32px;}
+#q_9_treat_kouisitsu_3{left:620px;bottom:577px;z-index:84;letter-spacing:0.32px;}
+#q_9_treat_kouisitsu_4{left:705px;bottom:577px;z-index:84;letter-spacing:0.32px;}
+#q_9_treat_kouisitsu_5{left:790px;bottom:577px;z-index:84;letter-spacing:0.32px;}
+
+#color_1{left:437px;bottom:1011px;letter-spacing:0.28px;width:82px;height:27px;background-color: yellow;}
+#color_2{left:521px;bottom:1011px;letter-spacing:0.28px;width:83px;height:27px;background-color: yellow;}
+#color_3{left:606px;bottom:1011px;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+#color_4{left:691.5px;bottom:1011px;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+#color_5{left:776.5px;bottom:1011px;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+
+#color_6{left:437px;bottom:982px;letter-spacing:0.28px;width:82px;height:27px;background-color: yellow;}
+#color_7{left:521px;bottom:982px;letter-spacing:0.28px;width:83px;height:27px;background-color: yellow;}
+#color_8{left:606px;bottom:982px;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+#color_9{left:691.5px;bottom:982px;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+#color_10{left:776.5px;bottom:982px;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+#color_11{left:437px;bottom:953px;letter-spacing:0.28px;width:82px;height:27px;background-color: yellow;}
+#color_12{left:521px;bottom:953px;letter-spacing:0.28px;width:83px;height:27px;background-color: yellow;}
+#color_13{left:606px;bottom:953px;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+#color_14{left:691.5px;bottom:953px;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+#color_15{left:776.5px;bottom:953px;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+
+#color_16{left:437px;bottom:924px;letter-spacing:0.28px;width:82px;height:27px;background-color: yellow;}
+#color_17{left:521px;bottom:924px;letter-spacing:0.28px;width:83px;height:27px;background-color: yellow;}
+#color_18{left:606px;bottom:924px;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+#color_19{left:691.5px;bottom:924px;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+#color_20{left:776.5px;bottom:924px;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+
+#color_21{left:437px;bottom:895px;letter-spacing:0.28px;width:82px;height:27px;background-color: yellow;}
+#color_22{left:521px;bottom:895px;letter-spacing:0.28px;width:83px;height:27px;background-color: yellow;}
+#color_23{left:606px;bottom:895px;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+#color_24{left:691.5px;bottom:895px;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+#color_25{left:776.5px;bottom:895px;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+
+#color_26{left:437px;bottom:866px;letter-spacing:0.28px;width:82px;height:27px;background-color: yellow;}
+#color_27{left:521px;bottom:866px;letter-spacing:0.28px;width:83px;height:27px;background-color: yellow;}
+#color_28{left:606px;bottom:866px;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+#color_29{left:691.5px;bottom:866px;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+#color_30{left:776.5px;bottom:866px;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+
+#color_31{left:437px;bottom:837px;letter-spacing:0.28px;width:82px;height:26.5px;background-color: yellow;}
+#color_32{left:521px;bottom:837px;letter-spacing:0.28px;width:83px;height:26.5px;background-color: yellow;}
+#color_33{left:606px;bottom:837px;letter-spacing:0.28px;width:83.5px;height:26.5px;background-color: yellow;}
+#color_34{left:691.5px;bottom:837px;letter-spacing:0.28px;width:83.5px;height:26.5px;background-color: yellow;}
+#color_35{left:776.5px;bottom:837px;letter-spacing:0.28px;width:83.5px;height:26.5px;background-color: yellow;}
+
+#color_36{left:437px;bottom:807.5px;letter-spacing:0.28px;width:82px;height:27px;background-color: yellow;}
+#color_37{left:521px;bottom:807.5px;letter-spacing:0.28px;width:83px;height:27px;background-color: yellow;}
+#color_38{left:606px;bottom:807.5px;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+#color_39{left:691.5px;bottom:807.5px;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+#color_40{left:776.5px;bottom:807.5px;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+
+#color_41{left:437px;bottom:778.5px;letter-spacing:0.28px;width:82px;height:27px;background-color: yellow;}
+#color_42{left:521px;bottom:778.5px;;letter-spacing:0.28px;width:83px;height:27px;background-color: yellow;}
+#color_43{left:606px;bottom:778.5px;;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+#color_44{left:691.5px;bottom:778.5px;;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+#color_45{left:776.5px;bottom:778.5px;;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+
+#color_46{left:437px;bottom:749.5px;letter-spacing:0.28px;width:82px;height:27px;background-color: yellow;}
+#color_47{left:521px;bottom:749.5px;;letter-spacing:0.28px;width:83px;height:27px;background-color: yellow;}
+#color_48{left:606px;bottom:749.5px;;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+#color_49{left:691.5px;bottom:749.5px;;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+#color_50{left:776.5px;bottom:749.5px;;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+
+#color_51{left:437px;bottom:720.5px;letter-spacing:0.28px;width:82px;height:27px;background-color: yellow;}
+#color_52{left:521px;bottom:720.5px;letter-spacing:0.28px;width:83px;height:27px;background-color: yellow;}
+#color_53{left:606px;bottom:720.5px;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+#color_54{left:691.5px;bottom:720.5px;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+#color_55{left:776.5px;bottom:720.5px;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+
+#color_56{left:437px;bottom:691px;letter-spacing:0.28px;width:82px;height:27px;background-color: yellow;}
+#color_57{left:521px;bottom:691px;letter-spacing:0.28px;width:83px;height:27px;background-color: yellow;}
+#color_58{left:606px;bottom:691px;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+#color_59{left:691.5px;bottom:691px;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+#color_60{left:776.5px;bottom:691px;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+
+#color_61{left:437px;bottom:662px;letter-spacing:0.28px;width:82px;height:27px;background-color: yellow;}
+#color_62{left:521px;bottom:662px;letter-spacing:0.28px;width:83px;height:27px;background-color: yellow;}
+#color_63{left:606px;bottom:662px;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+#color_64{left:691.5px;bottom:662px;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+#color_65{left:776.5px;bottom:662px;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+
+#color_66{left:437px;bottom:633px;letter-spacing:0.28px;width:82px;height:27px;background-color: yellow;}
+#color_67{left:521px;bottom:633px;letter-spacing:0.28px;width:83px;height:27px;background-color: yellow;}
+#color_68{left:606px;bottom:633px;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+#color_69{left:691.5px;bottom:633px;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+#color_70{left:776.5px;bottom:633px;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+
+#color_71{left:437px;bottom:604px;letter-spacing:0.28px;width:82px;height:27px;background-color: yellow;}
+#color_72{left:521px;bottom:604px;letter-spacing:0.28px;width:83px;height:27px;background-color: yellow;}
+#color_73{left:606px;bottom:604px;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+#color_74{left:691.5px;bottom:604px;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+#color_75{left:776.5px;bottom:604px;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+
+#color_76{left:437px;bottom:575px;letter-spacing:0.28px;width:82px;height:27px;background-color: yellow;}
+#color_77{left:521px;bottom:575px;letter-spacing:0.28px;width:83px;height:27px;background-color: yellow;}
+#color_78{left:606px;bottom:575px;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+#color_79{left:691.5px;bottom:575px;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+#color_80{left:776.5px;bottom:575px;letter-spacing:0.28px;width:83.5px;height:27px;background-color: yellow;}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts7" type="text/css" >
+
+@font-face {
+	font-family: MS-Mincho_23d;
+	src: url("css/fonts/MS-Mincho_23d.woff") format("woff");
+}
+
+@font-face {
+	font-family: MS-PGothic_239;
+	src: url("css/fonts/MS-PGothic_239.woff") format("woff");
+}
+
+@font-face {
+	font-family: MS-PMincho_235;
+	src: url("css/fonts/MS-PMincho_235.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin page background -->
+<div id="pg7Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg7" style="-webkit-user-select: none;"><object width="918" height="1299" data="img/7/7.svg" type="image/svg+xml" id="pdf7" style="width:918px; height:1299px; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<form name="myForm">
+<div id ="color_1"  class="t s6_10 se k"></div>
+<div id ="color_2"  class="t s6_10 infinite k"></div>
+<div id ="color_3"  class="t s6_10 limit_1 k"></div>
+<div id ="color_4"  class="t s6_10 limit_2 k"></div>
+<div id ="color_5"  class="t s6_10 limit_3"></div>
+<div id ="color_6"  class="t s6_10 se k"></div>
+<div id ="color_7"  class="t s6_10 infinite k"></div>
+<div id ="color_8"  class="t s6_10 limit_1 k"></div>
+<div id ="color_9"  class="t s6_10 limit_2 k"></div>
+<div id ="color_10"  class="t s6_10 limit_3"></div>
+<div id ="color_11"  class="t s6_10 se k"></div>
+<div id ="color_12"  class="t s6_10 infinite k"></div>
+<div id ="color_13"  class="t s6_10 limit_1 k"></div>
+<div id ="color_14"  class="t s6_10 limit_2 k"></div>
+<div id ="color_15"  class="t s6_10 limit_3"></div>
+<div id ="color_16"  class="t s6_10 se k"></div>
+<div id ="color_17"  class="t s6_10 infinite k"></div>
+<div id ="color_18"  class="t s6_10 limit_1 k"></div>
+<div id ="color_19"  class="t s6_10 limit_2 k"></div>
+<div id ="color_20"  class="t s6_10 limit_3"></div>
+<div id ="color_21"  class="t s6_10 se k"></div>
+<div id ="color_22"  class="t s6_10 infinite k"></div>
+<div id ="color_23"  class="t s6_10 limit_1 k"></div>
+<div id ="color_24"  class="t s6_10 limit_2 k"></div>
+<div id ="color_25"  class="t s6_10 limit_3"></div>
+<div id ="color_26"  class="t s6_10 se k"></div>
+<div id ="color_27"  class="t s6_10 infinite k"></div>
+<div id ="color_28"  class="t s6_10 limit_1 k"></div>
+<div id ="color_29"  class="t s6_10 limit_2 k"></div>
+<div id ="color_30"  class="t s6_10 limit_3"></div>
+<div id ="color_31"  class="t s6_10 se k"></div>
+<div id ="color_32"  class="t s6_10 infinite k"></div>
+<div id ="color_33"  class="t s6_10 limit_1 k"></div>
+<div id ="color_34"  class="t s6_10 limit_2 k"></div>
+<div id ="color_35"  class="t s6_10 limit_3"></div>
+<div id ="color_36"  class="t s6_10 se k"></div>
+<div id ="color_37"  class="t s6_10 infinite k"></div>
+<div id ="color_38"  class="t s6_10 limit_1 k"></div>
+<div id ="color_39"  class="t s6_10 limit_2 k"></div>
+<div id ="color_40"  class="t s6_10 limit_3"></div>
+<div id ="color_41"  class="t s6_10 se k"></div>
+<div id ="color_42"  class="t s6_10 infinite k"></div>
+<div id ="color_43"  class="t s6_10 limit_1 k"></div>
+<div id ="color_44"  class="t s6_10 limit_2 k"></div>
+<div id ="color_45"  class="t s6_10 limit_3"></div>
+<div id ="color_46"  class="t s6_10 se k"></div>
+<div id ="color_47"  class="t s6_10 infinite k"></div>
+<div id ="color_48"  class="t s6_10 limit_1 k"></div>
+<div id ="color_49"  class="t s6_10 limit_2 k"></div>
+<div id ="color_50"  class="t s6_10 limit_3"></div>
+<div id ="color_51"  class="t s6_10 se k"></div>
+<div id ="color_52"  class="t s6_10 infinite k"></div>
+<div id ="color_53"  class="t s6_10 limit_1 k"></div>
+<div id ="color_54"  class="t s6_10 limit_2 k"></div>
+<div id ="color_55"  class="t s6_10 limit_3"></div>
+<div id ="color_56"  class="t s6_10 se k"></div>
+<div id ="color_57"  class="t s6_10 infinite k"></div>
+<div id ="color_58"  class="t s6_10 limit_1 k"></div>
+<div id ="color_59"  class="t s6_10 limit_2 k"></div>
+<div id ="color_60"  class="t s6_10 limit_3"></div>
+<div id ="color_61"  class="t s6_10 se k"></div>
+<div id ="color_62"  class="t s6_10 infinite k"></div>
+<div id ="color_63"  class="t s6_10 limit_1 k"></div>
+<div id ="color_64"  class="t s6_10 limit_2 k"></div>
+<div id ="color_65"  class="t s6_10 limit_3"></div>
+<div id ="color_66"  class="t s6_10 se k"></div>
+<div id ="color_67"  class="t s6_10 infinite k"></div>
+<div id ="color_68"  class="t s6_10 limit_1 k"></div>
+<div id ="color_69"  class="t s6_10 limit_2 k"></div>
+<div id ="color_70"  class="t s6_10 limit_3"></div>
+<div id ="color_71"  class="t s6_10 se k"></div>
+<div id ="color_72"  class="t s6_10 infinite k"></div>
+<div id ="color_73"  class="t s6_10 limit_1 k"></div>
+<div id ="color_74"  class="t s6_10 limit_2 k"></div>
+<div id ="color_75"  class="t s6_10 limit_3"></div>
+<div id ="color_76"  class="t s6_10 se k"></div>
+<div id ="color_77"  class="t s6_10 infinite k"></div>
+<div id ="color_78"  class="t s6_10 limit_1 k"></div>
+<div id ="color_79"  class="t s6_10 limit_2 k"></div>
+<div id ="color_80"  class="t s6_10 limit_3"></div>
+
+<div id ="q_9_treat_up_1"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-0" onclick="disable();" name="q_9_treat_up" value="1">
+</div>
+<div id ="q_9_treat_up_2"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1"  onclick="disable();" name="q_9_treat_up" value="2">
+</div>
+<div id ="q_9_treat_up_3"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-2" onclick="disable();" name="q_9_treat_up" value="3">
+</div>
+<div id ="q_9_treat_up_4"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-3" onclick="disable();" name="q_9_treat_up" value="4">
+</div>
+<div id ="q_9_treat_up_5"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-5" onclick="disable1();" name="q_9_treat_up" value="5">
+</div>
+
+<div id ="q_9_treat_comment_1"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-0" onclick="disable();" name="q_9_treat_comment" value="1">
+</div>
+<div id ="q_9_treat_comment_2"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" onclick="disable();" name="q_9_treat_comment" value="2">
+</div>
+<div id ="q_9_treat_comment_3"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-2" onclick="disable();" name="q_9_treat_comment" value="3">
+</div>
+<div id ="q_9_treat_comment_4"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-3" onclick="disable();" name="q_9_treat_comment" value="4">
+</div>
+<div id ="q_9_treat_comment_5"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-5" onclick="disable1();" name="q_9_treat_comment" value="5">
+</div>
+
+<div id ="q_9_treat_tsukin_1"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-0" onclick="disable();" name="q_9_treat_tsukin" value="1">
+</div>
+<div id ="q_9_treat_tsukin_2"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" onclick="disable();" name="q_9_treat_tsukin" value="2">
+</div>
+<div id ="q_9_treat_tsukin_3"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-2" onclick="disable();" name="q_9_treat_tsukin" value="3">
+</div>
+<div id ="q_9_treat_tsukin_4"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-3" onclick="disable();" name="q_9_treat_tsukin" value="4">
+</div>
+<div id ="q_9_treat_tsukin_5"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-5" onclick="disable1();" name="q_9_treat_tsukin" value="5">
+</div>
+
+<div id ="q_9_treat_sekin_1"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-0" onclick="disable();" name="q_9_treat_sekin" value="1">
+</div>
+<div id ="q_9_treat_sekin_2"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" onclick="disable();" name="q_9_treat_sekin" value="2">
+</div>
+<div id ="q_9_treat_sekin_3"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-2" onclick="disable();" name="q_9_treat_sekin" value="3">
+</div>
+<div id ="q_9_treat_sekin_4"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-3" onclick="disable();" name="q_9_treat_sekin" value="4">
+</div>
+<div id ="q_9_treat_sekin_5"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-5" onclick="disable1();" name="q_9_treat_sekin" value="5">
+</div>
+
+<div id ="q_9_treat_yakusyoku_1"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-0" onclick="disable();" name="q_9_treat_yakusyoku" value="1">
+</div>
+<div id ="q_9_treat_yakusyoku_2"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" onclick="disable();" name="q_9_treat_yakusyoku" value="2">
+</div>
+<div id ="q_9_treat_yakusyoku_3"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-2" onclick="disable();" name="q_9_treat_yakusyoku" value="3">
+</div>
+<div id ="q_9_treat_yakusyoku_4"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-3" onclick="disable();" name="q_9_treat_yakusyoku" value="4">
+</div>
+<div id ="q_9_treat_yakusyoku_5"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-5" onclick="disable1();" name="q_9_treat_yakusyoku" value="5">
+</div>
+
+<div id ="q_9_treat_family_1"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-0" onclick="disable();" name="q_9_treat_family" value="1">
+</div>
+<div id ="q_9_treat_family_2"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" onclick="disable();" name="q_9_treat_family" value="2">
+</div>
+<div id ="q_9_treat_family_3"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-2" onclick="disable();" name="q_9_treat_family" value="3">
+</div>
+<div id ="q_9_treat_family_4"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-3" onclick="disable();" name="q_9_treat_family" value="4">
+</div>
+<div id ="q_9_treat_family_5"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-5" onclick="disable1();" name="q_9_treat_family" value="5">
+</div>
+
+<div id ="q_9_treat_house_1"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-0" onclick="disable();" name="q_9_treat_house" value="1">
+</div>
+<div id ="q_9_treat_house_2"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" onclick="disable();" name="q_9_treat_house" value="2">
+</div>
+<div id ="q_9_treat_house_3"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-2" onclick="disable();" name="q_9_treat_house" value="3">
+</div>
+<div id ="q_9_treat_house_4"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-3" onclick="disable();" name="q_9_treat_house" value="4">
+</div>
+<div id ="q_9_treat_house_5"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-5" onclick="disable1();" name="q_9_treat_house" value="5">
+</div>
+
+<div id ="q_9_treat_bonus_1"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-0" onclick="disable();" name="q_9_treat_bonus" value="1">
+</div>
+<div id ="q_9_treat_bonus_2"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" onclick="disable();" name="q_9_treat_bonus" value="2">
+</div>
+<div id ="q_9_treat_bonus_3"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-2" onclick="disable();" name="q_9_treat_bonus" value="3">
+</div>
+<div id ="q_9_treat_bonus_4"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-3" onclick="disable();" name="q_9_treat_bonus" value="4">
+</div>
+<div id ="q_9_treat_bonus_5"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-5" onclick="disable1();" name="q_9_treat_bonus" value="5">
+</div>
+
+<div id ="q_9_treat_retire_1"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-0" onclick="disable();" name="q_9_treat_retire" value="1">
+</div>
+<div id ="q_9_treat_retire_2"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" onclick="disable();" name="q_9_treat_retire" value="2">
+</div>
+<div id ="q_9_treat_retire_3"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-2" onclick="disable();" name="q_9_treat_retire" value="3">
+</div>
+<div id ="q_9_treat_retire_4"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-3" onclick="disable();" name="q_9_treat_retire" value="4">
+</div>
+<div id ="q_9_treat_retire_5"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-5" onclick="disable1();" name="q_9_treat_retire" value="5">
+</div>
+
+<div id ="q_9_treat_nenkin_1"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-0" onclick="disable();" name="q_9_treat_nenkin" value="1">
+</div>
+<div id ="q_9_treat_nenkin_2"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" onclick="disable();" name="q_9_treat_nenkin" value="2">
+</div>
+<div id ="q_9_treat_nenkin_3"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-2" onclick="disable();" name="q_9_treat_nenkin" value="3">
+</div>
+<div id ="q_9_treat_nenkin_4"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-3" onclick="disable();" name="q_9_treat_nenkin" value="4">
+</div>
+<div id ="q_9_treat_nenkin_5"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-5" onclick="disable1();" name="q_9_treat_nenkin" value="5">
+</div>
+
+<div id ="q_9_treat_nengen_1"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-0" onclick="disable();" name="q_9_treat_nengen" value="1">
+</div>
+<div id ="q_9_treat_nengen_2"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" onclick="disable();" name="q_9_treat_nengen" value="2">
+</div>
+<div id ="q_9_treat_nengen_3"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-2" onclick="disable();" name="q_9_treat_nengen" value="3">
+</div>
+<div id ="q_9_treat_nengen_4"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-3" onclick="disable();" name="q_9_treat_nengen" value="4">
+</div>
+<div id ="q_9_treat_nengen_5"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-5" onclick="disable1();" name="q_9_treat_nengen" value="5">
+</div>
+
+<div id ="q_9_treat_holiday_1"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-0" onclick="disable();" name="q_9_treat_holiday" value="1">
+</div>
+<div id ="q_9_treat_holiday_2"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" onclick="disable();" name="q_9_treat_holiday" value="2">
+</div>
+<div id ="q_9_treat_holiday_3"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-2" onclick="disable();" name="q_9_treat_holiday" value="3">
+</div>
+<div id ="q_9_treat_holiday_4"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-3" onclick="disable();" name="q_9_treat_holiday" value="4">
+</div>
+<div id ="q_9_treat_holiday_5"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-5" onclick="disable1();" name="q_9_treat_holiday" value="5">
+</div>
+
+<div id ="q_9_treat_ketyo_1"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-0" onclick="disable();" name="q_9_treat_ketyo" value="1">
+</div>
+<div id ="q_9_treat_ketyo_2"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" onclick="disable();" name="q_9_treat_ketyo" value="2">
+</div>
+<div id ="q_9_treat_ketyo_3"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-2" onclick="disable();" name="q_9_treat_ketyo" value="3">
+</div>
+<div id ="q_9_treat_ketyo_4"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-3" onclick="disable();" name="q_9_treat_ketyo" value="4">
+</div>
+<div id ="q_9_treat_ketyo_5"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-5" onclick="disable1();" name="q_9_treat_ketyo" value="5">
+</div>
+
+<div id ="q_9_treat_syokudo_1"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-0" onclick="disable();" name="q_9_treat_syokudo" value="1">
+</div>
+<div id ="q_9_treat_syokudo_2"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" onclick="disable();" name="q_9_treat_syokudo" value="2">
+</div>
+<div id ="q_9_treat_syokudo_3"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-2" onclick="disable();" name="q_9_treat_syokudo" value="3">
+</div>
+<div id ="q_9_treat_syokudo_4"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-3" onclick="disable();" name="q_9_treat_syokudo" value="4">
+</div>
+<div id ="q_9_treat_syokudo_5"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-5" onclick="disable1();" name="q_9_treat_syokudo" value="5">
+</div>
+
+<div id ="q_9_treat_restroom_1"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-0" onclick="disable();" name="q_9_treat_restroom" value="1">
+</div>
+<div id ="q_9_treat_restroom_2"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" onclick="disable();" name="q_9_treat_restroom" value="2">
+</div>
+<div id ="q_9_treat_restroom_3"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-2" onclick="disable();" name="q_9_treat_restroom" value="3">
+</div>
+<div id ="q_9_treat_restroom_4"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-3" onclick="disable();" name="q_9_treat_restroom" value="4">
+</div>
+<div id ="q_9_treat_restroom_5"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-5" onclick="disable1();" name="q_9_treat_restroom" value="5">
+</div>
+
+<div id ="q_9_treat_kouisitsu_1"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-0" onclick="disable();" name="q_9_treat_kouisitsu" value="1">
+</div>
+<div id ="q_9_treat_kouisitsu_2"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" onclick="disable();" name="q_9_treat_kouisitsu" value="2">
+</div>
+<div id ="q_9_treat_kouisitsu_3"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-2" onclick="disable();" name="q_9_treat_kouisitsu" value="3">
+</div>
+<div id ="q_9_treat_kouisitsu_4"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-3" onclick="disable();" name="q_9_treat_kouisitsu" value="4">
+</div>
+<div id ="q_9_treat_kouisitsu_5"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-5" onclick="disable1();" name="q_9_treat_kouisitsu" value="5">
+</div>
+<div id="t1_7" class="t s1_7">問９</div>
+<div id="t2_7" class="t s1_7">各種制度等について伺います。</div>
+<div id="t3_7" class="t s1_7">「</div>
+<div id="t4_7" class="t s2_7">正社員</div>
+<div id="t5_7" class="t s1_7">」及び「</div>
+<div id="t6_7" class="t s2_7">パートタイム・有期雇用労働者</div>
+<div id="t7_7" class="t s1_7">」の手当等、各種制度の実施及び福利厚生施設の利用はどのようになっています</div>
+<div id="t8_7" class="t s1_7">か。就業形態別に該当するもの（一部で実施も含む）を</div>
+<div id="t9_7" class="t s2_7">すべて</div>
+<div id="ta_7" class="t s1_7">選んでください。</div>
+<div id="tb_7" class="t s1_7">1</div>
+<div id="tc_7" class="t s1_7">3</div>
+<div id="td_7" class="t s1_7">1</div>
+<div id="te_7" class="t s1_7">役職手当</div>
+<div id="tf_7" class="t s1_7">通勤手当</div>
+<div id="tg_7" class="t s1_7">3</div>
+<div id="th_7" class="t s1_7">1</div>
+<div id="ti_7" class="t s1_7">人間ドックの補助</div>
+<div id="tj_7" class="t s1_7">人事評価・考課</div>
+<div id="tk_7" class="t s1_7">4</div>
+<div id="tl_7" class="t s1_7">2</div>
+<div id="tm_7" class="t s1_7">2</div>
+<div id="tn_7" class="t s1_7">1</div>
+<div id="to_7" class="t s1_7">2</div>
+<div id="tp_7" class="t s1_7">3</div>
+<div id="tq_7" class="t s1_7">2</div>
+<div id="tr_7" class="t s1_7">3</div>
+<div id="ts_7" class="t s1_7">3</div>
+<div id="tt_7" class="t s1_7">1</div>
+<div id="tu_7" class="t s1_7">4</div>
+<div id="tv_7" class="t s3_7"></div>
+<div id="tw_7" class="t s1_7">4</div>
+<div id="tx_7" class="t s1_7">4</div>
+<div id="ty_7" class="t s1_7">3</div>
+<div id="tz_7" class="t s1_7">4</div>
+<div id="t10_7" class="t s4_7">実施している</div>
+<div id="t11_7" class="t s1_7">5</div>
+<div id="t12_7" class="t s1_7">2</div>
+<div id="t13_7" class="t s1_7">慶弔休暇</div>
+<div id="t14_7" class="t s1_7">5</div>
+<div id="t15_7" class="t s1_7">住宅手当</div>
+<div id="t16_7" class="t s1_7">有期雇用</div>
+<div id="t17_7" class="t s1_7">パートタイム</div>
+<div id="t18_7" class="t s1_7">5</div>
+<div id="t1a_7" class="t s3_7"></div>
+<div id="t1b_7" class="t s1_7">有期雇用</div>
+<div id="t1c_7" class="t s1_7">フルタイム</div>
+<div id="t1d_7" class="t s1_7">正社員、</div>
+<div id="t1e_7" class="t s1_7">パートタイ</div>
+<div id="t1f_7" class="t s1_7">ム・有期雇</div>
+<div id="t1g_7" class="t s1_7">用労働者の</div>
+<div id="t1h_7" class="t s1_7">いずれにも</div>
+<div id="t1i_7" class="t s1_7">実施してい</div>
+<div id="t1j_7" class="t s1_7">ない</div>
+<div id="t1k_7" class="t s1_7">精勤手当</div>
+<div id="t1l_7" class="t s3_7"></div>
+<div id="t1m_7" class="t s1_7">5</div>
+<div id="t1n_7" class="t s1_7">5</div>
+<div id="t1o_7" class="t s1_7">5</div>
+<div id="t1p_7" class="t s3_7"></div>
+<div id="t1q_7" class="t s3_7"></div>
+<div id="t1r_7" class="t s3_7"></div>
+<div id="t1s_7" class="t s3_7"></div>
+<div id="t1t_7" class="t s1_7">5</div>
+<div id="t1u_7" class="t s3_7"></div>
+<div id="t1v_7" class="t s1_7">4</div>
+<div id="t1w_7" class="t s1_7">4</div>
+<div id="t1x_7" class="t s1_7">5</div>
+<div id="t1y_7" class="t s1_7">5</div>
+<div id="t1z_7" class="t s3_7"></div>
+<div id="t20_7" class="t s1_7">4</div>
+<div id="t21_7" class="t s3_7"></div>
+<div id="t22_7" class="t s1_7">5</div>
+<div id="t23_7" class="t s3_7"></div>
+<div id="t24_7" class="t s3_7"></div>
+<div id="t25_7" class="t s1_7">3</div>
+<div id="t26_7" class="t s1_7">3</div>
+<div id="t27_7" class="t s1_7">3</div>
+<div id="t28_7" class="t s1_7">5</div>
+<div id="t29_7" class="t s1_7">4</div>
+<div id="t2a_7" class="t s1_7">4</div>
+<div id="t2b_7" class="t s1_7">4</div>
+<div id="t2c_7" class="t s1_7">5</div>
+<div id="t2d_7" class="t s1_7">2</div>
+<div id="t2e_7" class="t s1_7">4</div>
+<div id="t2f_7" class="t s1_7">1</div>
+<div id="t2g_7" class="t s1_7">4</div>
+<div id="t2h_7" class="t s1_7">1</div>
+<div id="t2i_7" class="t s1_7">2</div>
+<div id="t2j_7" class="t s1_7">2</div>
+<div id="t2k_7" class="t s1_7">1</div>
+<div id="t2l_7" class="t s1_7">4</div>
+<div id="t2m_7" class="t s1_7">4</div>
+<div id="t2n_7" class="t s1_7">2</div>
+<div id="t2o_7" class="t s1_7">企業年金</div>
+<div id="t2p_7" class="t s1_7">1</div>
+<div id="t2q_7" class="t s1_7">2</div>
+<div id="t2r_7" class="t s1_7">2</div>
+<div id="t2s_7" class="t s1_7">2</div>
+<div id="t2t_7" class="t s1_7">2</div>
+<div id="t2u_7" class="t s1_7">給食施設（食堂）の利用</div>
+<div id="t2v_7" class="t s1_7">1</div>
+<div id="t2w_7" class="t s1_7">2</div>
+<div id="t2x_7" class="t s1_7">5</div>
+<div id="t2y_7" class="t s1_7">法定外の休暇（夏季冬季休暇や病気休暇など）</div>
+<div id="t2z_7" class="t s1_7">5</div>
+<div id="t30_7" class="t s1_7">3</div>
+<div id="t31_7" class="t s1_7">1</div>
+<div id="t32_7" class="t s1_7">賞与</div>
+<div id="t33_7" class="t s1_7">1</div>
+<div id="t34_7" class="t s1_7">3</div>
+<div id="t35_7" class="t s1_7">5</div>
+<div id="t36_7" class="t s1_7">手</div>
+<div id="t37_7" class="t s1_7">当</div>
+<div id="t38_7" class="t s1_7">の</div>
+<div id="t39_7" class="t s1_7">種</div>
+<div id="t3a_7" class="t s1_7">類</div>
+<div id="t3b_7" class="t s3_7"></div>
+<div id="t3c_7" class="t s3_7"></div>
+<div id="t3d_7" class="t s3_7"></div>
+<div id="t3e_7" class="t s1_7">3</div>
+<div id="t3f_7" class="t s1_7">退職金</div>
+<div id="t3g_7" class="t s1_7">3</div>
+<div id="t3h_7" class="t s1_7">1</div>
+<div id="t3i_7" class="t s1_7">2</div>
+<div id="t3j_7" class="t s1_7">更衣室の利用</div>
+<div id="t3k_7" class="t s1_7">4</div>
+<div id="t3l_7" class="t s1_7">5</div>
+<div id="t3m_7" class="t s1_7">3</div>
+<div id="t3n_7" class="t s1_7">休憩室の利用</div>
+<div id="t3o_7" class="t s1_7">1</div>
+<div id="t3p_7" class="t s1_7">定期的な昇給</div>
+<div id="t3q_7" class="t s1_7">各種制度の実施、福利厚生施設の利用</div>
+<div id="t3r_7" class="t s1_7">正社員</div>
+<div id="t3s_7" class="t s1_7">2</div>
+<div id="t3t_7" class="t s1_7">無期雇用</div>
+<div id="t3u_7" class="t s1_7">パートタイム</div>
+<div id="t3v_7" class="t s1_7">3</div>
+<div id="t3w_7" class="t s1_7">家族手当</div>
+<div id="t3x_7" class="t s1_7">3</div>
+<div id="t3y_7" class="t s1_7">1</div>
+<div id="t3z_7" class="t s1_7">1</div>
+<div id="t40_7" class="t s5_7">- 7 -</div>
+
+<!-- End text definitions -->
+<!--
+	4.2.5 (15) モダールウィンドウを表示する
+	・modal_conf(確認、キャンセル／OKボタンを配置)
+	
+	chosahyo.jsでMODAL_CONFを指定すると利用できます。
+-->
+<div class="modal fade" id="modal_conf" data-backdrop="static" tabindex="-1">
+	<div class="modal-dialog">
+	<div class="modal-content">
+	<div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span>×</span></button><h4 class="modal-title"></h4></div>
+	<div class="modal-body"><div class="alert alert-success tokei-alert-confirmation cf"><span class="glyphicon tokei-glyphicon-confirmation" aria-hidden="true"></span><div class="tokei-alert-inner"></div></div></div>
+	<div class="modal-footer"><button type="button" class="btn tokei-btn-important" data-dismiss="modal">OK</button></div>
+	</div>
+	</div>
+	</div>
+	<!--
+		4.2.5 (15) モダールウィンドウを表示する
+		・modal_warn(警告、OKボタンのみ配置)
+		
+		chosahyo.jsでMODAL_WARNを指定すると利用できます。
+	-->
+	<div class="modal fade" id="modal_warn" data-backdrop="static" tabindex="-1">
+	<div class="modal-dialog">
+	<div class="modal-content">
+	<div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span>×</span></button><h4 class="modal-title"></h4></div>
+	<div class="modal-body"><div class="alert alert-warning tokei-alert-warning cf"><span class="glyphicon tokei-glyphicon-warning" aria-hidden="true"></span><div class="tokei-alert-inner"></div></div></div>
+	<div class="modal-footer"><button type="button" class="btn tokei-btn-important" data-dismiss="modal">OK</button></div>
+	</div>
+	</div>
+	</div>
+	<!--
+		4.2.5 (15) モダールウィンドウを表示する
+		・modal_error(エラー用、OKボタンのみ配置)
+		
+		chosahyo.jsでMODAL_ERRORを指定すると利用できます。
+	-->
+	<div class="modal fade" id="modal_error" data-backdrop="static" tabindex="-1">
+	<div class="modal-dialog">
+	<div class="modal-content">
+	<div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span>×</span></button><h4 class="modal-title"></h4></div>
+	<div class="modal-body"><div class="alert alert-danger tokei-alert-danger cf"><span class="glyphicon tokei-glyphicon-danger" aria-hidden="true"></span><div class="tokei-alert-inner"></div></div></div>
+	<div class="modal-footer"><button type="button" class="btn tokei-btn-important" data-dismiss="modal">OK</button></div>
+	</div>
+	</div>
+	</div>
+</form>>
+
+</div>
+</body>
+</html>

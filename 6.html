@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;" onload="ColorAjustment1()">
+<link rel="stylesheet" href="./js/lib/bootstrap-3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="./js/lib/bootstrap-3.3.6/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="./css/toukei.main.css">
+<script src="./js/lib/jquery-1.11.3.min.js"></script>
+<script src="./js/lib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+<script src="./js/tokei.main.js"></script>
+<script src="./js/chosahyo.js"></script>
+
+<script>
+	function ColorAjustment1() {
+		var val =JSON.parse(localStorage.getItem("checkedArray"));
+		for (i=0;i<18;i++){
+			if (val[0] == "false"){
+			document.getElementsByClassName('infinite')[i].style.backgroundColor = "grey";
+			document.getElementsByClassName('checkbox-2')[i].disabled=true;
+			}
+			if (val[1] == "false"){
+				document.getElementsByClassName('limit_1')[i].style.backgroundColor = "grey";
+				document.getElementsByClassName('checkbox-3')[i].disabled=true;
+			}
+			if (val[2] == "false"){
+				document.getElementsByClassName('limit_2')[i].style.backgroundColor = "grey";
+				document.getElementsByClassName('checkbox-4')[i].disabled=true;
+			}
+		}
+	}
+	function disable() {
+		var val =JSON.parse(localStorage.getItem("checkedArray"));
+		for (i=13; i<18;i++){
+			if (document.getElementsByClassName("checkbox-2")[i].checked || document.getElementsByClassName("checkbox-3")[i].checked ||document.getElementsByClassName("checkbox-4")[i].checked || document.getElementsByClassName("checkbox-5")[i-13].checked){
+				document.getElementsByClassName("limit_3")[i-13].style.backgroundColor="grey";
+				document.getElementsByClassName("checkbox-6")[i-13].checked=false;
+				document.getElementsByClassName("checkbox-6")[i-13].disabled=true;
+			} else {
+				document.getElementsByClassName("limit_3")[i-13].style.backgroundColor="yellow";
+				document.getElementsByClassName("checkbox-6")[i-13].disabled=false;
+			}
+			if (document.getElementsByClassName("checkbox-6")[i-13].checked){
+				document.getElementsByClassName("infinite")[i].style.backgroundColor="grey";
+				document.getElementsByClassName("checkbox-2")[i].checked=false;
+				document.getElementsByClassName("checkbox-2")[i].disabled=true;
+
+				document.getElementsByClassName("limit_1")[i].style.backgroundColor="grey";
+				document.getElementsByClassName("checkbox-3")[i].checked=false;
+				document.getElementsByClassName("checkbox-3")[i].disabled=true;
+				
+				document.getElementsByClassName("limit_2")[i].style.backgroundColor="grey";
+				document.getElementsByClassName("checkbox-4")[i].checked=false;
+				document.getElementsByClassName("checkbox-4")[i].disabled=true;
+
+				document.getElementsByClassName("se")[i-13].style.backgroundColor="grey";
+				document.getElementsByClassName("checkbox-5")[i-13].checked=false;
+				document.getElementsByClassName("checkbox-5")[i-13].disabled=true;
+			} else{
+
+				document.getElementsByClassName("infinite")[i].style.backgroundColor="yellow";
+				document.getElementsByClassName("checkbox-2")[i].disabled=false;
+
+				document.getElementsByClassName("limit_1")[i].style.backgroundColor="yellow";
+				document.getElementsByClassName("checkbox-3")[i].disabled=false;
+				
+				document.getElementsByClassName("limit_2")[i].style.backgroundColor="yellow";
+				document.getElementsByClassName("checkbox-4")[i].disabled=false;
+
+				document.getElementsByClassName("se")[i-13].style.backgroundColor="yellow";
+				document.getElementsByClassName("checkbox-5")[i-13].disabled=false;
+
+				if (val[0] == "false"){
+					document.getElementsByClassName('infinite')[i].style.backgroundColor = "grey";
+					document.getElementsByClassName('checkbox-2')[i].disabled=true;
+					}
+					if (val[1] == "false"){
+						document.getElementsByClassName('limit_1')[i].style.backgroundColor = "grey";
+						document.getElementsByClassName('checkbox-3')[i].disabled=true;
+					}
+					if (val[2] == "false"){
+						document.getElementsByClassName('limit_2')[i].style.backgroundColor = "grey";
+						document.getElementsByClassName('checkbox-4')[i].disabled=true;
+					}
+			}
+		}
+	}
+</script>
+
+<div id ="common-bar">
+	<button type="button-1" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" style="position: absolute; left: 450px; top: 15px;z-index: 10">回答の一時保存</button>
+	<button type="button-2" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" style="position: absolute; left: 620px; top: 15px;z-index: 10">一時保存した回答の取得</button>
+	<a href="javascript:CmnPageClear(myForm)"><button type="button-3" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" style="position: absolute; left: 860px; top: 15px;z-index: 10">クリア</button></a>
+	<a href="javascript:CmnExecChk6(myForm)"><button type="button-5" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" style="position: absolute; left: 880px; top: 1330px; z-index: 10;">次ページへ</button></a>
+    <input
+	action="action"
+    onclick="window.history.go(-1); return false;"
+	class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command"
+    type="submit"
+	style="position: absolute; left: 250px; top: 1330px; width: 120px; z-index: 10"
+    value="前ページへ"
+/>
+</div>
+
+<div id="p6" style="overflow: hidden; position: relative; background-color: white; width: 918px; height: 1299px;left: 185px; top: 65px;">
+
+<!-- Begin shared CSS values -->
+<style class="shared-css" type="text/css" >
+.t {
+	transform-origin: bottom left;
+	z-index: 2;
+	position: absolute;
+	white-space: pre;
+	overflow: visible;
+	line-height: 1.5;
+}
+</style>
+<!-- End shared CSS values -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_6{left:38px;bottom:1216px;letter-spacing:0.3px;}
+#t2_6{left:73px;bottom:1216px;}
+#t3_6{left:81px;bottom:1216px;letter-spacing:0.56px;}
+#t4_6{left:128px;bottom:1216px;letter-spacing:0.31px;}
+#t5_6{left:174px;bottom:1216px;letter-spacing:0.52px;}
+#t6_6{left:372px;bottom:1216px;letter-spacing:0.34px;}
+#t7_6{left:73px;bottom:1191px;letter-spacing:0.37px;}
+#t8_6{left:322px;bottom:1191px;letter-spacing:0.55px;}
+#t9_6{left:367px;bottom:1191px;letter-spacing:0.3px;}
+#ta_6{left:38px;bottom:581px;letter-spacing:0.3px;}
+#tb_6{left:73px;bottom:581px;}
+#tc_6{left:81px;bottom:581px;letter-spacing:0.56px;}
+#td_6{left:128px;bottom:581px;letter-spacing:0.31px;}
+#te_6{left:174px;bottom:581px;letter-spacing:0.52px;}
+#tf_6{left:372px;bottom:581px;letter-spacing:0.32px;}
+#tg_6{left:78px;bottom:556px;letter-spacing:0.35px;}
+#th_6{left:401px;bottom:556px;letter-spacing:0.55px;}
+#ti_6{left:446px;bottom:556px;letter-spacing:0.3px;}
+#tj_6{left:82px;bottom:1021px;letter-spacing:0.35px;}
+#tk_6{left:619px;bottom:1059px;letter-spacing:0.28px;}
+#tl_6{left:619px;bottom:984px;letter-spacing:0.28px;}
+#tm_6{left:807px;bottom:1096px;letter-spacing:0.28px;}
+#tn_6{left:807px;bottom:1059px;letter-spacing:0.28px;}
+#to_6{left:807px;bottom:722px;letter-spacing:0.28px;}
+#tp_6{left:807px;bottom:1021px;letter-spacing:0.28px;}
+#tq_6{left:619px;bottom:797px;letter-spacing:0.28px;}
+#tr_6{left:526px;bottom:872px;letter-spacing:0.28px;}
+#ts_6{left:807px;bottom:872px;letter-spacing:0.28px;}
+#tt_6{left:526px;bottom:685px;letter-spacing:0.28px;}
+#tu_6{left:819px;bottom:331px;}
+#tv_6{left:526px;bottom:984px;letter-spacing:0.28px;}
+#tw_6{left:713px;bottom:1096px;letter-spacing:0.28px;}
+#tx_6{left:690px;bottom:1143px;letter-spacing:0.37px;}
+#ty_6{left:682px;bottom:1126px;letter-spacing:0.32px;}
+#tz_6{left:82px;bottom:1059px;letter-spacing:0.37px;}
+#t10_6{left:86px;bottom:247px;letter-spacing:-0.3px;}
+#t11_6{left:223px;bottom:247px;letter-spacing:-0.18px;}
+#t12_6{left:72px;bottom:157px;letter-spacing:-0.16px;word-spacing:0.07px;}
+#t13_6{left:124px;bottom:157px;letter-spacing:0.02px;}
+#t14_6{left:175px;bottom:157px;letter-spacing:-0.27px;}
+#t15_6{left:72px;bottom:141px;letter-spacing:-0.28px;}
+#t16_6{left:72px;bottom:126px;letter-spacing:-0.27px;}
+#t17_6{left:589px;bottom:244px;}
+#t18_6{left:819px;bottom:302px;}
+#t19_6{left:589px;bottom:514px;letter-spacing:0.35px;}
+#t1a_6{left:715px;bottom:448px;letter-spacing:0.37px;}
+#t1b_6{left:713px;bottom:430px;letter-spacing:0.31px;}
+#t1c_6{left:807px;bottom:947px;letter-spacing:0.28px;}
+#t1d_6{left:82px;bottom:1096px;letter-spacing:0.35px;}
+#t1e_6{left:526px;bottom:1059px;letter-spacing:0.28px;}
+#t1f_6{left:807px;bottom:797px;letter-spacing:0.28px;}
+#t1g_6{left:526px;bottom:834px;letter-spacing:0.28px;}
+#t1h_6{left:596px;bottom:1143px;letter-spacing:0.37px;}
+#t1i_6{left:588px;bottom:1126px;letter-spacing:0.32px;}
+#t1j_6{left:807px;bottom:909px;letter-spacing:0.28px;}
+#t1k_6{left:713px;bottom:909px;letter-spacing:0.28px;}
+#t1l_6{left:807px;bottom:984px;letter-spacing:0.28px;}
+#t1m_6{left:742px;bottom:244px;}
+#t1n_6{left:742px;bottom:273px;}
+#t1o_6{left:819px;bottom:244px;}
+#t1p_6{left:665px;bottom:273px;}
+#t1q_6{left:742px;bottom:360px;}
+#t1r_6{left:589px;bottom:360px;}
+#t1s_6{left:665px;bottom:360px;}
+#t1t_6{left:665px;bottom:244px;}
+#t1u_6{left:86px;bottom:276px;letter-spacing:-0.3px;}
+#t1v_6{left:374px;bottom:276px;letter-spacing:0.19px;}
+#t1w_6{left:819px;bottom:273px;}
+#t1x_6{left:619px;bottom:647px;letter-spacing:0.28px;}
+#t1y_6{left:713px;bottom:647px;letter-spacing:0.28px;}
+#t1z_6{left:846px;bottom:624px;letter-spacing:0.11px;}
+#t20_6{left:659px;bottom:624px;letter-spacing:0.11px;}
+#t21_6{left:665px;bottom:302px;}
+#t22_6{left:742px;bottom:302px;}
+#t23_6{left:665px;bottom:331px;}
+#t24_6{left:787px;bottom:503px;letter-spacing:0.34px;}
+#t25_6{left:787px;bottom:485px;letter-spacing:0.31px;}
+#t26_6{left:787px;bottom:468px;letter-spacing:0.36px;}
+#t27_6{left:787px;bottom:451px;letter-spacing:0.37px;}
+#t28_6{left:787px;bottom:434px;letter-spacing:0.36px;}
+#t29_6{left:787px;bottom:417px;letter-spacing:0.34px;}
+#t2a_6{left:787px;bottom:399px;letter-spacing:0.34px;}
+#t2b_6{left:562px;bottom:456px;letter-spacing:0.37px;}
+#t2c_6{left:561px;bottom:439px;letter-spacing:0.31px;}
+#t2d_6{left:586px;bottom:422px;}
+#t2e_6{left:819px;bottom:360px;}
+#t2f_6{left:863px;bottom:269px;letter-spacing:0.11px;}
+#t2g_6{left:863px;bottom:242px;letter-spacing:0.11px;}
+#t2h_6{left:72px;bottom:211px;letter-spacing:-0.17px;}
+#t2i_6{left:120px;bottom:211px;letter-spacing:0.03px;}
+#t2j_6{left:149px;bottom:211px;letter-spacing:-0.27px;}
+#t2k_6{left:72px;bottom:195px;letter-spacing:-0.27px;}
+#t2l_6{left:72px;bottom:180px;letter-spacing:-0.28px;}
+#t2m_6{left:512px;bottom:244px;}
+#t2n_6{left:82px;bottom:984px;letter-spacing:0.37px;}
+#t2o_6{left:187px;bottom:1135px;letter-spacing:0.37px;}
+#t2p_6{left:526px;bottom:760px;letter-spacing:0.28px;}
+#t2q_6{left:863px;bottom:328px;letter-spacing:0.11px;}
+#t2r_6{left:863px;bottom:299px;letter-spacing:0.11px;}
+#t2s_6{left:742px;bottom:331px;}
+#t2t_6{left:512px;bottom:302px;}
+#t2u_6{left:713px;bottom:685px;letter-spacing:0.28px;}
+#t2v_6{left:807px;bottom:647px;letter-spacing:0.28px;}
+#t2w_6{left:807px;bottom:685px;letter-spacing:0.28px;}
+#t2x_6{left:82px;bottom:834px;letter-spacing:0.34px;}
+#t2y_6{left:82px;bottom:647px;letter-spacing:0.38px;}
+#t2z_6{left:807px;bottom:834px;letter-spacing:0.28px;}
+#t30_6{left:807px;bottom:760px;letter-spacing:0.28px;}
+#t31_6{left:713px;bottom:797px;letter-spacing:0.28px;}
+#t32_6{left:619px;bottom:834px;letter-spacing:0.28px;}
+#t33_6{left:713px;bottom:984px;letter-spacing:0.28px;}
+#t34_6{left:589px;bottom:331px;}
+#t35_6{left:82px;bottom:722px;letter-spacing:0.37px;}
+#t36_6{left:713px;bottom:722px;letter-spacing:0.28px;}
+#t37_6{left:82px;bottom:685px;letter-spacing:0.37px;}
+#t38_6{left:589px;bottom:302px;}
+#t39_6{left:638px;bottom:456px;letter-spacing:0.37px;}
+#t3a_6{left:637px;bottom:439px;letter-spacing:0.31px;}
+#t3b_6{left:663px;bottom:422px;}
+#t3c_6{left:72px;bottom:100px;letter-spacing:-0.16px;word-spacing:0.07px;}
+#t3d_6{left:124px;bottom:100px;letter-spacing:-0.11px;}
+#t3e_6{left:249px;bottom:100px;letter-spacing:-0.27px;}
+#t3f_6{left:72px;bottom:85px;letter-spacing:-0.27px;}
+#t3g_6{left:863px;bottom:357px;letter-spacing:0.11px;}
+#t3h_6{left:82px;bottom:797px;letter-spacing:0.37px;}
+#t3i_6{left:526px;bottom:647px;letter-spacing:0.28px;}
+#t3j_6{left:512px;bottom:360px;}
+#t3k_6{left:526px;bottom:909px;letter-spacing:0.28px;}
+#t3l_6{left:82px;bottom:909px;letter-spacing:0.37px;}
+#t3m_6{left:526px;bottom:947px;letter-spacing:0.28px;}
+#t3n_6{left:619px;bottom:760px;letter-spacing:0.28px;}
+#t3o_6{left:526px;bottom:797px;letter-spacing:0.28px;}
+#t3p_6{left:752px;bottom:624px;letter-spacing:0.11px;}
+#t3q_6{left:565px;bottom:624px;letter-spacing:0.11px;}
+#t3r_6{left:619px;bottom:722px;letter-spacing:0.28px;}
+#t3s_6{left:526px;bottom:722px;letter-spacing:0.28px;}
+#t3t_6{left:619px;bottom:685px;letter-spacing:0.28px;}
+#t3u_6{left:82px;bottom:947px;letter-spacing:0.37px;}
+#t3v_6{left:86px;bottom:363px;letter-spacing:-0.3px;}
+#t3w_6{left:346px;bottom:364px;letter-spacing:0.22px;}
+#t3x_6{left:407px;bottom:363px;letter-spacing:-0.18px;}
+#t3y_6{left:82px;bottom:760px;letter-spacing:0.37px;}
+#t3z_6{left:619px;bottom:872px;letter-spacing:0.28px;}
+#t40_6{left:619px;bottom:947px;letter-spacing:0.28px;}
+#t41_6{left:82px;bottom:872px;letter-spacing:0.37px;}
+#t42_6{left:713px;bottom:872px;letter-spacing:0.28px;}
+#t43_6{left:713px;bottom:760px;letter-spacing:0.28px;}
+#t44_6{left:713px;bottom:1059px;letter-spacing:0.28px;}
+#t45_6{left:713px;bottom:834px;letter-spacing:0.28px;}
+#t46_6{left:526px;bottom:1021px;letter-spacing:0.28px;}
+#t47_6{left:526px;bottom:1096px;letter-spacing:0.28px;}
+#t48_6{left:783px;bottom:1143px;letter-spacing:0.37px;}
+#t49_6{left:781px;bottom:1126px;letter-spacing:0.31px;}
+#t4a_6{left:510px;bottom:1135px;letter-spacing:0.37px;}
+#t4b_6{left:589px;bottom:273px;}
+#t4c_6{left:86px;bottom:334px;letter-spacing:-0.3px;}
+#t4d_6{left:209px;bottom:334px;letter-spacing:0.19px;}
+#t4e_6{left:295px;bottom:334px;letter-spacing:-0.18px;}
+#t4f_6{left:512px;bottom:273px;}
+#t4g_6{left:220px;bottom:451px;letter-spacing:0.37px;}
+#t4h_6{left:512px;bottom:331px;}
+#t4i_6{left:493px;bottom:439px;letter-spacing:0.37px;}
+#t4j_6{left:619px;bottom:909px;letter-spacing:0.28px;}
+#t4k_6{left:619px;bottom:1021px;letter-spacing:0.28px;}
+#t4l_6{left:713px;bottom:947px;letter-spacing:0.28px;}
+#t4m_6{left:619px;bottom:1096px;letter-spacing:0.28px;}
+#t4n_6{left:713px;bottom:1021px;letter-spacing:0.28px;}
+#t4o_6{left:86px;bottom:305px;letter-spacing:-0.3px;}
+#t4p_6{left:360px;bottom:305px;letter-spacing:0.19px;}
+#t4q_6{left:441px;bottom:15px;letter-spacing:0.03px;word-spacing:-0.09px;}
+.k{
+	background-image: radial-gradient(black 30%, transparent 30%);
+	background-size: 3px 3px;
+ }
+
+#q_7_payreason_seisyain_1{left:510px;bottom:1096px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_muki_part_1{left:605px;bottom:1096px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_yuki_part_1{left:700px;bottom:1096px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_yuki_full_1{left:795px;bottom:1096px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_seisyain_2{left:510px;bottom:1059px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_muki_part_2{left:605px;bottom:1059px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_yuki_part_2{left:700px;bottom:1059px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_yuki_full_2{left:795px;bottom:1059px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_seisyain_3{left:510px;bottom:1021px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_muki_part_3{left:605px;bottom:1021px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_yuki_part_3{left:700px;bottom:1021px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_yuki_full_3{left:795px;bottom:1021px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_seisyain_4{left:510px;bottom:984px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_muki_part_4{left:605px;bottom:984px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_yuki_part_4{left:700px;bottom:984px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_yuki_full_4{left:795px;bottom:984px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_seisyain_5{left:510px;bottom:947px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_muki_part_5{left:605px;bottom:947px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_yuki_part_5{left:700px;bottom:947px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_yuki_full_5{left:795px;bottom:947px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_seisyain_6{left:510px;bottom:906px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_muki_part_6{left:605px;bottom:906px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_yuki_part_6{left:700px;bottom:906px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_yuki_full_6{left:795px;bottom:906px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_seisyain_7{left:510px;bottom:872px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_muki_part_7{left:605px;bottom:872px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_yuki_part_7{left:700px;bottom:872px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_yuki_full_7{left:795px;bottom:872px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_seisyain_8{left:510px;bottom:834px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_muki_part_8{left:605px;bottom:834px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_yuki_part_8{left:700px;bottom:834px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_yuki_full_8{left:795px;bottom:834px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_seisyain_9{left:510px;bottom:797px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_muki_part_9{left:605px;bottom:797px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_yuki_part_9{left:700px;bottom:797px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_yuki_full_9{left:795px;bottom:797px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_seisyain_10{left:510px;bottom:760px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_muki_part_10{left:605px;bottom:760px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_yuki_part_10{left:700px;bottom:760px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_yuki_full_10{left:795px;bottom:760px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_seisyain_11{left:510px;bottom:722px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_muki_part_11{left:605px;bottom:722px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_yuki_part_11{left:700px;bottom:722px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_yuki_full_11{left:795px;bottom:722px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_seisyain_12{left:510px;bottom:685px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_muki_part_12{left:605px;bottom:685px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_yuki_part_12{left:700px;bottom:685px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_yuki_full_12{left:795px;bottom:685px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_seisyain_13{left:510px;bottom:647px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_muki_part_13{left:605px;bottom:647px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_yuki_part_13{left:700px;bottom:647px;letter-spacing:0.32px;z-index: 99;}
+#q_7_payreason_yuki_full_13{left:795px;bottom:647px;letter-spacing:0.32px;z-index: 99;}
+
+
+#q_8_train_gyomu_1{left:490px;bottom:363px;letter-spacing:0.32px;z-index: 99;}
+#q_8_train_gyomu_2{left:570px;bottom:363px;letter-spacing:0.32px;z-index: 99;}
+#q_8_train_gyomu_3{left:645px;bottom:363px;letter-spacing:0.32px;z-index: 99;}
+#q_8_train_gyomu_4{left:720px;bottom:363px;letter-spacing:0.32px;z-index: 99;}
+#q_8_train_gyomu_5{left:795px;bottom:363px;letter-spacing:0.32px;z-index: 99;}
+
+#q_8_train_muki_nyusyoku_1{left:490px;bottom:334px;letter-spacing:0.32px;z-index: 88;}
+#q_8_train_muki_nyusyoku_2{left:570px;bottom:334px;letter-spacing:0.32px;z-index: 88;}
+#q_8_train_muki_nyusyoku_3{left:645px;bottom:334px;letter-spacing:0.32px;z-index: 88;}
+#q_8_train_muki_nyusyoku_4{left:720px;bottom:334px;letter-spacing:0.32px;z-index: 88;}
+#q_8_train_muki_nyusyoku_5{left:795px;bottom:334px;letter-spacing:0.32px;z-index: 88;}
+
+#q_8_train_yuki_noryuku_1{left:490px;bottom:305px;letter-spacing:0.32px;z-index: 77;}
+#q_8_train_yuki_noryuku_2{left:570px;bottom:305px;letter-spacing:0.32px;z-index: 77;}
+#q_8_train_yuki_noryuku_3{left:645px;bottom:305px;letter-spacing:0.32px;z-index: 77;}
+#q_8_train_yuki_noryuku_4{left:720px;bottom:305px;letter-spacing:0.32px;z-index: 77;}
+#q_8_train_yuki_noryuku_5{left:795px;bottom:305px;letter-spacing:0.32px;z-index: 77;}
+
+#q_8_train_yuki_noryuku_1{left:490px;bottom:305px;letter-spacing:0.32px;z-index: 66;}
+#q_8_train_yuki_noryuku_2{left:570px;bottom:305px;letter-spacing:0.32px;z-index: 66;}
+#q_8_train_yuki_noryuku_3{left:645px;bottom:305px;letter-spacing:0.32px;z-index: 66;}
+#q_8_train_yuki_noryuku_4{left:720px;bottom:305px;letter-spacing:0.32px;z-index: 66;}
+#q_8_train_yuki_noryuku_5{left:795px;bottom:305px;letter-spacing:0.32px;z-index: 66;}
+
+#q_8_train_yuki_future_1{left:490px;bottom:276px;z-index: 55;}
+#q_8_train_yuki_future_2{left:570px;bottom:276px;letter-spacing:0.32px;z-index: 55;}
+#q_8_train_yuki_future_3{left:645px;bottom:276px;letter-spacing:0.32px;z-index: 55;}
+#q_8_train_yuki_future_4{left:720px;bottom:276px;letter-spacing:0.32px;z-index: 55;}
+#q_8_train_yuki_future_5{left:795px;bottom:276px;letter-spacing:0.32px;z-index: 55;}
+
+#q_8_train_hojyo_1{left:490px;bottom:247px;letter-spacing:0.32px;z-index: 44;}
+#q_8_train_hojyo_2{left:570px;bottom:247px;letter-spacing:0.32px;z-index: 44;}
+#q_8_train_hojyo_3{left:645px;bottom:247px;letter-spacing:0.32px;z-index: 44;}
+#q_8_train_hojyo_4{left:720px;bottom:247px;letter-spacing:0.32px;z-index: 44;}
+#q_8_train_hojyo_5{left:795px;bottom:247px;letter-spacing:0.32px;z-index: 44;}
+
+.s1_6{font-size:15px;font-family:MS-PMincho_235;color:#000;}
+.s2_6{font-size:15px;font-family:MS-PGothic_239;color:#000;-webkit-text-stroke:0.4px #000;text-stroke:0.4px #000;}
+.s3_6{font-size:17px;font-family:MS-Mincho_23d;color:#000;}
+.s4_6{font-size:14px;font-family:MS-Mincho_23d;color:#000;}
+.s5_6{font-size:14px;font-family:MS-PMincho_235;color:#000;}
+.s6_6{font-size:14px;font-family:MS-PGothic_239;color:#000;-webkit-text-stroke:0.4px #000;text-stroke:0.4px #000;}
+.s7_6{font-size:12px;font-family:MS-Mincho_23d;color:#000;}
+.s8_6{font-size:12px;font-family:MS-PMincho_235;color:#000;}
+.s9_6{font-size:17px;font-family:MS-PGothic_239;color:#000;}
+
+#color_1{left:487px;bottom:1091px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+#color_2{left:580px;bottom:1091px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+#color_3{left:674px;bottom:1091px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+#color_4{left:768px;bottom:1091px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+
+#color_5{left:487px;bottom:1053.5px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+#color_6{left:580px;bottom:1053.5px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+#color_7{left:674px;bottom:1053.5px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+#color_8{left:768px;bottom:1053.5px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+
+#color_9{left:487px;bottom:1016px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+#color_10{left:580px;bottom:1016px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+#color_11{left:674px;bottom:1016px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+#color_12{left:768px;bottom:1016px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+
+#color_13{left:487px;bottom:978.5px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+#color_14{left:580px;bottom:978.5px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+#color_15{left:674px;bottom:978.5px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+#color_16{left:768px;bottom:978.5px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+
+#color_17{left:487px;bottom:941px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+#color_18{left:580px;bottom:941px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+#color_19{left:674px;bottom:941px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+#color_20{left:768px;bottom:941px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+
+#color_21{left:487px;bottom:904px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+#color_22{left:580px;bottom:904px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+#color_23{left:674px;bottom:904px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+#color_24{left:768px;bottom:904px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+
+#color_25{left:487px;bottom:866.5px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+#color_26{left:580px;bottom:866.5px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+#color_27{left:674px;bottom:866.5px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+#color_28{left:768px;bottom:866.5px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+
+#color_29{left:487px;bottom:829px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+#color_30{left:580px;bottom:829px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+#color_31{left:674px;bottom:829px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+#color_32{left:768px;bottom:829px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+
+#color_33{left:487px;bottom:791px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+#color_34{left:580px;bottom:791px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+#color_35{left:674px;bottom:791px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+#color_36{left:768px;bottom:791px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+
+#color_37{left:487px;bottom:754px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+#color_38{left:580px;bottom:754px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+#color_39{left:674px;bottom:754px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+#color_40{left:768px;bottom:754px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+
+#color_41{left:487px;bottom:717px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+#color_42{left:580px;bottom:717px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+#color_43{left:674px;bottom:717px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+#color_44{left:768px;bottom:717px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+
+#color_45{left:487px;bottom:679px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+#color_46{left:580px;bottom:679px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+#color_47{left:674px;bottom:679px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+#color_48{left:768px;bottom:679px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+
+#color_49{left:487px;bottom:642px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+#color_50{left:580px;bottom:642px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+#color_51{left:674px;bottom:642px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+#color_52{left:768px;bottom:642px;letter-spacing:0.28px;width:92px;height:34.5px;background-color: yellow;}
+
+
+#color_53{left:478px;bottom:360px;letter-spacing:0.28px;width:75px;height:26px;background-color: yellow;}
+#color_54{left:555px;bottom:360px;letter-spacing:0.28px;width:75px;height:26px;background-color: yellow;}
+#color_55{left:632px;bottom:360px;letter-spacing:0.28px;width:75px;height:26px;background-color: yellow;}
+#color_56{left:708.5px;bottom:360px;letter-spacing:0.28px;width:75px;height:26px;background-color: yellow;}
+#color_57{left:785px;bottom:360px;letter-spacing:0.28px;width:75px;height:26px;background-color: yellow;}
+
+#color_58{left:478px;bottom:331px;letter-spacing:0.28px;width:75px;height:26px;background-color: yellow;}
+#color_59{left:555px;bottom:331px;letter-spacing:0.28px;width:75px;height:26px;background-color: yellow;}
+#color_60{left:632px;bottom:331px;letter-spacing:0.28px;width:75px;height:26px;background-color: yellow;}
+#color_61{left:708.5px;bottom:331px;letter-spacing:0.28px;width:75px;height:26px;background-color: yellow;}
+#color_62{left:785px;bottom:331px;letter-spacing:0.28px;width:75px;height:26px;background-color: yellow;}
+
+#color_63{left:478px;bottom:302px;letter-spacing:0.28px;width:75px;height:26px;background-color: yellow;}
+#color_64{left:555px;bottom:302px;letter-spacing:0.28px;width:75px;height:26px;background-color: yellow;}
+#color_65{left:632px;bottom:302px;letter-spacing:0.28px;width:75px;height:26px;background-color: yellow;}
+#color_66{left:708.5px;bottom:302px;letter-spacing:0.28px;width:75px;height:26px;background-color: yellow;}
+#color_67{left:785px;bottom:302px;letter-spacing:0.28px;width:75px;height:26px;background-color: yellow;}
+
+#color_68{left:478px;bottom:273px;letter-spacing:0.28px;width:75px;height:26px;background-color: yellow;}
+#color_69{left:555px;bottom:273px;letter-spacing:0.28px;width:75px;height:26px;background-color: yellow;}
+#color_70{left:632px;bottom:273px;letter-spacing:0.28px;width:75px;height:26px;background-color: yellow;}
+#color_71{left:708.5px;bottom:273px;letter-spacing:0.28px;width:75px;height:26px;background-color: yellow;}
+#color_72{left:785px;bottom:273px;letter-spacing:0.28px;width:75px;height:26px;background-color: yellow;}
+
+#color_73{left:478px;bottom:244px;letter-spacing:0.28px;width:75px;height:26px;background-color: yellow;}
+#color_74{left:555px;bottom:244px;letter-spacing:0.28px;width:75px;height:26px;background-color: yellow;}
+#color_75{left:632px;bottom:244px;letter-spacing:0.28px;width:75px;height:26px;background-color: yellow;}
+#color_76{left:708.5px;bottom:244px;letter-spacing:0.28px;width:75px;height:26px;background-color: yellow;}
+#color_77{left:785px;bottom:244px;letter-spacing:0.28px;width:75px;height:26px;background-color: yellow;}
+
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts6" type="text/css" >
+
+@font-face {
+	font-family: MS-Mincho_23d;
+	src: url("css/fonts/MS-Mincho_23d.woff") format("woff");
+}
+
+@font-face {
+	font-family: MS-PGothic_239;
+	src: url("css/fonts/MS-PGothic_239.woff") format("woff");
+}
+
+@font-face {
+	font-family: MS-PMincho_235;
+	src: url("css/fonts/MS-PMincho_235.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin page background -->
+<div id="pg6Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg6" style="-webkit-user-select: none;"><object width="918" height="1299" data="img/6/6.svg" type="image/svg+xml" id="pdf6" style="width:918px; height:1299px; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<form name="myForm">
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+
+<div id ="q_7_payreason_seisyain_1"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" name="q_7_payreason_seisyain" style="z-index: 999;"value="1">
+</div>
+<div id ="q_7_payreason_seisyain_2"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" name="q_7_payreason_seisyain" value="2">
+</div>
+<div id ="q_7_payreason_seisyain_3"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" name="q_7_payreason_seisyain" value="3">
+</div>
+<div id ="q_7_payreason_seisyain_4"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" name="q_7_payreason_seisyain" value="4">
+</div>
+<div id ="q_7_payreason_seisyain_5"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" name="q_7_payreason_seisyain" value="5">
+</div>
+<div id ="q_7_payreason_seisyain_6"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" name="q_7_payreason_seisyain" value="6">
+</div>
+<div id ="q_7_payreason_seisyain_7"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" name="q_7_payreason_seisyain" value="7">
+</div>
+<div id ="q_7_payreason_seisyain_8"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" name="q_7_payreason_seisyain" value="8">
+</div>
+<div id ="q_7_payreason_seisyain_9"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" name="q_7_payreason_seisyain" value="9">
+</div>
+<div id ="q_7_payreason_seisyain_10"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" name="q_7_payreason_seisyain" value="10">
+</div>
+<div id ="q_7_payreason_seisyain_11"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" name="q_7_payreason_seisyain" value="11">
+</div>
+<div id ="q_7_payreason_seisyain_12"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" name="q_7_payreason_seisyain" value="12">
+</div>
+<div id ="q_7_payreason_seisyain_13"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-1" name="q_7_payreason_seisyain" value="13">
+</div>
+<div id ="q_7_payreason_muki_part_1"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-2" name="q_7_payreason_muki_part" value="1">
+</div>
+<div id ="q_7_payreason_muki_part_2"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-2" name="q_7_payreason_muki_part" value="2">
+</div>
+<div id ="q_7_payreason_muki_part_3"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-2" name="q_7_payreason_muki_part" value="3">
+</div>
+<div id ="q_7_payreason_muki_part_4"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-2" name="q_7_payreason_muki_part" value="4">
+</div>
+<div id ="q_7_payreason_muki_part_5"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-2" name="q_7_payreason_muki_part" value="5">
+</div>
+<div id ="q_7_payreason_muki_part_6"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-2" name="q_7_payreason_muki_part" value="6">
+</div>
+<div id ="q_7_payreason_muki_part_7"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-2" name="q_7_payreason_muki_part" value="7">
+</div>
+<div id ="q_7_payreason_muki_part_8"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-2" name="q_7_payreason_muki_part" value="8">
+</div>
+<div id ="q_7_payreason_muki_part_9"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-2" name="q_7_payreason_muki_part" value="9">
+</div>
+<div id ="q_7_payreason_muki_part_10"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-2" name="q_7_payreason_muki_part" value="10">
+</div>
+<div id ="q_7_payreason_muki_part_11"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-2" name="q_7_payreason_muki_part" value="11">
+</div>
+<div id ="q_7_payreason_muki_part_12"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-2" name="q_7_payreason_muki_part" value="12">
+</div>
+<div id ="q_7_payreason_muki_part_13"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-2" name="q_7_payreason_muki_part" value="13">
+</div>
+<div id ="q_7_payreason_yuki_part_1"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-3" name="q_7_payreason_yuki_part" value="1">
+</div>
+<div id ="q_7_payreason_yuki_part_2"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-3" name="q_7_payreason_yuki_part" value="2">
+</div>
+<div id ="q_7_payreason_yuki_part_3"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-3" name="q_7_payreason_yuki_part" value="3">
+</div>
+<div id ="q_7_payreason_yuki_part_4"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-3" name="q_7_payreason_yuki_part" value="4">
+</div>
+<div id ="q_7_payreason_yuki_part_5"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-3" name="q_7_payreason_yuki_part" value="5">
+</div>
+<div id ="q_7_payreason_yuki_part_6"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-3" name="q_7_payreason_yuki_part" value="6">
+</div>
+<div id ="q_7_payreason_yuki_part_7"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-3" name="q_7_payreason_yuki_part" value="7">
+</div>
+<div id ="q_7_payreason_yuki_part_8"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-3" name="q_7_payreason_yuki_part" value="8">
+</div>
+<div id ="q_7_payreason_yuki_part_9"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-3" name="q_7_payreason_yuki_part" value="9">
+</div>
+<div id ="q_7_payreason_yuki_part_10"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-3" name="q_7_payreason_yuki_part" value="10">
+</div>
+<div id ="q_7_payreason_yuki_part_11"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-3" name="q_7_payreason_yuki_part" value="11">
+</div>
+<div id ="q_7_payreason_yuki_part_12"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-3" name="q_7_payreason_yuki_part" value="12">
+</div>
+<div id ="q_7_payreason_yuki_part_13"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-3" name="q_7_payreason_yuki_part" value="13">
+</div>
+<div id ="q_7_payreason_yuki_full_1"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-4" name="q_7_payreason_yuki_full" value="1">
+</div>
+<div id ="q_7_payreason_yuki_full_2"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-4" name="q_7_payreason_yuki_full" value="2">
+</div>
+<div id ="q_7_payreason_yuki_full_3"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-4" name="q_7_payreason_yuki_full" value="3">
+</div>
+<div id ="q_7_payreason_yuki_full_4"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-4" name="q_7_payreason_yuki_full" value="4">
+</div>
+<div id ="q_7_payreason_yuki_full_5"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-4" name="q_7_payreason_yuki_full" value="5">
+</div>
+<div id ="q_7_payreason_yuki_full_6"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-4" name="q_7_payreason_yuki_full" value="6">
+</div>
+<div id ="q_7_payreason_yuki_full_7"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-4" name="q_7_payreason_yuki_full" value="7">
+</div>
+<div id ="q_7_payreason_yuki_full_8"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-4" name="q_7_payreason_yuki_full" value="8">
+</div>
+<div id ="q_7_payreason_yuki_full_9"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-4" name="q_7_payreason_yuki_full" value="9">
+</div>
+<div id ="q_7_payreason_yuki_full_10"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-4" name="q_7_payreason_yuki_full" value="10">
+</div>
+<div id ="q_7_payreason_yuki_full_11"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-4" name="q_7_payreason_yuki_full" value="11">
+</div>
+<div id ="q_7_payreason_yuki_full_12"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-4" name="q_7_payreason_yuki_full" value="12">
+</div>
+<div id ="q_7_payreason_yuki_full_13"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-4" name="q_7_payreason_yuki_full" value="13">
+</div>
+
+<div id ="q_8_train_gyomu_1"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-5" onclick="disable();" name="q_8_train_gyomu" value="1">
+</div>
+<div id ="q_8_train_gyomu_2"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-2" onclick="disable();" name="q_8_train_gyomu" value="2">
+</div>
+<div id ="q_8_train_gyomu_3"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-3" onclick="disable();"  name="q_8_train_gyomu" value="3">
+</div>
+<div id ="q_8_train_gyomu_4"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-4" onclick="disable();" name="q_8_train_gyomu" value="4">
+</div>
+<div id ="q_8_train_gyomu_5"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-6" onclick="disable();" name="q_8_train_gyomu" value="5">
+</div>
+<div id ="q_8_train_muki_nyusyoku_1"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-5" onclick="disable();" name="q_8_train_muki_nyusyoku" value="1">
+</div>
+<div id ="q_8_train_muki_nyusyoku_2"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-2" onclick="disable();" name="q_8_train_muki_nyusyoku" value="2">
+</div>
+<div id ="q_8_train_muki_nyusyoku_3"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-3" onclick="disable();" name="q_8_train_muki_nyusyoku" value="3">
+</div>
+<div id ="q_8_train_muki_nyusyoku_4"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-4" onclick="disable();" name="q_8_train_muki_nyusyoku" value="4">
+</div>
+<div id ="q_8_train_muki_nyusyoku_5"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-6" onclick="disable();"  name="q_8_train_muki_nyusyoku" value="5">
+</div>
+<div id ="q_8_train_yuki_noryuku_1"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-5" onclick="disable();" name="q_8_train_yuki_noryuku" value="1">
+</div>
+<div id ="q_8_train_yuki_noryuku_2"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-2" onclick="disable();" name="q_8_train_yuki_noryuku" value="2">
+</div>
+<div id ="q_8_train_yuki_noryuku_3"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-3" onclick="disable();" name="q_8_train_yuki_noryuku" value="3">
+</div>
+<div id ="q_8_train_yuki_noryuku_4"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-4" onclick="disable();" name="q_8_train_yuki_noryuku" value="4">
+</div>
+<div id ="q_8_train_yuki_noryuku_5"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-6" onclick="disable();"name="q_8_train_yuki_noryuku" value="5">
+</div>
+<div id ="q_8_train_yuki_future_1"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-5" onclick="disable();" name="q_8_train_yuki_future" value="1">
+</div>
+<div id ="q_8_train_yuki_future_2"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-2" onclick="disable();" name="q_8_train_yuki_future" value="2">
+</div>
+<div id ="q_8_train_yuki_future_3"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-3" onclick="disable();" name="q_8_train_yuki_future" value="3">
+</div>
+<div id ="q_8_train_yuki_future_4"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-4" onclick="disable();" name="q_8_train_yuki_future" value="4">
+</div>
+<div id ="q_8_train_yuki_future_5"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-6" onclick="disable();"  name="q_8_train_yuki_future" value="5">
+</div>
+<div id ="q_8_train_hojyo_1"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-5" onclick="disable();" name="q_8_train_hojyo" value="1">
+</div>
+<div id ="q_8_train_hojyo_2"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-2" onclick="disable();" name="q_8_train_hojyo" value="2">
+</div>
+<div id ="q_8_train_hojyo_3"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-3" onclick="disable();"  name="q_8_train_hojyo" value="3">
+</div>
+<div id ="q_8_train_hojyo_4"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-4" onclick="disable();" name="q_8_train_hojyo" value="4">
+</div>
+<div id ="q_8_train_hojyo_5"  class="t s1_3">
+	<input type ="checkbox" class="checkbox-6" onclick="disable();" style="z-index: 999;"name="q_8_train_hojyo" value="5">
+</div>
+
+<div id ="color_1"  class="t s6_10 k"></div>
+<div id ="color_2"  class="t s6_10 infinite  k"></div>
+<div id ="color_3"  class="t s6_10 limit_1  k"></div>
+<div id ="color_4"  class="t s6_10 limit_2 k"></div>
+<div id ="color_5"  class="t s6_10 k"></div>
+<div id ="color_6"  class="t s6_10 infinite k"></div>
+<div id ="color_7"  class="t s6_10 limit_1 k"></div>
+<div id ="color_8"  class="t s6_10 limit_2 k"></div>
+<div id ="color_9"  class="t s6_10 k"></div>
+<div id ="color_10"  class="t s6_10 infinite k"></div>
+<div id ="color_11"  class="t s6_10 limit_1 k"></div>
+<div id ="color_12"  class="t s6_10 limit_2 k"></div>
+<div id ="color_13"  class="t s6_10 k"></div>
+<div id ="color_14"  class="t s6_10 infinite k"></div>
+<div id ="color_15"  class="t s6_10 limit_1 k"></div>
+<div id ="color_16"  class="t s6_10 limit_2 k"></div>
+<div id ="color_17"  class="t s6_10 k"></div>
+<div id ="color_18"  class="t s6_10 infinite k"></div>
+<div id ="color_19"  class="t s6_10 limit_1 k"></div>
+<div id ="color_20"  class="t s6_10 limit_2 k"></div>
+<div id ="color_21"  class="t s6_10 k"></div>
+<div id ="color_22"  class="t s6_10 infinite k" ></div>
+<div id ="color_23"  class="t s6_10 limit_1 k"></div>
+<div id ="color_24"  class="t s6_10 limit_2 k"></div>
+<div id ="color_25"  class="t s6_10 k"></div>
+<div id ="color_26"  class="t s6_10 infinite k"></div>
+<div id ="color_27"  class="t s6_10 limit_1 k"></div>
+<div id ="color_28"  class="t s6_10 limit_2 k"></div>
+<div id ="color_29"  class="t s6_10 k"></div>
+<div id ="color_30"  class="t s6_10 infinite k"></div>
+<div id ="color_31"  class="t s6_10 limit_1 k"></div>
+<div id ="color_32"  class="t s6_10 limit_2 k"></div>
+<div id ="color_33"  class="t s6_10 k"></div>
+<div id ="color_34"  class="t s6_10 infinite k"></div>
+<div id ="color_35"  class="t s6_10 limit_1 k"></div>
+<div id ="color_36"  class="t s6_10 limit_2 k"></div>
+<div id ="color_37"  class="t s6_10 k"></div>
+<div id ="color_38"  class="t s6_10 infinite k"></div>
+<div id ="color_39"  class="t s6_10 limit_1 k"></div>
+<div id ="color_40"  class="t s6_10 limit_2 k"></div>
+<div id ="color_41"  class="t s6_10 k" ></div>
+<div id ="color_42"  class="t s6_10 infinite k"></div>
+<div id ="color_43"  class="t s6_10 limit_1 k"></div>
+<div id ="color_44"  class="t s6_10 limit_2 k"></div>
+<div id ="color_45"  class="t s6_10 k"></div>
+<div id ="color_46"  class="t s6_10 infinite k"></div>
+<div id ="color_47"  class="t s6_10 limit_1 k"></div>
+<div id ="color_48"  class="t s6_10 limit_2 k"></div>
+<div id ="color_49"  class="t s6_10 k"></div>
+<div id ="color_50"  class="t s6_10 infinite k"></div>
+<div id ="color_51"  class="t s6_10 limit_1 k"></div>
+<div id ="color_52"  class="t s6_10 limit_2 k"></div>
+
+<div id ="color_53"  class="t s6_10 se  k"></div>
+<div id ="color_54"  class="t s6_10 infinite k"></div>
+<div id ="color_55"  class="t s6_10 limit_1 k"></div>
+<div id ="color_56"  class="t s6_10 limit_2 k"></div>
+<div id ="color_57"  class="t s6_10 limit_3 k"></div>
+
+<div id ="color_58"  class="t s6_10 se k"></div>
+<div id ="color_59"  class="t s6_10 infinite k"></div>
+<div id ="color_60"  class="t s6_10 limit_1 k"></div>
+<div id ="color_61"  class="t s6_10 limit_2 k"></div>
+<div id ="color_62"  class="t s6_10 limit_3 k"></div>
+
+<div id ="color_63"  class="t s6_10 se k"></div>
+<div id ="color_64"  class="t s6_10 infinite k"></div>
+<div id ="color_65"  class="t s6_10 limit_1 k"></div>
+<div id ="color_66"  class="t s6_10 limit_2 k"></div>
+<div id ="color_67"  class="t s6_10 limit_3 k"></div>
+
+<div id ="color_68"  class="t s6_10 se k"></div>
+<div id ="color_69"  class="t s6_10 infinite k"></div>
+<div id ="color_70"  class="t s6_10 limit_1 k"></div>
+<div id ="color_71"  class="t s6_10 limit_2 k"></div>
+<div id ="color_72"  class="t s6_10 limit_3 k"></div>
+
+<div id ="color_73"  class="t s6_10 se k"></div>
+<div id ="color_74"  class="t s6_10 infinite k"></div>
+<div id ="color_75"  class="t s6_10 limit_1 k"></div>
+<div id ="color_76"  class="t s6_10 limit_2 k"></div>
+<div id ="color_77"  class="t s6_10 limit_3 k"></div>
+
+
+<div id="t1_6" class="t s1_6">問７</div>
+<div id="t2_6" class="t s1_6">「</div>
+<div id="t3_6" class="t s2_6">正社員</div>
+<div id="t4_6" class="t s1_6">」及び「</div>
+<div id="t5_6" class="t s2_6">パートタイム・有期雇用労働者</div>
+<div id="t6_6" class="t s1_6">」の基本給は何を考慮して決定していますか。</div>
+<div id="t7_6" class="t s1_6">就業形態別にそれぞれ該当するものを</div>
+<div id="t8_6" class="t s2_6">すべて</div>
+<div id="t9_6" class="t s1_6">選んでください。</div>
+<div id="ta_6" class="t s1_6">問８</div>
+<div id="tb_6" class="t s1_6">「</div>
+<div id="tc_6" class="t s2_6">正社員</div>
+<div id="td_6" class="t s1_6">」及び「</div>
+<div id="te_6" class="t s2_6">パートタイム・有期雇用労働者</div>
+<div id="tf_6" class="t s1_6">」の教育訓練は、どのようになっていますか。</div>
+<div id="tg_6" class="t s1_6">就業形態別に該当するもの（一部で実施も含む）を</div>
+<div id="th_6" class="t s2_6">すべて</div>
+<div id="ti_6" class="t s1_6">選んでください。</div>
+<div id="tj_6" class="t s1_6">能力、経験</div>
+<div id="tk_6" class="t s1_6">02</div>
+<div id="tl_6" class="t s1_6">04</div>
+<div id="tm_6" class="t s1_6">01</div>
+<div id="tn_6" class="t s1_6">02</div>
+<div id="to_6" class="t s1_6">11</div>
+<div id="tp_6" class="t s1_6">03</div>
+<div id="tq_6" class="t s1_6">09</div>
+<div id="tr_6" class="t s1_6">07</div>
+<div id="ts_6" class="t s1_6">07</div>
+<div id="tt_6" class="t s1_6">12</div>
+<div id="tu_6" class="t s3_6">5</div>
+<div id="tv_6" class="t s1_6">04</div>
+<div id="tw_6" class="t s1_6">01</div>
+<div id="tx_6" class="t s1_6">有期雇用</div>
+<div id="ty_6" class="t s1_6">パートタイム</div>
+<div id="tz_6" class="t s1_6">職務の成果</div>
+<div id="t10_6" class="t s4_6">自己啓発費用の補助</div>
+<div id="t11_6" class="t s4_6">(注18)</div>
+<div id="t12_6" class="t s5_6">（注17） 「</div>
+<div id="t13_6" class="t s6_6">Ｏｆｆ－ＪＴ</div>
+<div id="t14_6" class="t s5_6">」とは、業務命令に基づき、通常の仕事を一時的に離れて行う教育訓練（研修）のことをいい、例えば、社内で実施（労働者</div>
+<div id="t15_6" class="t s5_6">を１か所に集合させて実施する集合訓練など）や、社外で実施（業界団体や民間機関の教育訓練機関など社外の機関が実施する教育訓練</div>
+<div id="t16_6" class="t s5_6">に労働者を派遣することなど）を含みます。</div>
+<div id="t17_6" class="t s3_6">2</div>
+<div id="t18_6" class="t s3_6">5</div>
+<div id="t19_6" class="t s1_6">実施している</div>
+<div id="t1a_6" class="t s1_6">有期雇用</div>
+<div id="t1b_6" class="t s1_6">フルタイム</div>
+<div id="t1c_6" class="t s1_6">05</div>
+<div id="t1d_6" class="t s1_6">職務（業務の内容及び責任の程度）</div>
+<div id="t1e_6" class="t s1_6">02</div>
+<div id="t1f_6" class="t s1_6">09</div>
+<div id="t1g_6" class="t s1_6">08</div>
+<div id="t1h_6" class="t s1_6">無期雇用</div>
+<div id="t1i_6" class="t s1_6">パートタイム</div>
+<div id="t1j_6" class="t s1_6">06</div>
+<div id="t1k_6" class="t s1_6">06</div>
+<div id="t1l_6" class="t s1_6">04</div>
+<div id="t1m_6" class="t s3_6">4</div>
+<div id="t1n_6" class="t s3_6">4</div>
+<div id="t1o_6" class="t s3_6">5</div>
+<div id="t1p_6" class="t s3_6">3</div>
+<div id="t1q_6" class="t s3_6">4</div>
+<div id="t1r_6" class="t s3_6">2</div>
+<div id="t1s_6" class="t s3_6">3</div>
+<div id="t1t_6" class="t s3_6">3</div>
+<div id="t1u_6" class="t s4_6">将来のためのキャリアアップのための教育訓練</div>
+<div id="t1v_6" class="t s7_6">（Ｏff－ＪＴ）</div>
+<div id="t1w_6" class="t s3_6">5</div>
+<div id="t1x_6" class="t s1_6">13</div>
+<div id="t1y_6" class="t s1_6">13</div>
+<div id="t1z_6" class="t s8_6"></div>
+<div id="t20_6" class="t s8_6"></div>
+<div id="t21_6" class="t s3_6">3</div>
+<div id="t22_6" class="t s3_6">4</div>
+<div id="t23_6" class="t s3_6">3</div>
+<div id="t24_6" class="t s1_6">正社員、</div>
+<div id="t25_6" class="t s1_6">パートタイ</div>
+<div id="t26_6" class="t s1_6">ム・有期雇</div>
+<div id="t27_6" class="t s1_6">用労働者</div>
+<div id="t28_6" class="t s1_6">のいずれ</div>
+<div id="t29_6" class="t s1_6">にも実施し</div>
+<div id="t2a_6" class="t s1_6">ていない</div>
+<div id="t2b_6" class="t s1_6">無期雇用</div>
+<div id="t2c_6" class="t s1_6">パートタイ</div>
+<div id="t2d_6" class="t s1_6">ム</div>
+<div id="t2e_6" class="t s3_6">5</div>
+<div id="t2f_6" class="t s8_6"></div>
+<div id="t2g_6" class="t s8_6"></div>
+<div id="t2h_6" class="t s5_6">（注16）「</div>
+<div id="t2i_6" class="t s6_6">ＯＪＴ</div>
+<div id="t2j_6" class="t s5_6">」とは、日常の業務に就きながら行われる教育訓練のことをいい、教育訓練に関する計画書を作成するなどして教育担当者、対</div>
+<div id="t2k_6" class="t s5_6">象者、期間、内容などを具体的に定めて、段階的・継続的に教育訓練を実施することをいいます。例えば、教育訓練計画に基づき、ライン長な</div>
+<div id="t2l_6" class="t s5_6">どが教育訓練担当者として作業方法等について部下に指導することなどを含みます。</div>
+<div id="t2m_6" class="t s3_6">1</div>
+<div id="t2n_6" class="t s1_6">配置転換や人事異動の有無</div>
+<div id="t2o_6" class="t s1_6">基本給の決定の際の考慮点</div>
+<div id="t2p_6" class="t s1_6">10</div>
+<div id="t2q_6" class="t s8_6"></div>
+<div id="t2r_6" class="t s8_6"></div>
+<div id="t2s_6" class="t s3_6">4</div>
+<div id="t2t_6" class="t s3_6">1</div>
+<div id="t2u_6" class="t s1_6">12</div>
+<div id="t2v_6" class="t s1_6">13</div>
+<div id="t2w_6" class="t s1_6">12</div>
+<div id="t2x_6" class="t s1_6">最低賃金（地域別・産業別）</div>
+<div id="t2y_6" class="t s1_6">その他</div>
+<div id="t2z_6" class="t s1_6">08</div>
+<div id="t30_6" class="t s1_6">10</div>
+<div id="t31_6" class="t s1_6">09</div>
+<div id="t32_6" class="t s1_6">08</div>
+<div id="t33_6" class="t s1_6">04</div>
+<div id="t34_6" class="t s3_6">2</div>
+<div id="t35_6" class="t s1_6">年齢</div>
+<div id="t36_6" class="t s1_6">11</div>
+<div id="t37_6" class="t s1_6">学歴</div>
+<div id="t38_6" class="t s3_6">2</div>
+<div id="t39_6" class="t s1_6">有期雇用</div>
+<div id="t3a_6" class="t s1_6">パートタイ</div>
+<div id="t3b_6" class="t s1_6">ム</div>
+<div id="t3c_6" class="t s5_6">（注18） 「</div>
+<div id="t3d_6" class="t s6_6">自己啓発費用の補助</div>
+<div id="t3e_6" class="t s5_6">」とは、従業員が職業生活を継続するために行う、職業に関する能力を自発的に開発し、向上させるための活</div>
+<div id="t3f_6" class="t s5_6">動（職業に関係ない趣味、娯楽、スポーツ健康増進等のためのものは含みません）に対する費用を援助することをいいます。</div>
+<div id="t3g_6" class="t s8_6"></div>
+<div id="t3h_6" class="t s1_6">同業種の他企業の賃金相場</div>
+<div id="t3i_6" class="t s1_6">13</div>
+<div id="t3j_6" class="t s3_6">1</div>
+<div id="t3k_6" class="t s1_6">06</div>
+<div id="t3l_6" class="t s1_6">残業の有無</div>
+<div id="t3m_6" class="t s1_6">05</div>
+<div id="t3n_6" class="t s1_6">10</div>
+<div id="t3o_6" class="t s1_6">09</div>
+<div id="t3p_6" class="t s8_6"></div>
+<div id="t3q_6" class="t s8_6"></div>
+<div id="t3r_6" class="t s1_6">11</div>
+<div id="t3s_6" class="t s1_6">11</div>
+<div id="t3t_6" class="t s1_6">12</div>
+<div id="t3u_6" class="t s1_6">転勤可能性の有無</div>
+<div id="t3v_6" class="t s4_6">日常的な業務を通じた、計画的な教育訓練</div>
+<div id="t3w_6" class="t s7_6">（ＯＪＴ）</div>
+<div id="t3x_6" class="t s4_6">(注16)</div>
+<div id="t3y_6" class="t s1_6">勤続年数</div>
+<div id="t3z_6" class="t s1_6">07</div>
+<div id="t40_6" class="t s1_6">05</div>
+<div id="t41_6" class="t s1_6">地域での賃金相場</div>
+<div id="t42_6" class="t s1_6">07</div>
+<div id="t43_6" class="t s1_6">10</div>
+<div id="t44_6" class="t s1_6">02</div>
+<div id="t45_6" class="t s1_6">08</div>
+<div id="t46_6" class="t s1_6">03</div>
+<div id="t47_6" class="t s1_6">01</div>
+<div id="t48_6" class="t s1_6">有期雇用</div>
+<div id="t49_6" class="t s1_6">フルタイム</div>
+<div id="t4a_6" class="t s1_6">正社員</div>
+<div id="t4b_6" class="t s3_6">2</div>
+<div id="t4c_6" class="t s4_6">入職時のガイダンス</div>
+<div id="t4d_6" class="t s7_6">（Ｏff－ＪＴ）</div>
+<div id="t4e_6" class="t s4_6">(注17)</div>
+<div id="t4f_6" class="t s3_6">1</div>
+<div id="t4g_6" class="t s1_6">教育訓練の種類</div>
+<div id="t4h_6" class="t s3_6">1</div>
+<div id="t4i_6" class="t s1_6">正社員</div>
+<div id="t4j_6" class="t s1_6">06</div>
+<div id="t4k_6" class="t s1_6">03</div>
+<div id="t4l_6" class="t s1_6">05</div>
+<div id="t4m_6" class="t s1_6">01</div>
+<div id="t4n_6" class="t s1_6">03</div>
+<div id="t4o_6" class="t s4_6">職務の遂行に必要な能力を付与する教育訓練</div>
+<div id="t4p_6" class="t s7_6">（Ｏff－ＪＴ）</div>
+<div id="t4q_6" class="t s9_6">- 6 -</div>
+
+<!--
+	4.2.5 (15) モダールウィンドウを表示する
+	・modal_conf(確認、キャンセル／OKボタンを配置)
+	
+	chosahyo.jsでMODAL_CONFを指定すると利用できます。
+-->
+<div class="modal fade" id="modal_conf" data-backdrop="static" tabindex="-1">
+	<div class="modal-dialog">
+	<div class="modal-content">
+	<div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span>×</span></button><h4 class="modal-title"></h4></div>
+	<div class="modal-body"><div class="alert alert-success tokei-alert-confirmation cf"><span class="glyphicon tokei-glyphicon-confirmation" aria-hidden="true"></span><div class="tokei-alert-inner"></div></div></div>
+	<div class="modal-footer"><button type="button" class="btn tokei-btn-important" data-dismiss="modal">OK</button></div>
+	</div>
+	</div>
+	</div>
+	<!--
+		4.2.5 (15) モダールウィンドウを表示する
+		・modal_warn(警告、OKボタンのみ配置)
+		
+		chosahyo.jsでMODAL_WARNを指定すると利用できます。
+	-->
+	<div class="modal fade" id="modal_warn" data-backdrop="static" tabindex="-1">
+	<div class="modal-dialog">
+	<div class="modal-content">
+	<div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span>×</span></button><h4 class="modal-title"></h4></div>
+	<div class="modal-body"><div class="alert alert-warning tokei-alert-warning cf"><span class="glyphicon tokei-glyphicon-warning" aria-hidden="true"></span><div class="tokei-alert-inner"></div></div></div>
+	<div class="modal-footer"><button type="button" class="btn tokei-btn-important" data-dismiss="modal">OK</button></div>
+	</div>
+	</div>
+	</div>
+	<!--
+		4.2.5 (15) モダールウィンドウを表示する
+		・modal_error(エラー用、OKボタンのみ配置)
+		
+		chosahyo.jsでMODAL_ERRORを指定すると利用できます。
+	-->
+	<div class="modal fade" id="modal_error" data-backdrop="static" tabindex="-1">
+	<div class="modal-dialog">
+	<div class="modal-content">
+	<div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span>×</span></button><h4 class="modal-title"></h4></div>
+	<div class="modal-body"><div class="alert alert-danger tokei-alert-danger cf"><span class="glyphicon tokei-glyphicon-danger" aria-hidden="true"></span><div class="tokei-alert-inner"></div></div></div>
+	<div class="modal-footer"><button type="button" class="btn tokei-btn-important" data-dismiss="modal">OK</button></div>
+	</div>
+	</div>
+	</div>
+</form>>
+<!-- End text definitions -->
+
+
+</div>
+</body>
+</html>

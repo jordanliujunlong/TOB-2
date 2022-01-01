@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+
+<link rel="stylesheet" href="./js/lib/bootstrap-3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="./js/lib/bootstrap-3.3.6/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="./css/toukei.main.css">
+<script src="./js/lib/jquery-1.11.3.min.js"></script>
+<script src="./js/lib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+<script src="./js/tokei.main.js"></script>
+<script src="./js/chosahyo.js"></script>
+
+<div id ="common-bar">
+	<button type="button-1" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" style="position: absolute; left: 450px; top: 15px;z-index: 10">回答の一時保存</button>
+	
+	
+	
+	<button type="button-2" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" style="position: absolute; left: 620px; top: 15px;z-index: 10">一時保存した回答の取得</button>
+
+	
+	<a href="javascript:CmnPageClear(myForm)"><button type="button-3" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" style="position: absolute; left: 860px; top: 15px;z-index: 10">クリア</button></a>
+	<a href="./3.html"><button type="button-5" class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command" onclick="location.href='./3.html';"style="position: absolute; left: 880px; top: 1200px; z-index: 10;">次ページへ</button></a>
+	<input
+    action="action"
+    onclick="window.history.go(-1); return false;"
+	class ="btn btn-default btn-lg tokei-btn-default tokei-btn-command"
+    type="submit"
+	style="position: absolute; left: 250px; top: 1200px; width: 120px; z-index: 10"
+    value="前ページへ"
+/>
+</div>	
+
+
+<div id="p2" style="overflow: hidden; position: relative; background-color: white; width: 918px; height: 1299px; left: 185px; top: 25px;">
+
+<!-- Begin shared CSS values -->
+<style class="shared-css" type="text/css" >
+.t {
+	transform-origin: bottom left;
+	z-index: 2;
+	position: absolute;
+	white-space: pre;
+	overflow: visible;
+	line-height: 1.5;
+}
+</style>
+<!-- End shared CSS values -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_2{left:46px;bottom:834px;letter-spacing:-0.15px;}
+#t2_2{left:91px;bottom:834px;}
+#t3_2{left:98px;bottom:834px;letter-spacing:-0.11px;}
+#t4_2{left:140px;bottom:834px;letter-spacing:-0.26px;}
+#t5_2{left:90px;bottom:811px;letter-spacing:-0.24px;}
+#t6_2{left:46px;bottom:789px;letter-spacing:-0.19px;}
+#t7_2{left:90px;bottom:789px;}
+#t8_2{left:97px;bottom:789px;letter-spacing:-0.11px;}
+#t9_2{left:180px;bottom:789px;letter-spacing:-0.28px;}
+#ta_2{left:81px;bottom:767px;letter-spacing:-0.26px;}
+#tb_2{left:46px;bottom:746px;letter-spacing:-0.19px;}
+#tc_2{left:90px;bottom:746px;}
+#td_2{left:97px;bottom:746px;letter-spacing:-0.1px;}
+#te_2{left:273px;bottom:746px;letter-spacing:-0.25px;}
+#tf_2{left:81px;bottom:724px;letter-spacing:-0.24px;}
+#tg_2{left:46px;bottom:702px;letter-spacing:-0.19px;}
+#th_2{left:90px;bottom:702px;}
+#ti_2{left:97px;bottom:702px;letter-spacing:-0.09px;}
+#tj_2{left:224px;bottom:702px;letter-spacing:-0.26px;}
+#tk_2{left:83px;bottom:681px;letter-spacing:-0.28px;}
+#tl_2{left:46px;bottom:659px;letter-spacing:-0.19px;}
+#tm_2{left:90px;bottom:659px;}
+#tn_2{left:97px;bottom:659px;letter-spacing:-0.09px;}
+#to_2{left:224px;bottom:659px;letter-spacing:-0.26px;}
+#tp_2{left:83px;bottom:637px;letter-spacing:-0.28px;}
+#tq_2{left:83px;bottom:616px;letter-spacing:-0.26px;}
+#tr_2{left:46px;bottom:594px;letter-spacing:-0.19px;}
+#ts_2{left:90px;bottom:594px;}
+#tt_2{left:97px;bottom:594px;letter-spacing:-0.09px;}
+#tu_2{left:213px;bottom:594px;letter-spacing:-0.26px;}
+#tv_2{left:74px;bottom:572px;letter-spacing:-0.28px;}
+#tw_2{left:74px;bottom:551px;letter-spacing:-0.24px;}
+#tx_2{left:46px;bottom:527px;letter-spacing:-0.13px;}
+#ty_2{left:85px;bottom:527px;}
+#tz_2{left:91px;bottom:527px;letter-spacing:-0.12px;}
+#t10_2{left:300px;bottom:527px;letter-spacing:-0.26px;}
+#t11_2{left:74px;bottom:502px;letter-spacing:-0.28px;}
+#t12_2{left:74px;bottom:478px;letter-spacing:-0.27px;}
+#t13_2{left:74px;bottom:453px;letter-spacing:-0.27px;}
+#t14_2{left:46px;bottom:428px;letter-spacing:-0.14px;}
+#t15_2{left:96px;bottom:428px;}
+#t16_2{left:103px;bottom:428px;letter-spacing:-0.11px;}
+#t17_2{left:172px;bottom:428px;letter-spacing:-0.27px;}
+#t18_2{left:46px;bottom:403px;letter-spacing:-0.11px;}
+#t19_2{left:96px;bottom:403px;}
+#t1a_2{left:103px;bottom:403px;letter-spacing:-0.09px;}
+#t1b_2{left:241px;bottom:403px;letter-spacing:-0.25px;}
+#t1c_2{left:435px;bottom:403px;letter-spacing:-0.26px;}
+#t1d_2{left:81px;bottom:302px;letter-spacing:0.67px;word-spacing:-0.09px;}
+#t1e_2{left:81px;bottom:229px;letter-spacing:0.37px;}
+#t1f_2{left:81px;bottom:179px;letter-spacing:-0.3px;}
+#t1g_2{left:122px;bottom:157px;letter-spacing:-0.3px;}
+#t1h_2{left:486px;bottom:281px;letter-spacing:-0.14px;}
+#t1i_2{left:680px;bottom:281px;letter-spacing:-0.14px;}
+#t1j_2{left:460px;bottom:211px;}
+#t1k_2{left:639px;bottom:211px;}
+#t1l_2{left:835px;bottom:211px;}
+#t1m_2{left:81px;bottom:256px;letter-spacing:0.37px;}
+#t1n_2{left:299px;bottom:281px;letter-spacing:-0.14px;}
+#t1o_2{left:264px;bottom:884px;letter-spacing:-0.07px;}
+#t1p_2{left:39px;bottom:1185px;letter-spacing:-0.18px;}
+#t1q_2{left:76px;bottom:1185px;letter-spacing:-0.11px;}
+#t1r_2{left:145px;bottom:1185px;letter-spacing:-0.27px;}
+#t1s_2{left:57px;bottom:1167px;}
+#t1t_2{left:80px;bottom:1167px;letter-spacing:-0.27px;}
+#t1u_2{left:57px;bottom:1149px;}
+#t1v_2{left:80px;bottom:1149px;letter-spacing:-0.26px;}
+#t1w_2{left:57px;bottom:1131px;letter-spacing:-0.25px;}
+#t1x_2{left:39px;bottom:1114px;letter-spacing:-0.25px;}
+#t1y_2{left:39px;bottom:1096px;letter-spacing:-0.28px;}
+#t1z_2{left:48px;bottom:1065px;letter-spacing:-0.14px;}
+#t20_2{left:48px;bottom:1048px;}
+#t21_2{left:55px;bottom:1048px;letter-spacing:-0.16px;}
+#t22_2{left:249px;bottom:1048px;letter-spacing:-0.28px;}
+#t23_2{left:787px;bottom:1048px;letter-spacing:-0.01px;}
+#t24_2{left:803px;bottom:1048px;letter-spacing:-0.25px;}
+#t25_2{left:39px;bottom:1030px;letter-spacing:-0.26px;}
+#t26_2{left:287px;bottom:1030px;letter-spacing:-0.2px;}
+#t27_2{left:48px;bottom:998px;}
+#t28_2{left:55px;bottom:998px;letter-spacing:-0.13px;}
+#t29_2{left:207px;bottom:998px;letter-spacing:-0.25px;}
+#t2a_2{left:39px;bottom:984px;letter-spacing:-0.25px;word-spacing:1.29px;}
+#t2b_2{left:763px;bottom:984px;}
+#t2c_2{left:441px;bottom:15px;letter-spacing:0.03px;word-spacing:-0.09px;}
+
+.s1_2{font-size:14px;font-family:MS-PMincho_235;color:#000;}
+.s2_2{font-size:14px;font-family:MS-PGothic_239;color:#000;-webkit-text-stroke:0.4px #000;text-stroke:0.4px #000;}
+.s3_2{font-size:14px;font-family:MS-Gothic_23h;color:#000;-webkit-text-stroke:0.4px #000;text-stroke:0.4px #000;}
+.s4_2{font-size:18px;font-family:MS-Gothic_23h;color:#000;-webkit-text-stroke:0.5px #000;text-stroke:0.5px #000;}
+.s5_2{font-size:15px;font-family:MS-PMincho_235;color:#000;}
+.s6_2{font-size:14px;font-family:MS-Mincho_23d;color:#000;}
+.s7_2{font-size:17px;font-family:MS-PGothic_239;color:#000;}
+.s8_2{font-size:12px;font-family:MS-PMincho_235;color:#000;}
+.s9_2{font-size:17px;font-family:MS-PGothic_239;color:#000;-webkit-text-stroke:0.5px #000;text-stroke:0.5px #000;}
+.sa_2{font-size:14px;font-family:MS-PGothic_239;color:#000;}
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts2" type="text/css" >
+
+@font-face {
+	font-family: MS-Gothic_23h;
+	src: url("css/fonts/MS-Gothic_23h.woff") format("woff");
+}
+
+@font-face {
+	font-family: MS-Mincho_23d;
+	src: url("css/fonts/MS-Mincho_23d.woff") format("woff");
+}
+
+@font-face {
+	font-family: MS-PGothic_239;
+	src: url("css/fonts/MS-PGothic_239.woff") format("woff");
+}
+
+@font-face {
+	font-family: MS-PMincho_235;
+	src: url("css/fonts/MS-PMincho_235.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin page background -->
+<div id="pg2Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg2" style="-webkit-user-select: none;"><object width="918" height="1299" data="img/2/2.svg" type="image/svg+xml" id="pdf2" style="width:918px; height:1299px; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_2" class="t s1_2">(注3）</div>
+<div id="t2_2" class="t s1_2">「</div>
+<div id="t3_2" class="t s2_2">正社員</div>
+<div id="t4_2" class="t s1_2">」とは、常用労働者のうち、パートタイム・有期雇用労働者を除いた正規雇用の労働者をいいます。</div>
+<div id="t5_2" class="t s1_2">（短時間正社員(注4）を含みます。）</div>
+<div id="t6_2" class="t s1_2">（注4）</div>
+<div id="t7_2" class="t s1_2">「</div>
+<div id="t8_2" class="t s3_2">短時間正社員</div>
+<div id="t9_2" class="t s1_2">」とは、無期労働契約を締結し、時間当たりの基本給及び賞与・退職金等の算定方法等が同種のフルタイム正社員と同等</div>
+<div id="ta_2" class="t s1_2">で、所定労働時間（日数）が短い正社員をいいます。</div>
+<div id="tb_2" class="t s1_2">（注5）</div>
+<div id="tc_2" class="t s1_2">「</div>
+<div id="td_2" class="t s2_2">パートタイム・有期雇用労働者</div>
+<div id="te_2" class="t s1_2">」とは、「無期雇用パートタイム」「有期雇用パートタイム」「有期雇用フルタイム」全ての就業形態の労働者</div>
+<div id="tf_2" class="t s1_2">をいいます。</div>
+<div id="tg_2" class="t s1_2">（注6）</div>
+<div id="th_2" class="t s1_2">「</div>
+<div id="ti_2" class="t s2_2">無期雇用パートタイム</div>
+<div id="tj_2" class="t s1_2">」とは、常用労働者のうち、貴企業（事業所）に直接雇用されている労働者で、期間を定めずに雇用されており、</div>
+<div id="tk_2" class="t s1_2">かつ、１週間の所定労働時間が同一の事業主に雇用された通常の労働者（正社員）に比べて短い労働者をいいます。</div>
+<div id="tl_2" class="t s1_2">（注7）</div>
+<div id="tm_2" class="t s1_2">「</div>
+<div id="tn_2" class="t s2_2">有期雇用パートタイム</div>
+<div id="to_2" class="t s1_2">」とは、常用労働者のうち、貴企業（事業所）に直接雇用されている労働者で、１年契約、６か月契約など期間を定</div>
+<div id="tp_2" class="t s1_2">めた労働契約により雇用されており、かつ、１週間の所定労働時間が同一の事業主に雇用されている通常の労働者（正社員）に比べて短</div>
+<div id="tq_2" class="t s1_2">い労働者をいいます。</div>
+<div id="tr_2" class="t s1_2">（注8）</div>
+<div id="ts_2" class="t s1_2">「</div>
+<div id="tt_2" class="t s2_2">有期雇用フルタイム</div>
+<div id="tu_2" class="t s1_2">」とは、常用労働者のうち、貴企業（事業所）に直接雇用されている労働者で、１年契約、６か月契約など期間を定め</div>
+<div id="tv_2" class="t s1_2">た労働契約により雇用されており、かつ、１週間の所定労働時間が同一の事業主に雇用されている通常の労働者（正社員）と同じ労働者をい</div>
+<div id="tw_2" class="t s1_2">います。</div>
+<div id="tx_2" class="t s1_2">(注9)</div>
+<div id="ty_2" class="t s1_2">「</div>
+<div id="tz_2" class="t s3_2">定年後、継続雇用している労働者</div>
+<div id="t10_2" class="t s1_2">」とは、定年年齢に達し、一旦退職させた後にパートタイム・有期雇用労働者として再び雇用する</div>
+<div id="t11_2" class="t s1_2">者（高年齢者雇用安定法に規定する特殊関係事業主（65歳以上の雇用の場合は他社を含む）として、貴事業所が定年年齢を超えて雇</div>
+<div id="t12_2" class="t s1_2">用する者を含む）をいいます。なお、高年齢者雇用安定法に基づき、貴事業所が定年後の継続雇用制度として、特殊関係事業主（65歳</div>
+<div id="t13_2" class="t s1_2">以上の雇用の場合は他社を含む）に、送り出した高年齢労働者については計上しないものとします。</div>
+<div id="t14_2" class="t s1_2">(注10)</div>
+<div id="t15_2" class="t s1_2">「</div>
+<div id="t16_2" class="t s2_2">臨時労働者</div>
+<div id="t17_2" class="t s1_2">」とは、常用労働者に該当しない労働者（雇用契約の期間が日々又は１か月未満の労働者）をいいます。</div>
+<div id="t18_2" class="t s1_2">(注11) </div>
+<div id="t19_2" class="t s1_2">「</div>
+<div id="t1a_2" class="t s2_2">派遣労働者（受け入れ）</div>
+<div id="t1b_2" class="t s1_2">」とは、貴事業所に派遣されている</div>
+<div id="t1c_2" class="t s1_2">労働者をいいます。</div>
+<div id="t1d_2" class="t s4_2">☆ 厚生労働省記入欄 （この欄の記入は不要です。）</div>
+<div id="t1e_2" class="t s5_2">②調査対象労働者数</div>
+<div id="t1f_2" class="t s6_2">（注）②の上限値は、無期雇用パートタイムは５人、有期雇用パートタイムは３人、有期雇用フルタイムは５人である。</div>
+<div id="t1g_2" class="t s6_2">Ｐ１「種別」が２又は４の場合は、「有期雇用パートタイム」の②調査対象労働者数は０である。</div>
+<div id="t1h_2" class="t s7_2">有期雇用パートタイム</div>
+<div id="t1i_2" class="t s7_2">有期雇用フルタイム</div>
+<div id="t1j_2" class="t s8_2"></div>
+<div id="t1k_2" class="t s8_2"></div>
+<div id="t1l_2" class="t s8_2"></div>
+<div id="t1m_2" class="t s5_2">①対象労働者数</div>
+<div id="t1n_2" class="t s7_2">無期雇用パートタイム</div>
+<div id="t1o_2" class="t s9_2">以下、注３～11は、次ページの問2の注です。</div>
+<div id="t1p_2" class="t sa_2">（注２）</div>
+<div id="t1q_2" class="t s2_2">常用労働者</div>
+<div id="t1r_2" class="t s1_2">とは、下記の①又は②に該当する労働者のことです。</div>
+<div id="t1s_2" class="t s1_2">①</div>
+<div id="t1t_2" class="t s1_2">期間を定めずに雇われている者</div>
+<div id="t1u_2" class="t s1_2">②</div>
+<div id="t1v_2" class="t s1_2">１か月以上の期間を定めて雇われている者</div>
+<div id="t1w_2" class="t s1_2">なお、取締役、理事などの役員であって、常時勤務して一般の労働者と同じ給与規則若しくは同じ基準で毎月の給与の支払を受けている者、</div>
+<div id="t1x_2" class="t s1_2">事業主の家族であって、その事業所に常時勤務して給与の支払を受けている者、パートタイム労働者又は有期雇用労働者は、上記①又は②に</div>
+<div id="t1y_2" class="t s1_2">該当すれば、常用労働者です。</div>
+<div id="t1z_2" class="t s2_2">※派遣労働者について</div>
+<div id="t20_2" class="t s1_2">・</div>
+<div id="t21_2" class="t s2_2">貴事業所が派遣元事業所の場合</div>
+<div id="t22_2" class="t s1_2">、他の企業等に派遣中の労働者でも上記①又は②に該当すれば常用労働者に含めてください</div>
+<div id="t23_2" class="t s1_2">。（</div>
+<div id="t24_2" class="t s1_2">登録して</div>
+<div id="t25_2" class="t s1_2">いるだけで雇用契約のない者は含めません</div>
+<div id="t26_2" class="t s1_2">。）</div>
+<div id="t27_2" class="t s1_2">・</div>
+<div id="t28_2" class="t s2_2">貴事業所が派遣先の場合</div>
+<div id="t29_2" class="t s1_2">、「労働者派遣事業の適正な運営の確保及び派遣労働者の保護等に関する法律」（昭和60年7月5日法律第88号）</div>
+<div id="t2a_2" class="t s1_2">（以下「労働者派遣法」とい う。）に基づき、派遣元事業所から貴事業所に派遣されている者は常用労働者に含めないでください</div>
+<div id="t2b_2" class="t s1_2">。</div>
+<div id="t2c_2" class="t s7_2">- 2 -</div>
+
+<!-- End text definitions -->
+
+
+</div>
+</body>
+</html>
